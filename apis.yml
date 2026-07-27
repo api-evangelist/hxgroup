@@ -1,7 +1,31 @@
 aid: hxgroup
-name: hxgroup
-description: hxgroup is a company surfaced as a portfolio company of qiming and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hxgroup.png
+name: Hexing Electrical Co., Ltd.
+description: >-
+  Hexing Electrical Co., Ltd. (海兴电力 / Hexing) is a Chinese energy-technology
+  company focused on smart power distribution and utilization, new energy,
+  smart water and gas, water treatment and clean water, and marine
+  electrification. Beyond hardware, Hexing delivers integrated solutions and
+  project delivery spanning metering devices, communication networks (RF, PLC,
+  cellular, NB-IoT), MDC / MDM / AMI platforms, billing systems, distribution
+  automation, energy storage (BESS), EV charging, water metering, seawater
+  desalination and electric marine propulsion. The company reports 34 years of
+  industry experience, operations across 110+ countries and 17 global
+  manufacturing hubs. Surfaced as a portfolio company of qiming and profiled in
+  the API Evangelist network; Hexing publishes no public developer/API surface
+  today, so this profile captures corporate identity plus the AI knowledge file
+  (llms.txt) the company publishes for AI search / RAG.
 url: https://raw.githubusercontent.com/api-evangelist/hxgroup/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +35,18 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Energy
+- Smart Grid
+- Smart Metering
+- AMI
+- New Energy
+- Energy Storage
+- EV Charging
+- Water
+- IoT
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +54,15 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/hxgroup-domain-security.yml
 - type: Website
-  url: https://hxgroup.cn
+  url: https://www.hxgroup.com
+- type: LLMsTxt
+  name: Hexing AI Knowledge File (llms.txt)
+  url: llms/hxgroup-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

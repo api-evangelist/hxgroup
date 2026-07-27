@@ -1,0 +1,1171 @@
+﻿# Hexing / 海兴电力 AI Knowledge File
+Version: v1
+Language: Chinese + English
+Purpose: AI Search / RAG / Website Assistant / Presales Knowledge Base
+
+## Optional
+- [Sitemap index](https://www.hxgroup.com/sitemap_index.xml)
+
+## 1. 文件说明 / File Purpose
+
+本文件用于 AI 搜索、RAG、网站助手、售前问答与内容检索，整合 Hexing 官方 llms 文档、产品导出与客户案例导出。
+This file is designed for AI search, RAG, website assistants, presales Q&A, and structured content retrieval across Hexing official source materials.
+
+### Answering Rules
+- 优先使用本文件中的结构化信息回答问题；当参数或事实未提供时，应明确说明“文件未提供该参数”。
+- Use information in this file first; if a parameter or fact is not provided, say that the file does not provide it.
+- 不要输出 WordPress 后台字段、内部 ID、ACF 键名、Yoast 元字段或未清洗的序列化数据。
+- Do not expose WordPress backend fields, internal IDs, ACF keys, Yoast metadata, or serialized values.
+- 产品与案例事实以 CSV / XML 导出为准；上层结构与 FAQ 参考 llms-full.txt 和 llms.txt。
+- Product and case facts should follow the CSV / XML exports; the higher-level structure follows llms-full.txt and llms.txt.
+
+## 2. 公司与业务总览 / Company & Business Map
+
+### 公司概览 / Company Overview
+海兴 / Hexing Electrical Co., Ltd. 是一家聚焦智能配用电、新能源、智慧水务、智慧燃气、水处理与清洁用水、船舶电动化的能源技术企业。
+Hexing Electrical Co., Ltd. is an energy technology company focusing on smart power distribution and utilization, new energy, smart water, smart gas, water treatment & clean water, and marine electrification.
+
+海兴不仅提供产品，也提供集成解决方案与项目交付能力，覆盖计量设备、通信网络、MDC / MDM / AMI 平台、计费系统、配电自动化、储能、充电、水计量、海水淡化和船舶电动化。
+Hexing Electrical Co., Ltd. is not only a product vendor but also a solution and project delivery partner across metering, communications, AMI platforms, billing systems, distribution automation, storage, charging, water metering, desalination, and marine electrification.
+
+### 品牌别名 / Brand Names
+- 海兴 / 海兴电力 / 海兴全球 = Hexing / Hexing Electrical Co., Ltd. / Global Hexing
+- HEXING / 海兴: 主品牌，覆盖智能计量、采集与通信、软件平台、配电装备、海外 AMI / EPC / 公用事业数字化项目。
+- Livoltek / 利沃得: 主要覆盖光伏逆变器、储能、充电桩、能源监控与船舶电动化等新能源产品线。
+- Zlink / 泽联: 主要覆盖智慧水务、水表、超声波流量计、DMA 与漏损控制相关产品与方案。
+
+### 核心业务板块 / Core Business Areas
+- 智能配用电 / Smart Power Distribution
+- 新能源 / New Energy
+- 智慧水务 / Smart Water
+- 智慧燃气 / Smart Gas
+- 水处理与清洁用水 / Water Treatment & Clean Water
+- 船舶电动化 / Marine Electrification
+
+### 官方入口 / Official Entry Points
+- 首页 / Home: https://www.hxgroup.com/ | https://www.hxgroup.com/en/
+- 关于海兴 / About Hexing: https://www.hxgroup.com/about-hexing/ | https://www.hxgroup.com/en/about-hexing/
+- 解决方案 / Solutions: https://www.hxgroup.com/solution/ | https://www.hxgroup.com/en/solution/
+- 产品分类 / Product Categories: https://www.hxgroup.com/product-category/smart-metering/ | https://www.hxgroup.com/en/product-category/smart-metering-products/
+- 技术与创新 / Technology & Innovation: https://www.hxgroup.com/technology/ | https://www.hxgroup.com/en/technology/
+- 帮助中心 / Help Center: https://www.hxgroup.com/faq/ | https://www.hxgroup.com/en/faq/
+- 售后服务 / After-Sales: https://www.hxgroup.com/after-sales/ | https://www.hxgroup.com/en/after-sales/
+
+## 3. 解决方案地图 / Solution Knowledge Map
+
+### 智能用电计量 / Smart Energy Metering
+- 名称 / Name: 智能用电计量 / Smart Energy Metering
+- 定位 / What it solves: 通过计量设备、通信、MDC/MDM 与计费平台提升可视化、自动抄表、收费透明度与营收保障。 / Improves energy visibility, automated reading, billing transparency, and revenue protection through metering, communications, MDC/MDM, and billing systems.
+- 典型场景 / Typical scenarios: 公用事业 AMI、大用户管理、反窃电、台区治理、预付费。 / Utility AMI, large-customer management, anti-theft, distribution-area governance, and prepaid metering.
+- 相关产品族 / Related product families: 智能电表、通信模块、集中器、MDC/MDM/NMS、计费平台。 / Smart meters, communication modules, concentrators, MDC/MDM/NMS, billing platforms.
+- 代表案例 / Representative cases: 加纳、乌干达、贝宁、巴西 130 多万只智能电表、塔吉克斯坦 M2C。 / Ghana, Uganda, Benin, Brazil 1.3+ million meters, Tajikistan M2C.
+- 相关页面 / Related URLs: https://www.hxgroup.com/solution/smart-metering-solution/ | https://www.hxgroup.com/en/solution/smart-metering-solution/
+
+### AMI / AMR
+- 名称 / Name: AMI / AMR
+- 定位 / What it solves: 面向电力与水务的大规模远程抄表、监测、营收保障与自动化运营。 / Enables large-scale remote reading, monitoring, revenue assurance, and automated operations for power and water utilities.
+- 典型场景 / Typical scenarios: 远程抄表、防窃电、水务自动抄表、LoRa / Walk-by / Drive-by。 / Remote reading, anti-theft, smart water metering, LoRa, walk-by, and drive-by deployments.
+- 相关产品族 / Related product families: 电表、水表、网关、集中器、采集终端、平台软件。 / Meters, gateways, concentrators, acquisition terminals, and platform software.
+- 代表案例 / Representative cases: 巴西、加纳、贝宁、墨西哥、南非、冈比亚。 / Brazil, Ghana, Benin, Mexico, South Africa, and Gambia.
+- 相关页面 / Related URLs: https://www.hxgroup.com/solution/ami-solution/ | https://www.hxgroup.com/en/solution/ami-solution/
+
+### 智能计费与交易平台 / Billing & Trading
+- 名称 / Name: 智能计费与交易平台 / Billing & Trading
+- 定位 / What it solves: 连接计量数据、客户账户、支付渠道与运营系统，实现从计费到对账的闭环。 / Connects metering data, customer accounts, payment channels, and operations for closed-loop billing and reconciliation.
+- 典型场景 / Typical scenarios: 公用事业计费现代化、预付费售电、大用户营收管理。 / Utility billing modernization, prepaid power sales, and large-customer revenue management.
+- 相关产品族 / Related product families: 预付费管理系统、后付费管理系统、MDC / MDM / Billing。 / Prepaid systems, postpaid systems, MDC / MDM / Billing.
+- 代表案例 / Representative cases: 塔吉克斯坦 M2C、加纳 AMI、乌干达预付费项目。 / Tajikistan M2C, Ghana AMI, Uganda prepaid metering.
+- 相关页面 / Related URLs: https://www.hxgroup.com/solution/intelligent-billing-and-trading-platform/ | https://www.hxgroup.com/en/solution/intelligent-billing-and-trading-platform/
+
+### 大用户预付费 / Large-Customer Prepaid
+- 名称 / Name: 大用户预付费 / Large-Customer Prepaid
+- 定位 / What it solves: 针对高压或高消费客户，实现计量、预付费、远程分合闸与风险控制。 / Targets high-consumption customers with metering, prepaid charging, remote disconnection, and risk control.
+- 典型场景 / Typical scenarios: 工业与商业大用户、欠费风险管理、远程费控。 / Industrial and commercial large customers, payment risk control, and remote fee management.
+- 相关产品族 / Related product families: 计量柜、智能电表、通信、售电平台。 / Metering cabinets, smart meters, communications, and sales platforms.
+- 代表案例 / Representative cases: 乌干达、贝宁。 / Uganda and Benin.
+- 相关页面 / Related URLs: https://www.hxgroup.com/solution/intelligent-billing-and-trading-platform/ | https://www.hxgroup.com/en/solution/intelligent-billing-and-trading-platform/
+
+### 工商业供配电 / C&I Power Distribution
+- 名称 / Name: 工商业供配电 / C&I Power Distribution
+- 定位 / What it solves: 面向园区、学校、商业楼宇等中型场景提供安全高效的供配电解决方案。 / Provides safe and efficient power distribution for campuses, schools, commercial buildings, and other mid-scale scenarios.
+- 典型场景 / Typical scenarios: 工业园区、学校、办公楼、政府与商业场景。 / Industrial parks, schools, office buildings, government, and commercial scenarios.
+- 相关产品族 / Related product families: 环网柜、变压器、计量箱、成套设备、智能装置。 / RMUs, transformers, metering cabinets, complete equipment, and smart devices.
+- 代表案例 / Representative cases: 巴西表箱 120K、配网与费控相关交付。 / Brazil meter box 120K and related distribution delivery.
+- 相关页面 / Related URLs: https://www.hxgroup.com/solution/commercial-industrial-power-supply-and-distribution-solution/ | https://www.hxgroup.com/en/solution/commercial-industrial-power-supply-and-distribution-solution/
+
+### 微电网 / Microgrid
+- 名称 / Name: 微电网 / Microgrid
+- 定位 / What it solves: 将分布式发电、储能、配电基础设施和能量管理组合成韧性本地能源系统。 / Combines distributed generation, storage, distribution infrastructure, and energy management into resilient local energy systems.
+- 典型场景 / Typical scenarios: 弱电网、离岛、偏远地区、园区、自主供能。 / Weak-grid, islands, remote sites, parks, and autonomous local energy.
+- 相关产品族 / Related product families: 逆变器、储能电池、EMS、充电系统、配电装备。 / Inverters, batteries, EMS, charging systems, and distribution equipment.
+- 代表案例 / Representative cases: 斯威士兰 ERS、巴西中压微网。 / Eswatini ERS and Brazil medium-voltage microgrid.
+- 相关页面 / Related URLs: https://www.hxgroup.com/solution/medium-voltage-microgrid-solution/ | https://www.hxgroup.com/en/solution/medium-voltage-microgrid-solution/
+
+### 光储充 / PV-Storage-Charging
+- 名称 / Name: 光储充 / PV-Storage-Charging
+- 定位 / What it solves: 面向园区和交通场景，将光伏、储能与充电基础设施协同优化。 / Integrates PV, storage, and EV charging for parks and transport scenarios.
+- 典型场景 / Typical scenarios: 公交场站、工厂园区、工商业停车场。 / Bus depots, industrial parks, and C&I parking sites.
+- 相关产品族 / Related product families: 并网逆变器、储能一体柜、储能电池、直流/交流充电桩。 / Grid-tied inverters, BESS cabinets, batteries, and AC/DC chargers.
+- 代表案例 / Representative cases: 西班牙公交场站、新疆胡杨市、肯尼亚工厂园区。 / Spain bus depot, Huyang City Xinjiang, Kenya industrial park.
+- 相关页面 / Related URLs: https://www.hxgroup.com/solution/solar-storage-charging-solution/ | https://www.hxgroup.com/en/solution/solar-storage-charging-solution/
+
+### 工商业储能 / C&I ESS
+- 名称 / Name: 工商业储能 / C&I ESS
+- 定位 / What it solves: 通过峰谷套利、削峰填谷、自发自用优化与备电能力帮助企业降本增效。 / Reduces energy cost through peak shaving, arbitrage, self-consumption optimization, and backup power.
+- 典型场景 / Typical scenarios: 工业园、商业综合体、制造中心、教育机构。 / Industrial parks, commercial complexes, manufacturing centers, and educational institutions.
+- 相关产品族 / Related product families: 储能逆变器、储能电池、储能一体柜、能源监控系统。 / Hybrid inverters, batteries, all-in-one cabinets, and monitoring systems.
+- 代表案例 / Representative cases: 杭州制造中心、罗马尼亚工厂、西班牙教育机构。 / Hangzhou manufacturing center, Romania smart meter factory, and Spain educational institution.
+- 相关页面 / Related URLs: https://www.hxgroup.com/solution/industrial-park-energy-storage-solutions/ | https://www.hxgroup.com/en/solution/industrial-park-energy-storage-solutions/
+
+### 智慧水务 / Smart Water
+- 名称 / Name: 智慧水务 / Smart Water
+- 定位 / What it solves: 通过超声波水表、通信网络、采集系统与平台软件推进水务数字化。 / Digitizes water utilities through ultrasonic meters, communications, data collection, and software platforms.
+- 典型场景 / Typical scenarios: 市政抄表、预付费、工商业流量监测、楼宇管理。 / Municipal metering, prepaid water, C&I flow metering, and building projects.
+- 相关产品族 / Related product families: 户用与工商业超声波水表、电子背包、无线远传模块。 / Residential and C&I ultrasonic meters, electronic backpacks, and wireless modules.
+- 代表案例 / Representative cases: 墨西哥、南非、冈比亚、多米尼加、秘鲁。 / Mexico, South Africa, Gambia, Dominican Republic, and Peru.
+- 相关页面 / Related URLs: https://www.hxgroup.com/solution/ami-solution/ | https://www.hxgroup.com/en/solution/ami-solution/
+
+### DMA 与漏损控制 / DMA & Leakage Control
+- 名称 / Name: DMA 与漏损控制 / DMA & Leakage Control
+- 定位 / What it solves: 以分区计量、漏损可视化与压力优化提升城市供水效率。 / Improves water network efficiency through district metering, leak visibility, and pressure optimization.
+- 典型场景 / Typical scenarios: 城市供水管网、漏损治理、智慧水务平台。 / Municipal water networks, leak management, and smart water platforms.
+- 相关产品族 / Related product families: DMA 相关超声波大表、电子背包、平台组件。 / DMA-oriented ultrasonic bulk meters, electronic backpacks, and platform components.
+- 代表案例 / Representative cases: 某二线城市 A 区项目。 / A district project in a second-tier city.
+- 相关页面 / Related URLs: https://www.hxgroup.com/solution/dma-solution/ | https://www.hxgroup.com/en/solution/dma-solution/
+
+### 水处理与清洁用水 / Water Treatment & Clean Water
+- 名称 / Name: 水处理与清洁用水 / Water Treatment & Clean Water
+- 定位 / What it solves: 提供集装箱式与撬装式清洁用水、海水淡化与工业水处理系统。 / Provides containerized and skid-mounted clean water, desalination, and industrial water treatment systems.
+- 典型场景 / Typical scenarios: 市政供水、应急供水、核电施工、热电厂生产用水、棕榈油厂。 / Municipal supply, emergency water, nuclear construction, thermal power plant water, and palm oil factories.
+- 相关产品族 / Related product families: 集装箱式海水淡化、撬装式海水淡化、膜处理系统。 / Containerized desalination, skid-mounted desalination, and membrane treatment systems.
+- 代表案例 / Representative cases: 57,000 吨/天市政淡化、核电施工供水、棕榈油厂、热电厂。 / 57,000 t/day municipal desalination, nuclear construction water, palm oil factory, and thermal power plant use.
+- 相关页面 / Related URLs: https://www.hxgroup.com/solution/clean-water-solution/ | https://www.hxgroup.com/en/solution/clean-water-solution/
+
+### 船舶电动化 / Marine Electrification
+- 名称 / Name: 船舶电动化 / Marine Electrification
+- 定位 / What it solves: 面向小型船舶与水上交通提供低噪、低排、低运维的电动推进方案。 / Provides low-noise, low-emission, low-maintenance electric propulsion for small vessels and water mobility.
+- 典型场景 / Typical scenarios: 景区游船、渔民社区、休闲小艇、帆船、公务船。 / Tourist boats, fishing communities, recreational boats, sailboats, and public service vessels.
+- 相关产品族 / Related product families: Dolphin 船外机、Pod Drive 吊舱推进器。 / Dolphin electric outboards and Pod Drive systems.
+- 代表案例 / Representative cases: 亚马逊渔民社区水上动力项目。 / Amazon fishermen community water mobility project.
+- 相关页面 / Related URLs: https://www.hxgroup.com/solution/electric-propulsion-system-solutions-for-small-vessels/ | https://www.hxgroup.com/en/solution/electric-propulsion-system-solutions-for-small-vessels/
+
+## 4. 产品知识中心 / Product Knowledge Center
+
+产品数据范围：已发布产品共 214 组，其中中英配对 210 组，单语保留 4 组。
+Product coverage: 214 published product groups, including 210 bilingual pairs and 4 single-language entries.
+
+### 智能计量 / Smart Metering
+覆盖电表、专用计量装置与部分燃气计量相关条目，主要支撑 AMI、费控、结算与工业计量。 / Covers electricity metering, specialized metering devices, and some gas-related entries for AMI, billing control, settlement, and industrial metering.
+
+#### 子类清单 / Subcategory List
+- 电表: 36
+- Gas Meter: 3
+- 专用计量装置: 2
+
+#### 代表产品卡片 / Representative Product Cards
+- 产品名 / Product name: 单相智能预付费表 | Single-Phase Smart Prepayment Meter
+- 品牌 / Brand: HEXING
+- 型号范围 / Model range: HXE130
+- 核心定位 / Positioning: HXE130是新一代单相直接式预付费/后付费电表，产品具有AMI功能，符合STS国际标准，能通过远程/本地进行充值。该表可以连接到海兴的AMI和售电系统，仪表可以设计成分体式或一体式。
+- 关键卖点 / Key highlights: 高性能: 充钱/充电符合国际标准，具备AMI能力。; 灵活: 多达8个费率，预付费/后付费可切换。; 便捷: 远程/本地充值，具备多种防窃电能力。
+- 适用场景 / Typical use: HXE130
+- Path: /product/single-phase-smart-prepaid-meter
+
+- 产品名 / Product name: A级单相智能电能表（南网21标准） | Class A Single-Phase Smart Electricity Meter (CSG 21 Standard)
+- 品牌 / Brand: HEXING
+- 型号范围 / Model range: 具备集计量、费控、报警、显示、冻结、通讯功能的智能电能表。
+- 核心定位 / Positioning: DDZ208-Z/J型A级单相智能电能表（通信模块-开关内置）/...
+- 关键卖点 / Key highlights: 计量功能: 正向有功电能、反向有功电能计量，支持通过模式字设置组合有功计算方式。 分时计量。; 冻结功能: 总电能、各费率电能量、组合有功累计用电量24个月结算。 日冻结(254天)、整点冻结(254个)、月冻结(24个)、定时冻结、瞬时冻结、约定冻结。; 测量及监测功能: 测量、记录、显示当前电能表的电压、电流(含零线)、功率、功率因数频率等运行参数。
+- 适用场景 / Typical use: 具备集计量、费控、报警、显示、冻结、通讯功能的智能电能表。
+- Path: /product/class-a-single-phase-smart-electricity-meter-csg-2021-standard
+
+- 产品名 / Product name: 一体式直流表 | Integrated DC Meter
+- 品牌 / Brand: HEXING
+- 型号范围 / Model range: 针对直流屏、充电桩、电信基站等应用场景的直流表。
+- 核心定位 / Positioning: 采用微电子技术计量直流电能， 具有多协议支撑，超低功耗， 与直流充电桩配套使用。具有液晶显示、 电能计量、 时钟、 RS485通讯、 电脉冲及秒脉冲输出、 瞬时数据测量及监测等功能，适用于直流电能计量。 技术指标符合GB/T33708-2017《静止式直流电能表》标准要求，2路独立RS485接口， 支持DL/T645-2007协议，支持工业广泛应用协议Modbus-RTU，方便快速集成。
+- 关键卖点 / Key highlights: 电能计量: 正向、反向电能计量功能; 支持尖、峰、平、谷四个费率，具有两套费率时段表，可在指定时间进行切换。; 通讯功能: 2路RS485，支持DL/T645-2007，Modbus-RTU协议。; 数据存储: 存储最近100 次充电信息记录; 存储上12个月结算日的单向或双向总电能和各费率电能数据; 在电能表电源断电的情况下，结算数据至少可保存10年，其他数据至少保存3年。
+- 适用场景 / Typical use: 针对直流屏、充电桩、电信基站等应用场景的直流表。
+- Path: /product/integrated-dc-smart-meter
+
+#### 产品索引 / Product Index
+- English | Smart Diaphragm Residential Meter G1.6~G6 | HEXING | Smart Metering Products > Gas Meter | https://www.hxgroup.com/en/product/smart-diaphram-meter/ | Modular communication with plug-and-play, remote meter reading without entering homes, 10-year long-life battery, helping gas companies reduce costs and...
+- English | Ultrasonic Residential Meter G1.6~G6 | HEXING | Smart Metering Products > Gas Meter | https://www.hxgroup.com/en/product/ultrasonic-residential-meter/ | The HXG 210 series ultrasonic residential gas meter utilizes advanced ultrasonic metering technology, integrating a high-resolution ultrasonic sensor, a...
+- English | External Sampling Communication Backpack | HEXING | Smart Metering Products > Gas Meter > External Sampling Communication Backpack | https://www.hxgroup.com/en/product/sampling-communication-backpack/ | Modular Upgrade, Meter Renewal — HXG410, Redefining Gas Metering Value through Smart Retrofit.
+- 中文 | G3集中计量表箱 | HEXING | 智能计量产品 > 专用计量装置 | https://www.hxgroup.com/product/g3-centralized-metering-cabinet/ | 紧凑设计、简易安装、高性价比。
+- English | G3 Centralized Metering Box | HEXING | Smart Metering Products > Electricity Meter > Smart Meter (Overseas) > Centralized Metering Box | https://www.hxgroup.com/en/product/g3-centralized-metering-cabinet/ | Compact design, easy installation, high cost-effectiveness.
+- 中文 | G3集中计量表箱-计量单元 | HEXING | 智能计量产品 > 专用计量装置 | https://www.hxgroup.com/product/g3-centralized-metering-cabinet-metering-unit/ | 插拔式智能电表
+- English | G3 Centralized Metering Box - Metering Unit | HEXING | Smart Metering Products > Electricity Meter > Smart Meter (Overseas) > Centralized Metering Box | https://www.hxgroup.com/en/product/g3-centralized-metering-cabinet-metering-unit/ | Plug-in Smart Meter
+- 中文 | 多相智能圆表 | HEXING | 智能计量产品 > 电表 > 智能电表 (海外) | https://www.hxgroup.com/product/multi-phase-smart-round-meter/ | ANSI 美标多相智能表（FM3S FM4S FM12S FM16S FM9S）
+- English | Polyphase Smart Round Meter | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/multi-phase-smart-round-meter/ | ANSI Standard Polyphase Smart Meter (FM3S, FM4S, FM12S, FM16S, FM9S)
+- 中文 | 单相直接式智能表 | HEXING | 智能计量产品 > 电表 > 智能电表 (海外) | https://www.hxgroup.com/product/single-phase-direct-connect-smart-meter/ | 模块化设计，通信灵活，精准计量每一度电，赋能家庭能源智能管理。
+- English | Single-Phase Direct-Connected Smart Meter | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/single-phase-direct-connect-smart-meter/ | Modular design, flexible communication, precise measurement of every kilowatt-hour, enabling intelligent home energy management.
+- 中文 | 单相智能预付费导轨表 | HEXING | 智能计量产品 > 电表 > 智能电表 (海外) | https://www.hxgroup.com/product/single-phase-smart-prepaid-din-rail-meter/ | HXP100DII
+- English | Single-Phase Smart Prepayment DIN-Rail Meter | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/single-phase-smart-prepaid-din-rail-meter/ | HXP100DII
+- 中文 | 单相智能预付费表 | HEXING | 智能计量产品 > 电表 > 智能电表 (海外) | https://www.hxgroup.com/product/single-phase-smart-prepaid-meter/ | HXE130
+- English | Single-Phase Smart Prepayment Meter | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/single-phase-smart-prepaid-meter/ | HXE130
+- 中文 | 单相智能预付费导轨表 | HEXING | 智能计量产品 > 电表 > 智能电表 (海外) | https://www.hxgroup.com/product/single-phase-smart-prepayment-din-rail-meter/ | HXP100DIP
+- English | Single-Phase Smart Prepayment DIN-Rail Meter | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/single-phase-smart-prepayment-din-rail-meter/ | HXP100DIP
+- 中文 | 单相智能圆表 | HEXING | 智能计量产品 > 电表 > 智能电表 (海外) | https://www.hxgroup.com/product/single-phase-smart-round-meter/ | ANSI 美标单相/两相智能表（FM1S FM2S FM12S）
+- English | Single-Phase Smart Round Meter | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/single-phase-smart-round-meter/ | ANSI Standard Single-Phase/Two-Phase Smart Meter (FM1S FM2S FM12S)
+- 中文 | 三相直接式智能表 | HEXING | 智能计量产品 > 电表 > 智能电表 (海外) | https://www.hxgroup.com/product/three-phase-direct-connect-smart-meter/ | HXE310
+- English | Three-Phase Direct-Connected Smart Meter | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/three-phase-direct-connect-smart-meter/ | HXE310
+- 中文 | 三相互感式智能表 | HEXING | 智能计量产品 > 电表 > 智能电表 (海外) | https://www.hxgroup.com/product/three-phase-sensor-smart-meter/ | HXF300
+- English | Three-Phase Transformer-Connected Smart Meter | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/three-phase-sensor-smart-meter/ | HXF300
+- 中文 | 三相智能预付费表 | HEXING | 智能计量产品 > 电表 > 智能电表 (海外) | https://www.hxgroup.com/product/three-phase-smart-prepaid-meter/ | HXE330
+- English | Three-Phase Smart Prepayment Meter | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/three-phase-smart-prepaid-meter/ | HXE330
+- 中文 | 用户显示单元 | HEXING | 智能计量产品 > 电表 > 智能电表 (海外) | https://www.hxgroup.com/product/user-display-unit-ev100/ | CIU EV100
+- English | User Display Unit | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/user-display-unit-ev100/ | CIU EV100
+- 中文 | 用户显示单元 | HEXING | 智能计量产品 > 电表 > 智能电表 (海外) | https://www.hxgroup.com/product/user-display-unit-ev500/ | CIU EV500
+- English | User Display Unit | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/user-display-unit-ev500/ | CIU EV500
+- 中文 | 用户显示单元 | HEXING | 智能计量产品 > 电表 > 智能电表 (海外) | https://www.hxgroup.com/product/user-display-unit-ev800/ | CIU EV800
+- English | User Display Unit | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/user-display-unit-ev800/ | CIU EV800
+- 中文 | 用户显示单元 | HEXING | 智能计量产品 > 电表 > 智能电表 (海外) | https://www.hxgroup.com/product/user-display-unit-ev900/ | CIU EV900
+- English | User Display Unit | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/user-display-unit-ev900/ | CIU EV900
+- 中文 | 单相预付费表 | HEXING | 智能计量产品 > 电表 > 智能电表 (海外) > 普通表 | https://www.hxgroup.com/product/single-phase-prepayment-meter/ | HXE115-KP 充钱/充电符合国际标准，预付费/后付费可切换，本地充值，具备多种防窃电能力，一体式/分体式设计，可搭配CIU使用，多达8个费率。
+- English | Single-Phase Prepayment Meter | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/single-phase-prepayment-meter/ | HXE115-KP Top-up/charging compliant with international standards, switchable between prepaid and postpaid modes, local top-up, multiple anti-tampering...
+- 中文 | 单相普通表 | HEXING | 智能计量产品 > 电表 > 智能电表 (海外) > 普通表 | https://www.hxgroup.com/product/single-phase-standard-meter-hxe12-es/ | HXE12-ES 单相静止式电能表
+- English | Single-Phase Standard Meter | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/single-phase-standard-meter-hxe12-es/ | HXE12-ES Single-Phase Static Energy Meter
+- 中文 | 单相普通表 | HEXING | 智能计量产品 > 电表 > 智能电表 (海外) > 普通表 | https://www.hxgroup.com/product/single-phase-standard-meter-hxe12dl/ | HXE12DL & HXE13DL 单相静止式电能表
+- English | Single-Phase Standard Meter | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/single-phase-standard-meter-hxe12dl/ | HXE12DL & HXE13DL Single-Phase Static Energy Meter
+- 中文 | 单相普通圆表 | HEXING | 智能计量产品 > 电表 > 智能电表 (海外) > 普通表 | https://www.hxgroup.com/product/single-phase-standard-round-meter-hxs100/ | HXS100 FM1S/FM2S
+- English | Single-Phase Standard Round Meter | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/single-phase-standard-round-meter-hxs100/ | HXS100 FM1S/FM2S
+- 中文 | 三相普通表 | HEXING | 智能计量产品 > 电表 > 智能电表 (海外) > 普通表 | https://www.hxgroup.com/product/three-phase-standard-meter-hxe34k/ | HXE34K 多相静止式电能表
+- English | Three-Phase Standard Meter | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/three-phase-standard-meter-hxe34k/ | HXE34K Polyphase Static Meter
+- 中文 | 72/96型盘表 | HEXING | 智能计量产品 > 电表 > 智能电表(国内) | https://www.hxgroup.com/product/72-96-type-panel-meter/ | 针对高低压配电柜等电力监控需求的智能仪表。
+- English | 72/96 Type Panel Meter | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/72-96-type-panel-meter/ | An intelligent meter designed for power monitoring needs in high and low voltage distribution cabinets.
+- 中文 | 一体式直流表 | HEXING | 智能计量产品 > 电表 > 智能电表(国内) | https://www.hxgroup.com/product/integrated-dc-smart-meter/ | 针对直流屏、充电桩、电信基站等应用场景的直流表。
+- English | Integrated DC Meter | HEXING | Smart Metering Products > Electricity Meter > Smart Meter (Domestic) > DC Meter | https://www.hxgroup.com/en/product/integrated-dc-smart-meter/ | DC meter for applications such as DC panels, charging stations, and telecom base stations.
+- 中文 | 单相导轨式 | HEXING | 智能计量产品 > 电表 > 智能电表(国内) | https://www.hxgroup.com/product/single-phase-din-rail-meter/ | 具有体积小、 易安装等优点的导轨式电能表。
+- English | Single-Phase DIN-Rail | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/single-phase-din-rail-meter/ | A DIN-rail energy meter featuring compact size and easy installation.
+- 中文 | 分体式直流表 | HEXING | 智能计量产品 > 电表 > 智能电表(国内) | https://www.hxgroup.com/product/split-dc-smart-meter/ | 针对充电桩、直流屏、电信基站等应用场景的直流表。
+- English | Split-type DC Meter | HEXING | Smart Metering Products > Electricity Meter > Smart Meter (Domestic) > DC Meter | https://www.hxgroup.com/en/product/split-dc-smart-meter/ | DC meter for application scenarios such as charging stations, DC panels, and telecom base stations.
+- 中文 | 三相导轨式 | HEXING | 智能计量产品 > 电表 > 智能电表(国内) | https://www.hxgroup.com/product/three-phase-din-rail-meter/ | 具有体积小、 易安装等优点的导轨式电能表。
+- English | Three-Phase DIN-Rail | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/three-phase-din-rail-meter/ | A DIN-rail energy meter featuring compact size and easy installation.
+- 中文 | 三相穿孔式 | HEXING | 智能计量产品 > 电表 > 智能电表(国内) | https://www.hxgroup.com/product/three-phase-split-core-meter/ | 具有体积小、 穿孔安装、支持相序纠正等优点的电能表。
+- English | Three-phase through-hole type | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/three-phase-split-core-meter/ | An energy meter with advantages such as compact size, through-hole mounting, and phase sequence correction support.
+- 中文 | C/D级三相智能电能表（国网20标准） | HEXING | 智能计量产品 > 电表 > 智能电表(国内) > 三相电能表 | https://www.hxgroup.com/product/c-d-class-three-phase-smart-meter-state-grid-20-standard/ | 具备集计量、需量、显示、冻结、通讯功能的高精度智能电能表。
+- English | Class C/D Three-Phase Smart Energy Meter (State Grid 2020 Standard) | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/c-d-class-three-phase-smart-meter-state-grid-20-standard/ | A high-precision smart energy meter integrating metering, demand, display, freeze, and communication functions.
+- 中文 | B/C/D级 三相智能物联电能表（国网） | HEXING | 智能计量产品 > 电表 > 智能电表(国内) > 三相电能表 | https://www.hxgroup.com/product/class-b-c-d-three-phase-smart-iot-electricity-meter-sgcc/ | 具备电能计量、数据处理、实时监测、自动控制、环境感知、信息交互和通信路由等功能的智能电能表。
+- English | Class B/C/D Three-Phase Smart IoT Energy Meter (State Grid) | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/class-b-c-d-three-phase-smart-iot-electricity-meter-sgcc/ | A smart energy meter with functions including energy metering, data processing, real-time monitoring, automatic control, environmental sensing, information...
+- 中文 | B/C级三相费控智能电能表（国网20标准） | HEXING | 智能计量产品 > 电表 > 智能电表(国内) > 三相电能表 | https://www.hxgroup.com/product/class-b-c-three-phase-prepayment-controlled-smart-electricity-meter-sgcc-2020-standard/ | 具备集计量、需量、费控、报警、显示、冻结、通讯功能的智能电能表。
+- English | Class B/C Three-Phase Prepayment Smart Meter (State Grid 20 Standard) | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/class-b-c-three-phase-prepayment-controlled-smart-electricity-meter-sgcc-2020-standard/ | A smart meter integrating metering, demand, prepayment, alarm, display, freeze, and communication functions.
+- 中文 | B/C级三相智能电能表（南网21标准） | HEXING | 智能计量产品 > 电表 > 智能电表(国内) > 三相电能表 | https://www.hxgroup.com/product/class-b-c-three-phase-smart-electricity-meter-csg-2021-standard/ | 具备集计量、需量、费控、报警、显示、冻结、通讯功能的智能电能表。
+- English | Class B/C Three-Phase Smart Meter (CSG 21 Standard) | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/class-b-c-three-phase-smart-electricity-meter-csg-2021-standard/ | A smart meter integrating metering, demand, billing control, alarm, display, freezing, and communication functions.
+- 中文 | B/C级三相智能网关电能表（南网24标准） | HEXING | 智能计量产品 > 电表 > 智能电表(国内) > 三相电能表 | https://www.hxgroup.com/product/class-b-c-three-phase-smart-gateway-electricity-meter-csg-2024-standard/ | 基于南方电网公司新一代智能表标准开发的模组化电能表，实现法制与非法制功能分离。
+- English | Class B/C Three-Phase Smart Gateway Energy Meter (CSG 24 Standard) | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/class-b-c-three-phase-smart-gateway-electricity-meter-csg-2024-standard/ | A modular energy meter developed based on the new generation smart meter standard of China Southern Power Grid, achieving separation of legal and non-legal...
+- 中文 | C级三相智能电能表（南网21标准） | HEXING | 智能计量产品 > 电表 > 智能电表(国内) > 三相电能表 | https://www.hxgroup.com/product/class-c-three-phase-smart-electricity-meter-csg-2021-standard/ | 具备集计量、需量、费控、报警、显示、冻结、通讯功能的智能电能表。
+- English | Class C Three-Phase Smart Energy Meter (CSG 21 Standard) | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/class-c-three-phase-smart-electricity-meter-csg-2021-standard/ | A smart energy meter integrating metering, demand, billing control, alarm, display, freeze, and communication functions.
+- 中文 | C级三相智能网关电能表（南网24标准） | HEXING | 智能计量产品 > 电表 > 智能电表(国内) > 三相电能表 | https://www.hxgroup.com/product/class-c-three-phase-smart-gateway-electricity-meter-csg-2024-standard/ | 基于南方电网公司新一代智能表标准开发的模组化电能表，实现法制与非法制功能分离。
+- English | Class C Three-Phase Smart Gateway Meter (CSG 24 Standard) | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/class-c-three-phase-smart-gateway-electricity-meter-csg-2024-standard/ | A modular meter developed based on the new generation smart meter standard of China Southern Power Grid, achieving separation of legal and non-legal metrology...
+- 中文 | A级单相高防护智能电能表(国网IP68) | HEXING | 智能计量产品 > 电表 > 智能电表(国内) > 单相电能表 | https://www.hxgroup.com/product/class-a-single-phase-high-protection-smart-electricity-meter-sgcc-ip68/ | 具备集计量、费控、报警、显示、冻结、通讯功能的高防护等级（IP68）智能电能表。
+- English | Class A Single-Phase High-Protection Smart Electricity Meter (State Grid IP68) | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/class-a-single-phase-high-protection-smart-electricity-meter-sgcc-ip68/ | A high-protection (IP68) smart electricity meter integrating metering, prepayment, alarm, display, freeze, and communication functions.
+- 中文 | A级单相费控智能电能表  (国网20标准) | HEXING | 智能计量产品 > 电表 > 智能电表(国内) > 单相电能表 | https://www.hxgroup.com/product/class-a-single-phase-prepayment-controlled-smart-electricity-meter-sgcc-2020-standard/ | 具备集计量、费控、报警、显示、冻结、通讯功能的智能电能表。
+- English | Class A Single-Phase Smart Prepayment Meter  (State Grid 20 Standard) | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/class-a-single-phase-prepayment-controlled-smart-electricity-meter-sgcc-2020-standard/ | A smart electricity meter integrating metering, billing control, alarm, display, freezing, and communication functions.
+- 中文 | A级单相智能电能表（南网21标准） | HEXING | 智能计量产品 > 电表 > 智能电表(国内) > 单相电能表 | https://www.hxgroup.com/product/class-a-single-phase-smart-electricity-meter-csg-2021-standard/ | 具备集计量、费控、报警、显示、冻结、通讯功能的智能电能表。
+- English | Class A Single-Phase Smart Electricity Meter (CSG 21 Standard) | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/class-a-single-phase-smart-electricity-meter-csg-2021-standard/ | A smart electricity meter integrating metering, tariff control, alarm, display, freeze, and communication functions.
+- 中文 | A级单相智能网关电能表（南网24标准） | HEXING | 智能计量产品 > 电表 > 智能电表(国内) > 单相电能表 | https://www.hxgroup.com/product/class-a-single-phase-smart-gateway-electricity-meter-csg-2024-standard/ | 基于南方电网公司新一代智能表标准开发的模组化电能表，实现法制与非法制功能分离。
+- English | Class A Single-Phase Smart Gateway Meter (CSG 24 Standard) | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/class-a-single-phase-smart-gateway-electricity-meter-csg-2024-standard/ | A modular meter developed based on the new generation smart meter standard of China Southern Power Grid, achieving separation of legal and non-legal metrology...
+- 中文 | A级单相智能物联电能表（国网） | HEXING | 智能计量产品 > 电表 > 智能电表(国内) > 单相电能表 | https://www.hxgroup.com/product/class-a-single-phase-smart-iot-electricity-meter-sgcc-ddzm208-m/ | 具备电能计量、数据处理、实时监测、自动控制、环境感知、信息交互和通信路由等功能的智能电能表。
+- English | Class A single-phase smart IoT electricity meter (State Grid) | HEXING | Smart Metering Products > Electricity Meter | https://www.hxgroup.com/en/product/class-a-single-phase-smart-iot-electricity-meter-sgcc-ddzm208-m/ | A smart electricity meter featuring energy metering, data processing, real-time monitoring, automatic control, environmental sensing, information exchange,...
+
+### 采集与通信 / Collection & Communication
+覆盖通信模块、采集终端、集中器与数据采集器，是电力与水务远程抄表和联网的基础层。 / Covers communication modules, acquisition terminals, concentrators, and data collectors for remote reading and networking.
+
+#### 子类清单 / Subcategory List
+- 采集终端: 11
+- 通信模块: 9
+- General: 8
+
+#### 代表产品卡片 / Representative Product Cards
+- 产品名 / Product name: Wi-SUN模组 | Wi-SUN Module
+- 品牌 / Brand: HEXING
+- 型号范围 / Model range: MSN00是一款基于SoC芯片组的高性能无线通信模块，可广泛应用于各类需要通信稳定性的户外场景。
+- 核心定位 / Positioning: MSN00是一款基于SoC芯片组的高性能无线通信模块，可广泛应用于各类需要通信稳定性的户外场景。该模块不仅具备高数据速率、体积小巧、传输距离远、抗干扰能力强的特点，还支持IEEE802.15.4g/e、6LoWPAN标准及UDP/CoAP协议，因此特别适用于大规模网络部署。
+- 关键卖点 / Key highlights: 可靠通信基础: 符合 IEEE 802.15.4g/e 标准的亚千兆赫射频通信 支持信道跳频，增强可靠性; 智能自组网: 通过网络管理系统 (NMS) 进行拓扑管理的自组织 IPv6 网状网络 支持多跳路由（最高24级，实际部署建议10级） 通过自动节点注册实现灵活的网络组织; 开放应用与便捷运维: 现场无线操作和维护能力 支持UDP/CoAP协议 在IP应用层支持DLMS/COSEM协议套件
+- 适用场景 / Typical use: MSN00是一款基于SoC芯片组的高性能无线通信模块，可广泛应用于各类需要通信稳定性的户外场景。
+- Path: /product/wi-sun-module
+
+- 产品名 / Product name: 电表集中器(通用) | Meter Concentrator (General)
+- 品牌 / Brand: HEXING
+- 型号范围 / Model range: HXEJ200是一款高度集成的一体化设备，通过即插即用的PLC调制解调器与所连电表通信，并借助即插即用的4G/3G/2G调制解调器或以太网，将数据稳定传输至主站系统，可显著降低成本并简化安装流程。
+- 核心定位 / Positioning: HXEJ200是一款高度集成的一体化设备，通过即插即用的PLC调制解调器与所连电表通信，并借助即插即用的4G/3G/2G调制解调器或以太网，将数据稳定传输至主站系统，可显著降低成本并简化安装流程。
+- 关键卖点 / Key highlights: 数据采集: 实时/瞬时数据采集； 每日、每月等周期性计费结算数据读取； 间隔/负荷曲线数据采集； 可根据主站请求、预设时间或电表事件上报触发数据采集； 提供直达电表的透明访问通道。; 工业设计: 搭载 Linux 操作系统； 可在电压频繁波动等复杂电网环境中稳定运行。; 事件/告警管理: 收集变压器下所有电表的事件与告警信息； 可生成设备自身故障诊断事件与告警； 统一管理全部事件与告警。
+- 适用场景 / Typical use: HXEJ200是一款高度集成的一体化设备，通过即插即用的PLC调制解调器与所连电表通信，并借助即插即用的4G/3G/2G调制解调器或以太网，将数据稳定传输至主站系统，可显著降低成本并简化安装流程。
+- Path: /product/smart-meter-concentrator-general
+
+- 产品名 / Product name: 数据采集器 | Data Collector
+- 品牌 / Brand: Livoltek
+- 型号范围 / Model range: PSD400-WiNet
+- 核心定位 / Positioning: PSD400.R210 数据采集终端支持 USB 物理接口，上行通信方式包括 WiFi、以太网（Ethernet）及蓝牙（Bluetooth），下行支持 RS485 通讯。 设备可实现逆变器的数据采集与传输，实时记录逆变器的运行状态与发电信息，为电站接入及后期运维提供高效支持。
+- 关键卖点 / Key highlights: 更智能: - 支持 WiFi / 以太网 / 蓝牙上行通信 + RS485 下行通信 - 支持 DHCP 自动网络配置，轻松完成联网 - 支持本地 / 远程升级，并具备断点续传功能; 更简单: - 安装简便，即插即用（Plug & Play） - 秒级数据采集间隔，数据查看更直观快捷; 更可靠: - IP65 防护等级，支持自动重连 - 密码保护与加密传输，全面保障用户数据安全 - 支持 7 天离线数据缓存
+- 适用场景 / Typical use: PSD400-WiNet
+- Path: /product/stick-logger-data-collector-psd400-r210
+
+#### 产品索引 / Product Index
+- 中文 | 集中器 | HEXING | 采集与通信产品 | https://www.hxgroup.com/product/data-concentrator-unit/ | DJXX23-HX5310 南方电网I型集中器是衔接智能终端与电网主站的基础核心设备，具备终端数据汇聚、主站指令转发及双向通信能力，支撑配网运维自动化与用电智能化管理。
+- English | Concentrator | HEXING | Data Collection and Communication Products > Data Collection Terminal > China Southern Power Grid Power Consumption Terminal | https://www.hxgroup.com/en/product/data-concentrator-unit/ | DJXX23-HX5310 The China Southern Power Grid Type I Concentrator is a core device bridging smart terminals and the grid master station.
+- 中文 | 新型智能融合终端 | HEXING | 采集与通信产品 | https://www.hxgroup.com/product/new-intelligent-convergence-terminal/ | IFT-HX3710 集数据采集、边缘计算、设备控制于一体的台区智能化核心设备
+- English | New Intelligent Integrated Terminal | HEXING | Data Collection and Communication Products > Data Collection Terminal | https://www.hxgroup.com/en/product/new-intelligent-convergence-terminal/ | IFT-HX3710 Core intelligent device for substation areas integrating data collection, edge computing, and equipment control
+- 中文 | 智能台区终端 | HEXING | 采集与通信产品 | https://www.hxgroup.com/product/smart-distribution-area-terminal/ | STTU12-HX01 南方电网智能台区终端是安装于公变台区的智能化采集与控制终端，具备数据采集、设备监测、电能计量、用电管理、远程运维等功能，支撑营销、配电及新兴业务发展需求。
+- English | Smart Transformer Area Terminal | HEXING | Data Collection and Communication Products > Data Collection Terminal > China Southern Power Grid Power Consumption Terminal | https://www.hxgroup.com/en/product/smart-distribution-area-terminal/ | STTU12-HX01 The China Southern Power Grid Smart Transformer Area Terminal is an intelligent data collection and control terminal installed in public...
+- 中文 | 智能量测开关 | HEXING | 采集与通信产品 | https://www.hxgroup.com/product/smart-metering-switch/ | HXM3E-250 集通信、计量、保护、控制及边缘计算于一体的智能终端
+- English | Intelligent Measurement Switch | HEXING | Data Collection and Communication Products > Data Collection Terminal | https://www.hxgroup.com/en/product/smart-metering-switch/ | HXM3E-250 Intelligent terminal integrating communication, metering, protection, control, and edge computing
+- 中文 | 数据采集器 | Livoltek | 采集与通信产品 | https://www.hxgroup.com/product/stick-logger-data-collector-psd1000-r110/ | PSD1000-WiNet
+- English | Data Collector | Livoltek | Data Collection and Communication Products > Data Concentrator | https://www.hxgroup.com/en/product/stick-logger-data-collector-psd1000-r110/ | PSD1000-WiNet
+- 中文 | 数据采集器 PSD2000 | Livoltek | 采集与通信产品 | https://www.hxgroup.com/product/stick-logger-data-collector-psd2000/ | PSD2000-WiNet
+- English | Data Collector PSD2000 | Livoltek | Data Collection and Communication Products > Data Concentrator | https://www.hxgroup.com/en/product/stick-logger-data-collector-psd2000/ | PSD2000-WiNet
+- 中文 | 数据采集器 | Livoltek | 采集与通信产品 | https://www.hxgroup.com/product/stick-logger-data-collector-psd400-r210/ | PSD400-WiNet
+- English | Data Collector | Livoltek | Data Collection and Communication Products > Data Concentrator | https://www.hxgroup.com/en/product/stick-logger-data-collector-psd400-r210/ | PSD400-WiNet
+- 中文 | I型集中器 | HEXING | 采集与通信产品 | https://www.hxgroup.com/product/type-i-data-concentrator-unit/ | DJTD23-HX3200 专用于低压电力系统数据自动化采集与智能抄表‌
+- English | Type I Concentrator | HEXING | Data Collection and Communication Products > Data Collection Terminal | https://www.hxgroup.com/en/product/type-i-data-concentrator-unit/ | DJTD23-HX3200 Dedicated to automated data collection and intelligent meter reading in low-voltage power systems
+- 中文 | 宽带双模通信模块（集中器） | HEXING | 采集与通信产品 > 通信模块 | https://www.hxgroup.com/product/broadband-dual-mode-communication-module-concentrator/ | 适配用电信息采集集中器的双模通信模块，实现集中器与主站系统、下属电能表的双向数据通信，承担数据汇总、转发、指令解析等功能，保障集中器在大范围用电采集场景下的通信覆盖与数据传输效率。
+- English | Broadband Dual-Mode Communication Module (Concentrator) | HEXING | Data Collection and Communication Products > Communication Module | https://www.hxgroup.com/en/product/broadband-dual-mode-communication-module-concentrator/ | A dual-mode communication module adapted for electricity information collection concentrators, enabling bidirectional data communication between the...
+- 中文 | 宽带双模通信模块（单相电能表） | HEXING | 采集与通信产品 > 通信模块 | https://www.hxgroup.com/product/broadband-dual-mode-communication-module-single-phase-energy-meter/ | 适配南网单相智能电能表，搭载南方电网鸿蒙系统，专为单相电能表内置设计，提供高速、稳定的通信链路，实现单相电能表用电数据的远程上传、抄表指令接收及设备状态反馈，适配家用、小型商业单相用电场景的智能化需求。
+- English | Broadband Dual-Mode Communication Module (Single-Phase Meter) | HEXING | Data Collection and Communication Products > Communication Module | https://www.hxgroup.com/en/product/broadband-dual-mode-communication-module-single-phase-energy-meter/ | Adapted to CSG single-phase smart meters, equipped with CSG HarmonyOS, designed for built-in integration into single-phase meters, providing a high-speed and...
+- 中文 | 宽带双模通信模块（三相电能表） | HEXING | 采集与通信产品 > 通信模块 | https://www.hxgroup.com/product/broadband-dual-mode-communication-module-three-phase-energy-meter/ | 专为三相电能表内置设计的宽带双模通信模块，具备高速数据传输与稳定通信能力，适配工业、商业三相用电场景，实现三相电能表负荷数据、电能质量数据的实时上传及远程控制指令接收，支撑高精度用电管理。
+- English | Broadband Dual-Mode Communication Module (Three-Phase Meter) | HEXING | Data Collection and Communication Products > Communication Module | https://www.hxgroup.com/en/product/broadband-dual-mode-communication-module-three-phase-energy-meter/ | A broadband dual-mode communication module designed for integration into three-phase meters, offering high-speed data transmission and stable communication.
+- 中文 | 宽带双模通信单元（智能台区终端） | HEXING | 采集与通信产品 > 通信模块 | https://www.hxgroup.com/product/broadband-dual-mode-communication-unit-intelligent-district-terminal/ | 专为智能台区终端设计，搭载南方电网鸿蒙系统，构建台区层面的双模通信链路，实现台区内电能表、传感器等设备的数据汇总、转发及主站指令下发，支撑台区线损分析、负荷调控、故障定位等智能化管理功能，助力配网台区数字化转型。
+- English | Broadband Dual-Mode Communication Unit (Smart Transformer Area Terminal) | HEXING | Data Collection and Communication Products > Communication Module | https://www.hxgroup.com/en/product/broadband-dual-mode-communication-unit-intelligent-district-terminal/ | Designed specifically for smart transformer area terminals, equipped with the CSG HarmonyOS, it establishes a dual-mode communication link at the transformer...
+- 中文 | 宽带双模通信单元（单相智能网关电能表） | HEXING | 采集与通信产品 > 通信模块 | https://www.hxgroup.com/product/broadband-dual-mode-communication-unit-single-phase-smart-gateway-meter/ | 适配南网单相智能网关电能表，搭载南方电网鸿蒙系统，集成宽带与无线双模通信功能，实现电能表数据的高速上传、指令接收及设备状态监控，适配南网台区用电信息采集系统，保障单相用电场景下数据传输的稳定性与实时性，助力智能用电管理数字化升级。
+- English | Broadband Dual-Mode Communication Unit (Single-Phase Smart Gateway Meter) | HEXING | Data Collection and Communication Products > Communication Module | https://www.hxgroup.com/en/product/broadband-dual-mode-communication-unit-single-phase-smart-gateway-meter/ | Designed for China Southern Power Grid single-phase smart gateway meters, equipped with the China Southern Power Grid HarmonyOS, integrating broadband and...
+- 中文 | 宽带双模通信单元（智能量测终端） | HEXING | 采集与通信产品 > 通信模块 | https://www.hxgroup.com/product/broadband-dual-mode-communication-unit-smart-metering-terminal/ | 集成于智能量测终端，搭载南方电网鸿蒙系统，提供宽带与无线双模通信解决方案，实现终端与主站系统的高速数据交互，涵盖用电负荷、电压电流、功率因数等关键数据的实时采集与上传，支撑用电数据精准量测与智能化分析决策。
+- English | Broadband Dual-Mode Communication Unit (Smart Measurement Terminal) | HEXING | Data Collection and Communication Products > Communication Module | https://www.hxgroup.com/en/product/broadband-dual-mode-communication-unit-smart-metering-terminal/ | Integrated into the smart measurement terminal and equipped with China Southern Power Grid HarmonyOS, it provides a broadband and wireless dual-mode...
+- 中文 | 宽带双模通信单元（三相智能网关电能表） | HEXING | 采集与通信产品 > 通信模块 | https://www.hxgroup.com/product/broadband-dual-mode-communication-unit-three-phase-smart-gateway-meter/ | 适配南网三相智能网关电能表，搭载南方电网鸿蒙系统，具备宽带与无线双模协同通信能力，针对工业、商业等三相用电场景，实现多回路电能数据采集、负荷监控、远程抄表及指令下发功能，支撑三相用电设备的智能化管控与能效分析。
+- English | Broadband Dual-Mode Communication Unit (Three-Phase Smart Gateway Meter) | HEXING | Data Collection and Communication Products > Communication Module | https://www.hxgroup.com/en/product/broadband-dual-mode-communication-unit-three-phase-smart-gateway-meter/ | Designed for China Southern Power Grid three-phase smart gateway meters, equipped with the China Southern Power Grid HarmonyOS, featuring broadband and...
+- 中文 | 协调控制终端 | HEXING | 采集与通信产品 > 通信模块 | https://www.hxgroup.com/product/coordination-control-terminal/ | HXIEMS-2000能源协调控制终端是新能源电站的能量调度和管理中心，通过与BMS（电池管理系统）、PCS（双向储能变流器）、...
+- English | Coordination Control Terminal | HEXING | Data Collection and Communication Products > Communication Module | https://www.hxgroup.com/en/product/coordination-control-terminal/ | The HXIEMS-2000 Energy Coordination Control Terminal serves as the energy dispatch and management center for renewable energy power stations.
+- 中文 | Wi-SUN模组 | HEXING | 采集与通信产品 > 通信模块 | https://www.hxgroup.com/product/wi-sun-module/ | MSN00是一款基于SoC芯片组的高性能无线通信模块，可广泛应用于各类需要通信稳定性的户外场景。
+- English | Wi-SUN Module | HEXING | Data Collection and Communication Products > Communication Module | https://www.hxgroup.com/en/product/wi-sun-module/ | The MSN00 is a high-performance wireless communication module based on an SoC chipset, widely applicable in various outdoor scenarios requiring communication...
+- 中文 | 配变监测计量终端 | HEXING | 采集与通信产品 > 采集终端 > 南网用电终端 | https://www.hxgroup.com/product/distribution-transformer-monitoring-and-metering-terminal/ | FKXA23-HX5200 南方电网配变监测计量终端是一款实时监测配变电压、电流等运行参数，精准计量电能数据并上传至电网系统，助力配网运维优化与用电管理的智能终端设备。
+- English | Distribution Transformer Monitoring and Metering Terminal | HEXING | Data Collection and Communication Products > Data Collection Terminal > China Southern Power Grid Power Consumption Terminal | https://www.hxgroup.com/en/product/distribution-transformer-monitoring-and-metering-terminal/ | FKXA23-HX5200 The China Southern Power Grid distribution transformer monitoring and metering terminal is an intelligent terminal device that monitors...
+- 中文 | 负荷管理终端 | HEXING | 采集与通信产品 > 采集终端 > 南网用电终端 | https://www.hxgroup.com/product/load-management-terminal/ | FKXA43-HX5100 南方电网负荷管理终端是一款能实时监测用电负荷数据、接收并执行电网调控指令、实现精准负荷控制，助力电网供需平衡与安全稳定运行的智能终端设备。
+- English | Load Management Terminal | HEXING | Data Collection and Communication Products > Data Collection Terminal > China Southern Power Grid Power Consumption Terminal | https://www.hxgroup.com/en/product/load-management-terminal/ | FKXA43-HX5100 The China Southern Power Grid load management terminal is an intelligent terminal device that can monitor load data in real time, receive and...
+- 中文 | 智能量测终端 | HEXING | 采集与通信产品 > 采集终端 > 南网用电终端 | https://www.hxgroup.com/product/smart-metering-terminal/ | MT11-HX57/MT12-HX58 南方电网智能量测终端是安装于专变或公变台区的模块化智能化终端，具备电能计量、数据采集、配变监测、用电管理等功能，支持多对象采集与高性能计算，助力电网运维与用电智能化。
+- English | Smart Measurement Terminal | HEXING | Data Collection and Communication Products > Data Collection Terminal > China Southern Power Grid Power Consumption Terminal | https://www.hxgroup.com/en/product/smart-metering-terminal/ | MT11-HX57/MT12-HX58 The China Southern Power Grid Smart Metering Terminal is a modular intelligent terminal installed in dedicated or public transformer areas.
+- 中文 | 能源控制器 | HEXING | 采集与通信产品 > 采集终端 > 国网用电终端 | https://www.hxgroup.com/product/energy-controller/ | ECU4X13-HX3700 支持多设备接入、数据采集、费控管理及有序充电等功能，模块化设计功能灵活扩展‌
+- English | Energy Controller | HEXING | Data Collection and Communication Products | https://www.hxgroup.com/en/product/energy-controller/ | ECU4X13-HX3700 Supports multi-device access, data collection, fee control management, and orderly charging.
+- 中文 | 专变采集终端 | HEXING | 采集与通信产品 > 采集终端 > 国网用电终端 | https://www.hxgroup.com/product/special-transformer-acquisition-terminal/ | FKTA43-HX3100 远程通信、自动抄表、负荷控制、防窃电
+- English | Dedicated Transformer Acquisition Terminal | HEXING | Data Collection and Communication Products | https://www.hxgroup.com/en/product/special-transformer-acquisition-terminal/ | FKTA43-HX3100 Remote Communication, Automatic Meter Reading, Load Control, Anti-Tampering
+- 中文 | 能源控制器 | HEXING | 采集与通信产品 > 采集终端 > 国网用电终端 | https://www.hxgroup.com/product/type-ii-data-concentrator-unit/ | 采用RS485有线通信的集中抄表终端。
+- English | Energy Controller | HEXING | Data Collection and Communication Products | https://www.hxgroup.com/en/product/type-ii-data-concentrator-unit/ | Centralized meter reading terminal using RS485 wired communication.
+- 中文 | 电表集中器(通用) | HEXING | 采集与通信产品 > 采集终端 > 海外用电终端 | https://www.hxgroup.com/product/smart-meter-concentrator-general/ | HXEJ200是一款高度集成的一体化设备，通过即插即用的PLC调制解调器与所连电表通信，并借助即插即用的4G/3G/2G调制解调器或以太网，将数据稳定传输至主站系统，可显著降低成本并简化安装流程。
+- English | Meter Concentrator (General) | HEXING | Data Collection and Communication Products | https://www.hxgroup.com/en/product/smart-meter-concentrator-general/ | The HXEJ200 is a highly integrated all-in-one device that communicates with connected meters via a plug-and-play PLC modem and transmits data stably to the...
+- 中文 | 电表集中器(高端) | HEXING | 采集与通信产品 > 采集终端 > 海外用电终端 | https://www.hxgroup.com/product/smart-meter-concentrator-premium/ | HXEJ200是一款高度集成的一体化设备，通过即插即用的PLC/RF调制解调器与所连电表通信，并借助即插即用的4G无线模块或以太网接口，将采集到的数据稳定传输至主站系统，实现端到端的高效、可靠的数据透传，可显著降低部署成本并简化安装流程。
+- English | Meter Concentrator (High-End) | HEXING | Data Collection and Communication Products | https://www.hxgroup.com/en/product/smart-meter-concentrator-premium/ | HXEJ200 is a highly integrated all-in-one device that communicates with connected meters via plug-and-play PLC/RF modems and reliably transmits collected data...
+- 中文 | 分布式电源接入单元/协议转换单元 | HEXING | 采集与通信产品 > 采集终端 > 负荷管理 | https://www.hxgroup.com/product/distributed-power-access-unit-protocol-conversion-unit/ | 协议转换、数据采集及远程控制，实现分布式能源的集中监控与优化运行‌。
+- English | Distributed Power Access Unit / Protocol Conversion Unit | HEXING | Data Collection and Communication Products | https://www.hxgroup.com/en/product/distributed-power-access-unit-protocol-conversion-unit/ | Protocol conversion, data collection, and remote control enable centralized monitoring and optimized operation of distributed energy resources.
+- 中文 | 负荷管理分支装置 | HEXING | 采集与通信产品 > 采集终端 > 负荷管理 | https://www.hxgroup.com/product/load-management-branch-device/ | HX5400型负荷管理分支装置是加装于用电台区分支回路的设备，具备电参量采集、分路控制、计量、通信及保护功能，抗干扰强、运行稳定、安装便捷。
+- English | Load Management Branch Device | HEXING | Data Collection and Communication Products | https://www.hxgroup.com/en/product/load-management-branch-device/ | The HX5400 load management branch device is installed in the branch circuit of a power distribution transformer area.
+- 中文 | 智能柔性调控终端 | HEXING | 采集与通信产品 > 采集终端 > 负荷管理 | https://www.hxgroup.com/product/smart-flexible-regulation-terminal/ | 智能柔性调控终端是用于监测和调控柔性负荷设备运行状态，具备测量、通信、控制、数据采集存储、协议转换及安全防护等功能，可与主站、计量自动化终端交互，适用于多场景应用的设备。
+- English | Smart Flexible Control Terminal | HEXING | Data Collection and Communication Products | https://www.hxgroup.com/en/product/smart-flexible-regulation-terminal/ | The Smart Flexible Control Terminal is a device used to monitor and control the operating status of flexible load equipment.
+
+### 软件与平台 / Software Platforms
+覆盖 AMI、MDC / MDM、计费与交易、能源监控等软件能力。 / Covers AMI, MDC / MDM, billing, trading, and energy monitoring software.
+
+#### 子类清单 / Subcategory List
+- General: 3
+- 计费与交易平台 Orca(R)解决方案: 2
+- AMI Orca(R)解决方案: 1
+
+#### 代表产品卡片 / Representative Product Cards
+- 产品名 / Product name: 大数据采集和监测系统 | Big Data Acquisition and Monitoring System
+- 品牌 / Brand: HEXING
+- 型号范围 / Model range: 国际标准协议规约，跨平台兼容与数据标准化采集，多模通信，高并发、低延迟及智能诊断能力。
+- 核心定位 / Positioning: MDC系统基于DLMS/COSEM与IDIS国际协议栈，实现跨平台设备兼容与数据标准化采集。支持多模通信（公网/PLC/RF），提供从边缘计算到云端分析的端到端解决方案，具备高并发处理、低延迟控制与智能诊断能力。
+- 关键卖点 / Key highlights: 多源适配与采集能力: 支持水、电、气多种采集业务； 通信层支持多种通讯方式(GPRS/3G/4G，Ethernet，RF，PLC 等)，适应不同的业务场景； 采集层通过插件式的规约库支持多种国际标准化规约，包括但不限于DLMS/COSEM，IDIS，FID2 等。; 灵活部署与开放集成: 支持本地物理部署和云部署； 接口层遵循IEC61968规范，符合CIM格式并通过自适应技术，根据各厂家要求灵活支持自定义接口格式。; 智能应用与安全保障: 应用层使用了工作流，自定义报表，GIS集成技术及数据挖掘技术；...
+- 适用场景 / Typical use: 国际标准协议规约，跨平台兼容与数据标准化采集，多模通信，高并发、低延迟及智能诊断能力。
+- Path: /product/advanced-metering-infrastructure-ami
+
+- 产品名 / Product name: 预付费管理系统 | Prepaid Management System
+- 品牌 / Brand: HEXING
+- 型号范围 / Model range: 提供水电气一体化预付费方案，保障收费安全，用户多渠道便捷购能。
+- 核心定位 / Positioning: 海兴预付费系统（Vending）为市政及能源公用事业提供水、电、气一体化预付费解决方案，保障收费安全，实现“先缴费、后使用”。用户可通过代理商等多渠道便捷购能。
+- 关键卖点 / Key highlights: 智能预付费: 分时计费，电能分析/能耗监测，远程缴费，抄表方案多样性。; 收费方式多样: 缓解收费压力，提高用户满意度，加速财务回款。; 模式扩充: 档案一致性，财务口径统一，简化业扩流程，支持模式互相切换，加速数据整合分析，降低收费成本。
+- 适用场景 / Typical use: 提供水电气一体化预付费方案，保障收费安全，用户多渠道便捷购能。
+- Path: /product/prepayment-management-system
+
+- 产品名 / Product name: 利沃得能源监控系统 | 
+- 品牌 / Brand: Livoltek
+- 型号范围 / Model range: APP & WEB
+- 核心定位 / Positioning: 提供实时状态更新和图形分析，帮助您更智能、更简便地管理系统，优化太阳能发电的使用，并通过时段电价功能节省电费，匹配电力进口费用。支持远程访问。
+- 关键卖点 / Key highlights: 查看全部家庭用电情况; 监控家庭发电及用电数据; 智能电动汽车充电调度
+- 适用场景 / Typical use: APP & WEB
+- Path: /product/livoltek-energy-monitoring-system
+
+#### 产品索引 / Product Index
+- 中文 | 大数据采集和监测系统 | HEXING | 软件与平台 | https://www.hxgroup.com/product/advanced-metering-infrastructure-ami/ | 国际标准协议规约，跨平台兼容与数据标准化采集，多模通信，高并发、低延迟及智能诊断能力。
+- English | Big Data Acquisition and Monitoring System | HEXING | Software & Platforms > Network O&M Platform Orca® Solution | https://www.hxgroup.com/en/product/advanced-metering-infrastructure-ami/ | International standard protocol specifications, cross-platform compatibility and standardized data acquisition, multi-mode communication, high concurrency,...
+- 中文 | 利沃得能源监控系统 | Livoltek | 软件与平台 | https://www.hxgroup.com/product/livoltek-energy-monitoring-system/ | APP & WEB
+- 中文 | 网络管理系统 | HEXING | 软件与平台 | https://www.hxgroup.com/product/network-management-system/ | 全维监控与资源管理，可视化拓扑，支持优化排查，高可用与弹性扩展力。
+- English | Network Management System | HEXING | Software & Platforms > Network O&M Platform Orca® Solution | https://www.hxgroup.com/en/product/network-management-system/ | Full-dimensional monitoring and resource management, visual topology, supporting optimization and troubleshooting, high availability and resilient scalability.
+- 中文 | 大数据管理和分析挖掘系统 | HEXING | 软件与平台 > AMI Orca(R)解决方案 | https://www.hxgroup.com/product/meter-data-management-system/ | 分布式与大数据技术，构建可信计量数据资产体系，支持监测、决策与发布。
+- English | Big Data Management and Analysis/Mining System | HEXING | Software & Platforms > AMI Orca(R) Solution | https://www.hxgroup.com/en/product/meter-data-management-system/ | Distributed and big data technologies, constructing a trusted metering data asset system, supporting monitoring, decision-making, and publication.
+- 中文 | 后付费管理系统 | HEXING | 软件与平台 > 计费与交易平台 Orca(R)解决方案 | https://www.hxgroup.com/product/postpaid-billing-system/ | 涵盖开户到催缴的全流程用电服务，助力企业流程标准化、管理规范化及运营提效。
+- English | Post-paid Management System | HEXING | Software & Platforms > Billing & Transaction Platform Orca® | https://www.hxgroup.com/en/product/postpaid-billing-system/ | Covers the full-process power service from account opening to payment collection, helping utilities standardize workflows, regulate management, and improve...
+- 中文 | 预付费管理系统 | HEXING | 软件与平台 > 计费与交易平台 Orca(R)解决方案 | https://www.hxgroup.com/product/prepayment-management-system/ | 提供水电气一体化预付费方案，保障收费安全，用户多渠道便捷购能。
+- English | Prepaid Management System | HEXING | Software & Platforms > Billing & Transaction Platform Orca® | https://www.hxgroup.com/en/product/prepayment-management-system/ | Delivers an integrated water-electricity-gas prepayment solution to ensure revenue security, while providing multiple convenient energy purchasing channels...
+
+### 配电装备 / Power Distribution Equipment
+覆盖计量箱、变压器、开关柜、成套设备和配电侧智能装置。 / Covers metering cabinets, transformers, switchgear, complete equipment, and smart distribution devices.
+
+#### 子类清单 / Subcategory List
+- 计量表箱: 43
+- 电气装备: 26
+- General: 17
+- 成套设备: 9
+- 智能装置: 3
+
+#### 代表产品卡片 / Representative Product Cards
+- 产品名 / Product name: 环保气体绝缘环网柜 | Eco-Friendly Gas-Insulated Ring Main Unit
+- 品牌 / Brand: HEXING
+- 型号范围 / Model range: 采用干燥空气替代SF6，零碳环保；结构紧凑，模块化设计，集成智能监控与故障诊断，安全可靠，助力绿色配网升级。
+- 核心定位 / Positioning: HXGNA型环保气体绝缘金属交流封闭开关设备基于国家实现“双碳”目标而开发的新一代配电开关设备，其技术特点是以人工合成干燥空气替代SF6气体作为绝缘介质，真空开关对负荷电流和故障电流开合，设备布置为在真空开关上端设计有导通、隔离、接地功能转换的三工位开关，线路的预伏接地短路电流由回路内真空开关关合，能有效避免关合过程中电弧对柜内环境的污染，环网柜的外形尺寸、操作顺序、“五 防”联锁满足国网典设方案的规定。
+- 关键卖点 / Key highlights: 环保气体绝缘: 使用干燥空气、氮气或混合气体等环保介质，替代传统的SF6气体，减少温室效应。; 高可靠性: 具备高机械和电气性能，确保长期稳定运行。; 模块化设计: 采用模块化结构，便于安装、维护和扩展。
+- 适用场景 / Typical use: 采用干燥空气替代SF6，零碳环保；结构紧凑，模块化设计，集成智能监控与故障诊断，安全可靠，助力绿色配网升级。
+- Path: /product/environmentally-friendly-gas-insulated-ring-main-unit-hxgna-12
+
+- 产品名 / Product name: 110kV级油浸式电力变压器 | 110kV Oil-Immersed Power Transformer
+- 品牌 / Brand: HEXING
+- 型号范围 / Model range: 
+- 核心定位 / Positioning: 110kV级油浸式电⼒变压器铁芯采⽤优质取向硅钢⽚多级阶梯叠积⽽成，表面涂固化漆。具有低损耗、低噪音等特点。线圈采用内外撑条结构，线圈与铁芯之间线圈之间采用高强度硬纸筒结构，从而有效保证抗突发短路冲击能力，器身与油箱之间采用全方位定位结构，保证运输及运行稳定性，外形美观大方。
+- 关键卖点 / Key highlights: 低损耗: 符合GB20052-2024《电力变压器能效限定值及能效等级》标准中的能效要求; 低噪音: 自冷噪音水平将达到60dB以下;; 低局放: 局放量控制在100pc以下;
+- 适用场景 / Typical use: 110kV级油浸式电⼒变压器铁芯采⽤优质取向硅钢⽚多级阶梯叠积⽽成，表面涂固化漆。
+- Path: /product/110kv-oil-immersed-power-transformer
+
+- 产品名 / Product name: 南网PC单相12表位计量箱 | CSG PC Single-Phase 12-Position Metering Box
+- 品牌 / Brand: HEXING
+- 型号范围 / Model range: PC南网费控单相12表位计量箱是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- 核心定位 / Positioning: 非金属表箱（PC+ABS材料） ‌ 悬挂式或落地式安装，需使用内置膨胀螺栓固定。 ‌ 户外安装需满足IP34D防护等级，户内不低于IP20。 ‌
+- 关键卖点 / Key highlights: 电能计量: 集成电能表、电压互感器、电流互感器等设备，实现对有功电能和无功电能的精确计量。; 防窃电设计: 部分型号（如预付费计量箱）通过智能断路器、电子锁等技术，杜绝外部窃电风险。; 远程管理: 支持远程预付费购电、负荷监控及欠费断电等功能，便于电力部门管理。 ‌
+- 适用场景 / Typical use: PC南网费控单相12表位计量箱是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- Path: /product/csg-pc-series-single-phase-12-meter-position-metering-cabinet
+
+#### 产品索引 / Product Index
+- 中文 | 10/20/35/110kV级油浸式变压器 | HEXING | 配电装备 | https://www.hxgroup.com/product/10kv-110kv-oil-immersed-distribution-transformer/ | 10/20/35/110kV级低损耗、高安全油浸式核心输配电变压器。
+- English | 10/20/35/110kV Oil-Immersed Transformer | HEXING | Distribution Equipment > Electrical Equipment | https://www.hxgroup.com/en/product/10kv-110kv-oil-immersed-distribution-transformer/ | 10/20/35/110kV Low-Loss, High-Safety Oil-Immersed Core Power Distribution Transformer.
+- 中文 | 20kV级单相油浸式配电变压器 | HEXING | 配电装备 | https://www.hxgroup.com/product/20kv-single-phase-oil-immersed-distribution-transformer/ | 单相油浸式叠铁芯配电变压器具有结构紧凑、外形美观、体积小、温升噪音低、过负载能力强、电气性能及机械性能良好、运行可靠等优点，节能型产品是我公司通过新材料、新工艺的研究运用及自主创新与技术引进结合的方式，通过对铁芯及线圈结构的优化创新设计，达到降低空载损耗及噪音的目的。
+- English | 20 kV Single-Phase Oil-Immersed Distribution Transformer | HEXING | Distribution Equipment > Electrical Equipment | https://www.hxgroup.com/en/product/20kv-single-phase-oil-immersed-distribution-transformer/ | The single-phase oil-immersed distribution transformer with stacked core features compact structure, attractive appearance, small size, low temperature rise...
+- 中文 | 电缆分支箱 | HEXING | 配电装备 | https://www.hxgroup.com/product/cable-distribution-box/ | 10kV电缆分支箱：仅为电缆提供连接与绝缘密封，实现配电网电缆分支延伸。
+- English | Cable distribution cabinet | HEXING | Distribution Equipment > Electrical Equipment > Medium Voltage Switchgear | https://www.hxgroup.com/en/product/cable-distribution-box/ | 10kV cable distribution cabinet: provides only cable connection and insulation sealing, enabling cable branching and extension in the distribution network.
+- 中文 | 深度融合柱上断路器 | HEXING | 配电装备 | https://www.hxgroup.com/product/deep-integration-pole-mounted-circuit-breaker-hxv8-12/ | 专为12kV配网架空线路设计，适应恶劣环境与频繁操作，守护电网稳定运行。
+- English | Deeply Integrated Pole-Mounted Circuit Breaker | HEXING | Distribution Equipment > Electrical Equipment > Medium Voltage Switchgear | https://www.hxgroup.com/en/product/deep-integration-pole-mounted-circuit-breaker-hxv8-12/ | Designed specifically for 12kV distribution overhead lines, adaptable to harsh environments and frequent operations, ensuring stable grid operation.
+- 中文 | 环保气体绝缘环网柜 | HEXING | 配电装备 | https://www.hxgroup.com/product/environmentally-friendly-gas-insulated-ring-main-unit/ | HXGNA-12型环保气体绝缘金属交流封闭开关设备基于国家实现“双碳”目标而开发的新一代配电开关设备，其技术特点是以人工合成干燥空气替代SF6气体作为绝缘介质，真空开关对负荷电流和故障电流开合，设备布置为在真空开关上端设计有导通、隔离、接地功能转换的三工位开关，线路的预伏接地短...
+- English | Eco-Friendly Gas-Insulated Ring Main Unit | HEXING | Distribution Equipment > Electrical Equipment > Medium Voltage Switchgear | https://www.hxgroup.com/en/product/environmentally-friendly-gas-insulated-ring-main-unit/ | The HXGNA-12 eco-friendly gas-insulated metal-enclosed AC switchgear is a new generation of distribution switchgear developed to support the national "dual...
+- 中文 | 罩式FTU馈线终端 | HEXING | 配电装备 | https://www.hxgroup.com/product/ftu-feeder-terminal-unit-hxd837-f30/ | 主要应用于10kV配电线路的柱上开关。
+- English | Cover-Type FTU Feeder Terminal | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/ftu-feeder-terminal-unit-hxd837-f30/ | Mainly applied to pole-mounted switches on 10kV distribution lines.
+- 中文 | 低压抽出式开关柜 | HEXING | 配电装备 | https://www.hxgroup.com/product/low-voltage-withdrawable-switchgear-mns/ | MNS低压抽出式成套开关设备，主打4000A及以下配电系统全场景应用，覆盖多行业核心配电需求。
+- English | Low-Voltage Draw-out Switchgear | HEXING | Distribution Equipment > Electrical Equipment > Low-Voltage Switchgear | https://www.hxgroup.com/en/product/low-voltage-withdrawable-switchgear-mns/ | MNS low-voltage withdrawable switchgear is designed for full-scenario applications in power distribution systems up to 4000A, covering core distribution needs...
+- 中文 | 中置柜 | HEXING | 配电装备 | https://www.hxgroup.com/product/medium-voltage-switchgear-kyn28/ | 12~40.5kV中置柜是适用于对应电压等级三相交流50Hz电力系统的铠装式金属封闭开关设备，用于电能分配与电路管控保护，具备安全抗弧设计并通过权威认证，可配套智能元件。
+- English | Medium Voltage Switchgear | HEXING | Distribution Equipment > Electrical Equipment > Medium Voltage Switchgear | https://www.hxgroup.com/en/product/medium-voltage-switchgear-kyn28/ | The 12~40.
+- 中文 | 户外高压交流真空断路器 | HEXING | 配电装备 | https://www.hxgroup.com/product/outdoor-high-voltage-ac-vacuum-circuit-breaker-zw32/ | ZW32弹操-永磁型 真空灭弧安全可靠，全密封结构免维护，体积小重量轻，可配置智能控制，灵活适应城网农网多种场景。
+- English | Outdoor High-Voltage AC Vacuum Circuit Breaker | HEXING | Distribution Equipment > Electrical Equipment > Medium Voltage Switchgear | https://www.hxgroup.com/en/product/outdoor-high-voltage-ac-vacuum-circuit-breaker-zw32/ | ZW32 Spring-Operated/Permanent Magnet Type Safe and reliable vacuum arc extinction, fully sealed structure for maintenance-free operation, compact and...
+- 中文 | 户外高压交流智能真空断路器 | HEXING | 配电装备 | https://www.hxgroup.com/product/outdoor-high-voltage-intelligent-vacuum-circuit-breaker-zw68/ | ZW68柱上断路器（12kV），支持手动／电动操作，可开断关合电流，适用于配电系统及农村电网。
+- English | Outdoor high-voltage AC intelligent vacuum circuit breaker | HEXING | Distribution Equipment > Electrical Equipment > Medium Voltage Switchgear | https://www.hxgroup.com/en/product/outdoor-high-voltage-intelligent-vacuum-circuit-breaker-zw68/ | The ZW68 pole-mounted circuit breaker (12kV) supports manual/electric operation, can open and close currents, and is suitable for distribution systems and...
+- 中文 | 一二次深度融合成套柱上断路器 | HEXING | 配电装备 | https://www.hxgroup.com/product/primary-and-secondary-deep-fusion-complete-pole-mounted-circuit-breaker-hxv8-12-hxd833-f30/ | HXV8成套柱上断路器是我司根据国网市场需求研发设计的户外一二次融合成套设备，用于三相交流50Hz，额定电压12kV配网架空线路的控制和保护，可根据客户要求配备相应的自动化控制接口，也可选择配套的FTU智能控制器成套采购，实现线路故障的自动检测、隔离和报警，监控线路的运行，自动恢复非故障段供电功能；并配备测量、保护、控...
+- English | Primary and Secondary Deep Integration Pole-Mounted Circuit Breaker | HEXING | Distribution Equipment > Complete Equipment > Primary and Secondary Integrated Pole-Mounted Circuit Breaker | https://www.hxgroup.com/en/product/primary-and-secondary-deep-fusion-complete-pole-mounted-circuit-breaker-hxv8-12-hxd833-f30/ | The HXV8 integrated pole-mounted circuit breaker is an outdoor primary and secondary integrated device developed by our company based on the market demands of...
+- 中文 | 一二次深度融合成套柱上断路器 | HEXING | 配电装备 | https://www.hxgroup.com/product/primary-and-secondary-deep-fusion-complete-pole-mounted-circuit-breaker-zw68-12-hxd837-f30/ | ZW68成套柱上断路器是我司与中国电科院联合设计的全新户外一二次融合成套设备，用于三相交流50Hz，额定电压12kV配网架空线路的控制和保护。
+- English | Primary and Secondary Deeply Integrated Complete Pole-Mounted Circuit Breaker | HEXING | Distribution Equipment > Complete Equipment > Primary and Secondary Integrated Pole-Mounted Circuit Breaker | https://www.hxgroup.com/en/product/primary-and-secondary-deep-fusion-complete-pole-mounted-circuit-breaker-zw68-12-hxd837-f30/ | The ZW68 complete pole-mounted circuit breaker is a new outdoor primary and secondary integrated complete set jointly designed by our company and the China...
+- 中文 | 光伏并网柜 | HEXING | 配电装备 | https://www.hxgroup.com/product/pv-integration-cabinet-hxbwg/ | 光伏发电系统核心并网配电设备，实现电能滤波、计量、保护与远程监控，保障安全合规并网，广泛应用于各类光伏及储能配套系统。
+- English | PV Grid-Connected Cabinet | HEXING | Distribution Equipment > Electrical Equipment > PV Grid-Connected Equipment | https://www.hxgroup.com/en/product/pv-integration-cabinet-hxbwg/ | Core grid-connected distribution equipment for PV power generation systems, enabling power filtering, metering, protection, and remote monitoring to ensure...
+- 中文 | SF6绝缘环网柜 | HEXING | 配电装备 | https://www.hxgroup.com/product/sf6-insulated-ring-main-unit-hxgn-12/ | 全模块设计，20年免维护，模块化灵活拓展，安全可靠，助力配网自动化升级。
+- English | SF6 Insulated Ring Main Unit | HEXING | Distribution Equipment > Electrical Equipment > Medium Voltage Switchgear | https://www.hxgroup.com/en/product/sf6-insulated-ring-main-unit-hxgn-12/ | Fully modular design, 20-year maintenance-free, flexible modular expansion, safe and reliable, supporting distribution network automation upgrades.
+- 中文 | SF6绝缘环网柜 | HEXING | 配电装备 | https://www.hxgroup.com/product/sf6-insulated-ring-main-unit-hxgnq-40.5/ | HXGNQ-40.5 全密封SF6气体绝缘，高稳定免维护，灵活适配35kV配网，保障供电安全可靠。
+- English | SF6 Insulated Ring Main Unit | HEXING | Distribution Equipment > Electrical Equipment > Medium Voltage Switchgear | https://www.hxgroup.com/en/product/sf6-insulated-ring-main-unit-hxgnq-40.5/ | HXGNQ-40.
+- 中文 | SF6绝缘环网柜 | HEXING | 配电装备 | https://www.hxgroup.com/product/sf6-insulated-ring-main-unit-hxgns-17.5/ | HXGNS-17.7 全密封SF6绝缘，全工况适应，20年免维护，灵活配置保障供电稳定可靠。
+- English | SF6 Insulated Ring Main Unit | HEXING | Distribution Equipment > Electrical Equipment > Medium Voltage Switchgear | https://www.hxgroup.com/en/product/sf6-insulated-ring-main-unit-hxgns-17.5/ | HXGNS-17.
+- 中文 | 单相智能隔离式重合器 | HEXING | 配电装备 | https://www.hxgroup.com/product/single-phase-intelligent-isolating-recloser-hxd820-29/ | 轻便设计人工可装（12kg），线路自取能（1.5A启动），一机替代万只熔断器，智能隔离故障，让配网运维更高效可靠。
+- English | Single-Phase Intelligent Isolating Recloser | HEXING | Distribution Equipment > Complete Equipment > Recloser | https://www.hxgroup.com/en/product/single-phase-intelligent-isolating-recloser-hxd820-29/ | Lightweight design allows manual installation (12kg).
+- 中文 | 电缆型高压费控设备 | HEXING | 配电装备 > 成套设备 | https://www.hxgroup.com/product/cable-type-hv-prepayment-device/ | 电缆型高压费控设备型号为：HXGN-12(M)；是将电力的连接、隔离、分配和计量集成在一个或一组紧凑的箱式外壳内，通常作为电力公司向终端用户（如小区、商业综合体、工厂、园区）进行供电、计量和保护的分界点和控制点。
+- English | Cable-Type High-Voltage Prepayment Equipment | HEXING | Distribution Equipment > Complete Equipment > Cable-Type High-Voltage Fee Control Device | https://www.hxgroup.com/en/product/cable-type-hv-prepayment-device/ | The cable-type high-voltage fee control equipment model is: HXGN-12(M); it integrates power connection, isolation, distribution, and metering into one or a...
+- 中文 | 架空型高压费控设备 | HEXING | 配电装备 > 成套设备 | https://www.hxgroup.com/product/overhead-type-hv-prepayment-device/ | 架空型高压费控设备包含两个型号，ZW32-11和ZW32-33；一套架空型高压费控设备包含一次部分的ZW32开关和二次部分的计量控制箱；架空型高压费控设备在海内外已经有长期的应用，主要用于大用户的高压侧计量和控制，从高压侧直接计量，杜绝了低压侧计量窃电的问题。
+- English | Overhead High-Voltage Prepayment Equipment | HEXING | Distribution Equipment > Complete Equipment | https://www.hxgroup.com/en/product/overhead-type-hv-prepayment-device/ | The overhead high-voltage prepayment equipment includes two models, ZW32-11 and ZW32-33.
+- 中文 | 单相智能隔离式重合器 | HEXING | 配电装备 > 成套设备 | https://www.hxgroup.com/product/single-phase-intelligent-isolating-recloser-hxd820-15.5/ | 应用于15.5kV的单相线路，通过多次重合和闭锁功能，过滤瞬时故障，隔离永久故障。
+- English | Single-Phase Intelligent Isolating Recloser | HEXING | Distribution Equipment > Complete Equipment | https://www.hxgroup.com/en/product/single-phase-intelligent-isolating-recloser-hxd820-15.5/ | Applied to 15.
+- 中文 | 三相自动重合器 | HEXING | 配电装备 > 成套设备 | https://www.hxgroup.com/product/three-phase-automatic-recloser-hxd811-15.5-f40/ | 应用于15.5kV三相架空线路，运用继电保护技术对配电线路进行监测和控制，识别故障种类，隔离故障区域，恢复非故障区域供电。
+- English | Three-Phase Automatic Recloser | HEXING | Distribution Equipment > Complete Equipment | https://www.hxgroup.com/en/product/three-phase-automatic-recloser-hxd811-15.5-f40/ | Applied to 15.
+- 中文 | 三相自动重合器 | HEXING | 配电装备 > 成套设备 | https://www.hxgroup.com/product/three-phase-automatic-recloser-hxd811-27-hxd811-f40/ | 应用于38kV三相架空线路，运用继电保护技术对配电线路进行监测和控制，识别故障种类，隔离故障区域，恢复非故障区域供电。
+- English | Three-Phase Automatic Recloser | HEXING | Distribution Equipment > Complete Equipment | https://www.hxgroup.com/en/product/three-phase-automatic-recloser-hxd811-27-hxd811-f40/ | Applied to 38kV three-phase overhead lines, it uses relay protection technology to monitor and control distribution lines, identify fault types, isolate fault...
+- 中文 | 三相自动重合器 | HEXING | 配电装备 > 成套设备 | https://www.hxgroup.com/product/three-phase-automatic-recloser-hxd811-38-hxd811-f40/ | 一体浇筑绝缘可靠，永磁机构快速稳定，精准识别隔离故障，全面提升配网供电可靠性。
+- English | Three-Phase Automatic Recloser | HEXING | Distribution Equipment > Complete Equipment | https://www.hxgroup.com/en/product/three-phase-automatic-recloser-hxd811-38-hxd811-f40/ | Integrated casting ensures reliable insulation; permanent magnet mechanism provides fast and stable operation; precise fault identification and isolation...
+- 中文 | 一二次融合成套环网箱 | HEXING | 配电装备 > 成套设备 > 一二次融合成套环网箱 | https://www.hxgroup.com/product/primary-and-secondary-fusion-complete-ring-main-unit/ | XGW□-12/HXGW□-12 /XGWA-12型户外开闭所是采用和借鉴国外的先进技术，将12kV开关柜、断路器、负荷开关、电流互感器、电压互感器、配电终端、通信控制终端、计量终端、UPS电源及指示仪表等装入一个防潮的不锈钢箱体。
+- English | Primary and Secondary Fusion Complete Ring Main Unit | HEXING | Distribution Equipment > Complete Equipment | https://www.hxgroup.com/en/product/primary-and-secondary-fusion-complete-ring-main-unit/ | The XGW□-12/HXGW□-12/XGWA-12 outdoor switching station adopts advanced foreign technology, integrating 12kV switchgear, circuit breakers, load switches,...
+- 中文 | 一二次融合成套柱上断路器 | HEXING | 配电装备 > 成套设备 > 一二次融合柱上断路器 | https://www.hxgroup.com/product/primary-and-secondary-fusion-complete-pole-mounted-circuit-breaker-zw20/ | ZW20成套柱上断路器是额定电压12kV、三相交流50Hz的户外配电开关成套设备，可根据客户要求配备相应的自动化控制接口，也可选择配套的FTU智能控制器成套采购，实现线路故障的自动检测、隔离和报警，监控线路的运行，自动恢复非故障段供电功能；并配备测量、保护、控制和通讯模块，满足配网自动化要求。
+- English | Primary and Secondary Fusion Pole-Mounted Circuit Breaker | HEXING | Distribution Equipment > Complete Equipment | https://www.hxgroup.com/en/product/primary-and-secondary-fusion-complete-pole-mounted-circuit-breaker-zw20/ | The ZW20 pole-mounted circuit breaker is an outdoor distribution switchgear assembly with a rated voltage of 12kV and three-phase AC 50Hz.
+- 中文 | 一二次融合成套柱上断路器 | HEXING | 配电装备 > 成套设备 > 一二次融合柱上断路器 | https://www.hxgroup.com/product/primary-and-secondary-fusion-complete-pole-mounted-circuit-breaker-zw32/ | ZW32成套柱上断路器是额定电压12kV、额定频率50Hz的三相交流配电系统，主要用于开断电力系统中的额定负荷电流，关合过载电流及短路电流；断路器具有手动、电动两种操作方式，可根据客户要求配备相应的自动化控制接口，也可选择配套的FTU智能控制器成套采购，实现线路故障的自动检测、隔离和报警，监控线路的运行，自动恢复非故障...
+- English | Primary and Secondary Fusion Pole-Mounted Circuit Breaker | HEXING | Distribution Equipment > Complete Equipment | https://www.hxgroup.com/en/product/primary-and-secondary-fusion-complete-pole-mounted-circuit-breaker-zw32/ | The ZW32 pole-mounted circuit breaker is a three-phase AC distribution system with a rated voltage of 12kV and a rated frequency of 50Hz.
+- 中文 | 箱式FTU馈线终端 | HEXING | 配电装备 > 智能装置 | https://www.hxgroup.com/product/box-ftu-feeder-terminal-hxd833-f30/ | 主要用于户外柱上断路器或负荷开关的数据采集、控制、监测及保护，实现柱上开关设备的遥测、遥信、遥控等三遥功能，同时具备与配电自动化主站通信的能力，将采集的信息通过无线通讯方式或光纤通讯方式传送到主站，执行主站对馈线及其终端设备的调节和控制，通常安装于馈线上。
+- English | Box-Type FTU Feeder Terminal | HEXING | Distribution Equipment > Intelligent Device > Distribution Automation Terminal | https://www.hxgroup.com/en/product/box-ftu-feeder-terminal-hxd833-f30/ | Primarily used for data acquisition, control, monitoring, and protection of outdoor pole-mounted circuit breakers or load switches, enabling telemetry, remote...
+- 中文 | 集中式DTU站所终端 | HEXING | 配电装备 > 智能装置 | https://www.hxgroup.com/product/centralized-dtu-distribution-terminal-unit/ | 配电自动化站所终端是配电自动化核心设备，用于10kV配电场景，实现线路管控、数据处理及馈线自动化等功能。
+- English | Centralized DTU Station Terminal | HEXING | Distribution Equipment > Intelligent Device > Distribution Automation Terminal | https://www.hxgroup.com/en/product/centralized-dtu-distribution-terminal-unit/ | The distribution automation station terminal is a core device for distribution automation, used in 10kV distribution scenarios to achieve line management,...
+- 中文 | 分布式站所终端（DTU） | HEXING | 配电装备 > 智能装置 | https://www.hxgroup.com/product/distributed-terminal-unit-dtu/ | 分布式站所终端（DTU）是配网自动化核心设备，采用分散式架构，由‌间隔单元‌（安装于开关柜内）和‌公共单元‌（集中管理）组成，通过总线协同工作‌。
+- English | Distributed Station Terminal (DTU) | HEXING | Distribution Equipment > Intelligent Device > Distribution Automation Terminal | https://www.hxgroup.com/en/product/distributed-terminal-unit-dtu/ | The Distributed Station Terminal (DTU) is a core device for distribution network automation, adopting a decentralized architecture.
+- 中文 | 箱逆变一体机 | HEXING | 配电装备 > 电气装备 | https://www.hxgroup.com/product/box-inverter-all-in-one/ | 箱逆变一体机是将太阳能等绿色能源经一体机逆变、升压至额定电压后并网输出，简化了光伏电站的系统架构。
+- English | Integrated Inverter-Transformer Unit | HEXING | Distribution Equipment > Electrical Equipment > Compact Substation | https://www.hxgroup.com/en/product/box-inverter-all-in-one/ | The integrated inverter-transformer unit converts green energy such as solar power through inversion and voltage step-up to the rated voltage for grid...
+- 中文 | 组合式变压器 （美变） | HEXING | 配电装备 > 电气装备 | https://www.hxgroup.com/product/combination-transformer-compact-secondary-substation/ | ZGS-Z（H）-12/0.4kV组合式变压器（又称为美式箱变），该产品作为配电网中重要的供电单元，将高压负荷开关、高压熔断器置于变压器的箱内。
+- English | Pad-Mounted Transformer (American Style) | HEXING | Distribution Equipment > Electrical Equipment > Compact Substation | https://www.hxgroup.com/en/product/combination-transformer-compact-secondary-substation/ | ZGS-Z(H)-12/0.
+- 中文 | 集装箱式箱变 | HEXING | 配电装备 > 电气装备 | https://www.hxgroup.com/product/container-substation/ | 集装箱式变电站：将高低压设备、变压器等集成于可移动钢箱的成套配电装置。
+- English | Container-Type Substation | HEXING | Distribution Equipment > Electrical Equipment > Compact Substation | https://www.hxgroup.com/en/product/container-substation/ | Containerized substation: A complete set of power distribution equipment integrating high and low voltage equipment, transformers, etc.
+- 中文 | 环保气体绝缘环网柜 | HEXING | 配电装备 > 电气装备 | https://www.hxgroup.com/product/environmentally-friendly-gas-insulated-ring-main-unit-hxgna-12/ | 采用干燥空气替代SF6，零碳环保；结构紧凑，模块化设计，集成智能监控与故障诊断，安全可靠，助力绿色配网升级。
+- English | Eco-Friendly Gas-Insulated Ring Main Unit | HEXING | Distribution Equipment > Electrical Equipment > Medium Voltage Switchgear | https://www.hxgroup.com/en/product/environmentally-friendly-gas-insulated-ring-main-unit-hxgna-12/ | Using dry air instead of SF6, zero-carbon and eco-friendly; compact structure, modular design, integrated intelligent monitoring and fault diagnosis, safe and...
+- 中文 | 华氏箱变 | HEXING | 配电装备 > 电气装备 | https://www.hxgroup.com/product/hua-shi-compact-substation/ | 华式箱变是集成先进技术的预装式变电站，适用于各类变配电场景，尤其适配配电、风电、光伏工程。
+- English | Hexing Compact Substation | HEXING | Distribution Equipment > Electrical Equipment > Compact Substation | https://www.hxgroup.com/en/product/hua-shi-compact-substation/ | The Hexing Compact Substation is a prefabricated substation integrating advanced technologies, suitable for various power distribution scenarios, especially...
+- 中文 | 预装式箱式变电站(欧变) | HEXING | 配电装备 > 电气装备 | https://www.hxgroup.com/product/pre-fabricated-box-substation-european-type/ | 保护功能全，不受容量限制。
+- English | Prefabricated compact substation (European type) | HEXING | Distribution Equipment > Electrical Equipment > Compact Substation | https://www.hxgroup.com/en/product/pre-fabricated-box-substation-european-type/ | Comprehensive protection functions, not limited by capacity.
+- 中文 | 户外高压交流真空断路器 | HEXING | 配电装备 > 电气装备 > 中压开关设备 | https://www.hxgroup.com/product/outdoor-high-voltage-ac-vacuum-circuit-breaker-zw20/ | ZW20柱上断路器（12kV），支持手动／电动操作，可开断关合电流，适用于配电系统及农村电网。
+- English | Outdoor HV AC Vacuum Circuit Breaker | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/outdoor-high-voltage-ac-vacuum-circuit-breaker-zw20/ | ZW20 pole-mounted circuit breaker (12kV), supports manual/electric operation, capable of making and breaking currents, suitable for distribution systems and...
+- 中文 | SF6全密封环网柜 | HEXING | 配电装备 > 电气装备 > 中压开关设备 | https://www.hxgroup.com/product/sf6-fully-sealed-ring-main-unit-hxgnp-12/ | HXGNP-12 国内首创产品，整机IP67防护，适用于地下室等潮湿恶劣及有浸水风险的环境中使用。
+- English | SF6 Fully Sealed Ring Main Unit | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sf6-fully-sealed-ring-main-unit-hxgnp-12/ | HXGNP-12 A domestic first-of-its-kind product with IP67 protection for the entire unit, suitable for use in damp, harsh conditions and areas at risk of...
+- 中文 | 固体绝缘环网柜 | HEXING | 配电装备 > 电气装备 > 中压开关设备 | https://www.hxgroup.com/product/solid-insulated-ring-main-unit-hxgn-12/ | HXGN☐-12 导电部分全固封、局放小于20pC、真空灭弧、可实现配网自动化，适用于多类电力场景的新型环保全绝缘固体绝缘开关设备。
+- English | Solid Insulated Ring Main Unit | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/solid-insulated-ring-main-unit-hxgn-12/ | HXGN☐-12 Fully encapsulated conductive parts, partial discharge <20pC, vacuum arc extinction, capable of distribution automation.
+- 中文 | ABB授权柜 | HEXING | 配电装备 > 电气装备 > 低压开关设备 | https://www.hxgroup.com/product/abb-authorized-cabinet/ | MDmax ST：ABB授权模块化多功能低压开关柜，经完全型式试验，适配多领域，兼具数字化监测与稳定运行。
+- English | ABB authorized cabinet | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/abb-authorized-cabinet/ | MDmax ST: ABB-authorized modular multifunctional low-voltage switchgear, fully type-tested, adaptable to multiple fields, with digital monitoring and stable...
+- 中文 | 低压交流配电柜 GGD | HEXING | 配电装备 > 电气装备 > 低压开关设备 | https://www.hxgroup.com/product/low-voltage-ac-distribution-cabinet-ggd/ | GGD配电柜用于电能转换分配，适配低压配电系统。
+- English | Low-voltage AC distribution cabinet GGD | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/low-voltage-ac-distribution-cabinet-ggd/ | The GGD distribution cabinet is used for power conversion and distribution, suitable for low-voltage power distribution systems.
+- 中文 | 低压交流动力柜 | HEXING | 配电装备 > 电气装备 > 低压开关设备 | https://www.hxgroup.com/product/low-voltage-ac-power-distribution-cabinet-xl/ | 紧凑设计，多功能保护，适配400V/630A配电系统，用于动力、电机控制与照明。
+- English | Low Voltage AC Power Distribution Cabinet | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/low-voltage-ac-power-distribution-cabinet-xl/ | Compact design with multifunctional protection, suitable for 400V/630A power distribution systems for power, motor control, and lighting.
+- 中文 | 低压交流无功补偿柜 | HEXING | 配电装备 > 电气装备 > 低压开关设备 | https://www.hxgroup.com/product/low-voltage-ac-reactive-power-compensation-cabinet/ | GGJ-0.4柜用于380V系统自动无功补偿，可提效降损、优化电能质量，适配多类工业与建筑场景。
+- English | Low Voltage AC Reactive Power Compensation Cabinet | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/low-voltage-ac-reactive-power-compensation-cabinet/ | The GGJ-0.
+- 中文 | 低压抽出式开关柜 | HEXING | 配电装备 > 电气装备 > 低压开关设备 | https://www.hxgroup.com/product/low-voltage-withdrawable-switchgear-gck/ | 高效配电与电机控制的核心低压成套装置。
+- English | Low-Voltage Draw-out Switchgear | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/low-voltage-withdrawable-switchgear-gck/ | Core low-voltage assembly for efficient power distribution and motor control.
+- 中文 | 低压抽出式开关柜 | HEXING | 配电装备 > 电气装备 > 低压开关设备 | https://www.hxgroup.com/product/low-voltage-withdrawable-switchgear-gcs/ | 高效配电与电机控制的核心低压成套装置。
+- English | Low-Voltage Draw-out Switchgear | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/low-voltage-withdrawable-switchgear-gcs/ | Core low-voltage assembly for efficient power distribution and motor control.
+- 中文 | 智能光伏直流/交流汇流箱 | HEXING | 配电装备 > 电气装备 > 光伏并网设备 | https://www.hxgroup.com/product/intelligent-pv-dc-ac-combiner-box-hxpv-hxhlx-j/ | 光伏直流汇流箱是光伏发电系统中衔接光伏组件与逆变器的核心中间设备，通常采用 IP54 及以上防护等级的喷塑钢板、不锈钢等材质箱体，可接入2-24路光伏阵列直流电，通过箱内光伏专用直流熔断器、防反二极管、高压防雷器等核心元器件，实现多路电流汇集、支路短路保护、防环流、防雷击等功能。
+- English | Smart PV DC/AC Combiner Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/intelligent-pv-dc-ac-combiner-box-hxpv-hxhlx-j/ | The PV DC combiner box is a core intermediate device in photovoltaic power generation systems that connects PV modules and inverters.
+- 中文 | 智能型预制舱 | HEXING | 配电装备 > 电气装备 > 光伏并网设备 | https://www.hxgroup.com/product/smart-prefabricated-cabin/ | 预制舱（又称模块化预制舱）是一种基于工业化生产、集成化设计的新型电气设备安装载体，主要用于光伏电站、储能系统、变电站等电力工程场景，通常采用 Q235 冷轧钢板或不锈钢材质，经数控切割、焊接成型后，通过喷砂除锈 + 静电喷塑（或氟碳喷涂）工艺处理，防护等级可达 IP54 及以上，部分特殊环境产品可提升至...
+- English | Smart Prefabricated Enclosure | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/smart-prefabricated-cabin/ | The prefabricated enclosure (also known as modular prefabricated enclosure) is a new type of electrical equipment installation carrier based on industrial...
+- 中文 | 光伏并网箱 | HEXING | 配电装备 > 电气装备 > 光伏并网设备 > 光伏并网箱 | https://www.hxgroup.com/product/pv-combiner-box-hxbwx/ | 光伏并网箱是分布式光伏系统中实现低压并网、集成保护与计量功能的核心设备，主要用于户用及工商业小型光伏项目。
+- English | PV Grid-Connected Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/pv-combiner-box-hxbwx/ | The photovoltaic combiner box is a core device in distributed PV systems for low-voltage grid connection, integrated protection, and metering, primarily used...
+- 中文 | 10kV级环氧浇注干式电力变压器 | HEXING | 配电装备 > 电气装备 > 变压器 | https://www.hxgroup.com/product/10kv-epoxy-cast-dry-type-power-transformer/ | 环氧树脂浇注干式电力变压器采用先进的工艺浇注而成，产品可靠性高，使用寿命长并可根据不同的防护等级，加配防护外壳。
+- English | 10kV Class Epoxy Cast Dry-Type Power Transformer | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/10kv-epoxy-cast-dry-type-power-transformer/ | The epoxy resin cast dry-type power transformer is manufactured using advanced casting technology, offering high reliability and long service life.
+- 中文 | 10kV级单相油浸式配电变压器 | HEXING | 配电装备 > 电气装备 > 变压器 | https://www.hxgroup.com/product/10kv-single-phase-oil-immersed-distribution-transformer/ | 单相油浸式叠铁芯配电变压器具有结构紧凑、外形美观、体积小、温升噪音低、过负载能力强、电气性能及机械性能良好、运行可靠等优点，节能型产品是我公司通过新材料、新工艺的研究运用及自主创新与技术引进结合的方式，通过对铁芯及线圈结构的优化创新设计，达到降低空载损耗及噪音的目的。
+- English | 10kV Single-Phase Oil-Immersed Distribution Transformer | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/10kv-single-phase-oil-immersed-distribution-transformer/ | The single-phase oil-immersed distribution transformer with stacked core features compact structure, attractive appearance, small size, low temperature rise...
+- 中文 | 10kV级立体卷铁芯油浸式配电变压器 | HEXING | 配电装备 > 电气装备 > 变压器 | https://www.hxgroup.com/product/10kv-three-dimensional-wound-core-oil-immersed-distribution-transformer/ | 立体卷铁芯油浸式配电变压器：突破了传统平面式结构。
+- English | 10kV Class Three-Phase Wound Core Oil-Immersed Distribution Transformer | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/10kv-three-dimensional-wound-core-oil-immersed-distribution-transformer/ | Three-Phase Wound Core Oil-Immersed Distribution Transformer: Breaks through the traditional planar structure.
+- 中文 | 110kV级油浸式电力变压器 | HEXING | 配电装备 > 电气装备 > 变压器 | https://www.hxgroup.com/product/110kv-oil-immersed-power-transformer/ | 110kV级油浸式电⼒变压器铁芯采⽤优质取向硅钢⽚多级阶梯叠积⽽成，表面涂固化漆。
+- English | 110kV Oil-Immersed Power Transformer | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/110kv-oil-immersed-power-transformer/ | The core of the 110kV oil-immersed power transformer is made of high-quality oriented silicon steel sheets stacked in multiple steps and coated with curing...
+- 中文 | 20kV级环氧浇注干式电力变压器 | HEXING | 配电装备 > 电气装备 > 变压器 | https://www.hxgroup.com/product/20kv-epoxy-cast-dry-type-power-transformer/ | 环氧浇注干式变压器是指铁芯和绕组均不浸渍在绝缘油中的变压器，依靠空气对流进行冷却，分为自然空气冷却（AN）和强迫空气冷却（AF）。
+- English | 20kV Epoxy Resin Cast Dry-Type Power Transformer | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/20kv-epoxy-cast-dry-type-power-transformer/ | An epoxy cast dry-type transformer is a transformer whose core and windings are not immersed in insulating oil; it relies on air convection for cooling and is...
+- 中文 | 20kV级油浸式配电变压器 | HEXING | 配电装备 > 电气装备 > 变压器 | https://www.hxgroup.com/product/20kv-oil-immersed-distribution-transformer/ | 20kV油浸式配电变压器具有结构紧凑、体积小、过负载能力强、电气性能及机械性能良好、运行可靠等优点。
+- English | 20kV Oil-immersed Distribution Transformer | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/20kv-oil-immersed-distribution-transformer/ | The 20kV oil-immersed distribution transformer features a compact structure, small size, strong overload capacity, excellent electrical and mechanical...
+- 中文 | 35kV级环氧浇注干式电力变压器 | HEXING | 配电装备 > 电气装备 > 变压器 | https://www.hxgroup.com/product/35kv-epoxy-cast-dry-type-power-transformer/ | 环氧树脂浇注干式电力变压器采用先进的工艺浇注而成，产品可靠性高，使用寿命长并可根据不同的防护等级，加配防护外壳。
+- English | 35kV Epoxy Resin Cast Dry-Type Power Transformer | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/35kv-epoxy-cast-dry-type-power-transformer/ | The epoxy resin cast dry-type power transformer is manufactured using advanced casting technology, offering high reliability and long service life.
+- 中文 | 35kV级油浸式电力变压器 | HEXING | 配电装备 > 电气装备 > 变压器 | https://www.hxgroup.com/product/35kv-oil-immersed-power-transformer/ | 35kV级油浸式电力变压器适用于电力系统变电站以及30kV用户站，铁芯采用高导磁优质取向冷轧硅钢片，线圈采用饼式结构，器身采用成型绝缘件，油箱采用钟罩式，膨胀式储油柜，外形美观大方。
+- English | 35kV Oil-immersed Power Transformer | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/35kv-oil-immersed-power-transformer/ | The 35kV oil-immersed power transformer is suitable for power system substations and 30kV user substations.
+- 中文 | 低压电缆分支箱 | HEXING | 配电装备 > 计量表箱 > 低压电缆分支箱 | https://www.hxgroup.com/product/low-voltage-cable-branch-box/ | 低压电缆分支箱的主要作用是将电缆分接或转接，主要起电缆分接作用和电缆转接作用。
+- English | Low-Voltage Cable Distribution Cabinet | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/low-voltage-cable-branch-box/ | The main function of a low-voltage cable distribution cabinet is to branch or transition cables, primarily serving cable branching and cable transitioning...
+- 中文 | 金属低压综合配电箱 | HEXING | 配电装备 > 计量表箱 > 低压配电箱 | https://www.hxgroup.com/product/metal-enclosed-low-voltage-distribution-cabinet/ | 低压综合配电箱是一种集电能分配、计量、保护、控制、无功补偿于一体的低压配电设备，主要用于工业、商业及民用建筑的电力系统中。
+- English | Metal Low-Voltage Integrated Distribution Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/metal-enclosed-low-voltage-distribution-cabinet/ | The low-voltage integrated distribution box is a low-voltage distribution device integrating power distribution, metering, protection, control, and reactive...
+- 中文 | 南网PC单相1表位计量箱 | HEXING | 配电装备 > 计量表箱 > 南网计量箱系列 | https://www.hxgroup.com/product/csg-pc-series-single-phase-1-meter-position-metering-cabinet/ | PC南网费控单相1表位计量箱是用于220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | CSG PC Single-Phase 1-Position Metering Box | HEXING | Distribution Equipment > Metering Box > CSG Metering Box Series | https://www.hxgroup.com/en/product/csg-pc-series-single-phase-1-meter-position-metering-cabinet/ | The PC CSG prepayment single-phase 1-position metering box is a complete box-type assembly for low-voltage energy metering at 220 V and below.
+- 中文 | 南网PC单相12表位计量箱 | HEXING | 配电装备 > 计量表箱 > 南网计量箱系列 | https://www.hxgroup.com/product/csg-pc-series-single-phase-12-meter-position-metering-cabinet/ | PC南网费控单相12表位计量箱是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | CSG PC Single-Phase 12-Position Metering Box | HEXING | Distribution Equipment > Metering Box > CSG Metering Box Series | https://www.hxgroup.com/en/product/csg-pc-series-single-phase-12-meter-position-metering-cabinet/ | The PC CSG Prepayment Single-Phase 12-Position Metering Box is a box-type assembly for low-voltage energy metering at 380/220 V and below.
+- 中文 | 南网PC单相2表位计量箱 | HEXING | 配电装备 > 计量表箱 > 南网计量箱系列 | https://www.hxgroup.com/product/csg-pc-series-single-phase-2-meter-position-metering-cabinet/ | PC南网费控单相2表位计量箱是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | CSG PC Single-Phase 2-Position Metering Box | HEXING | Distribution Equipment > Metering Box > CSG Metering Box Series | https://www.hxgroup.com/en/product/csg-pc-series-single-phase-2-meter-position-metering-cabinet/ | The PC CSG prepayment single-phase 2-position metering box is a complete box-type device for low-voltage energy metering at 380/220 V and below.
+- 中文 | 南网PC单相4表位计量箱 | HEXING | 配电装备 > 计量表箱 > 南网计量箱系列 | https://www.hxgroup.com/product/csg-pc-series-single-phase-4-meter-position-metering-cabinet/ | PC南网费控单相4表位计量箱是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | CSG PC Single-Phase 4-Position Metering Box | HEXING | Distribution Equipment > Metering Box > CSG Metering Box Series | https://www.hxgroup.com/en/product/csg-pc-series-single-phase-4-meter-position-metering-cabinet/ | The PC CSG prepayment single-phase 4-position metering box is a box-type assembly for low-voltage energy metering at 380 V, 220 V and below.
+- 中文 | 南网PC单相6表位计量箱 | HEXING | 配电装备 > 计量表箱 > 南网计量箱系列 | https://www.hxgroup.com/product/csg-pc-series-single-phase-6-meter-position-metering-cabinet/ | PC南网费控单相6表位计量箱是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | CSG PC Single-Phase 6-Position Metering Box | HEXING | Distribution Equipment > Metering Box > CSG Metering Box Series | https://www.hxgroup.com/en/product/csg-pc-series-single-phase-6-meter-position-metering-cabinet/ | The PC CSG prepayment single-phase 6-position metering box is a box-type assembly for low-voltage energy metering at 380/220 V and below.
+- 中文 | 南网PC单相9表位计量箱 | HEXING | 配电装备 > 计量表箱 > 南网计量箱系列 | https://www.hxgroup.com/product/csg-pc-series-single-phase-9-meter-position-metering-cabinet/ | PC南网费控单相9表位计量箱是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | CSG PC Single-Phase 9-Position Metering Box | HEXING | Distribution Equipment > Metering Box > CSG Metering Box Series | https://www.hxgroup.com/en/product/csg-pc-series-single-phase-9-meter-position-metering-cabinet/ | The PC CSG Prepayment Single-Phase 9-Position Metering Box is a box-type assembly for low-voltage energy metering at 380 V, 220 V and below.
+- 中文 | 南网PC三相1表位计量箱 | HEXING | 配电装备 > 计量表箱 > 南网计量箱系列 | https://www.hxgroup.com/product/csg-pc-series-three-phase-1-meter-position-metering-cabinet/ | PC南网费控三相1表位计量箱是用于380及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | CSG PC Three-Phase 1-Position Metering Box | HEXING | Distribution Equipment > Metering Box > CSG Metering Box Series | https://www.hxgroup.com/en/product/csg-pc-series-three-phase-1-meter-position-metering-cabinet/ | The PC CSG prepayment three-phase 1-position metering box is a box-type assembly for low-voltage energy metering at 380 V and below.
+- 中文 | 南网PC三相1表位动力计量箱 | HEXING | 配电装备 > 计量表箱 > 南网计量箱系列 | https://www.hxgroup.com/product/csg-pc-series-three-phase-1-meter-position-power-metering-cabinet/ | PC南网费控三相1表位动力计量箱是用于380及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | CSG PC Three-Phase 1-Position Power Metering Box | HEXING | Distribution Equipment > Metering Box > CSG Metering Box Series | https://www.hxgroup.com/en/product/csg-pc-series-three-phase-1-meter-position-power-metering-cabinet/ | The PC CSG Prepayment Three-Phase 1-Position Power Metering Box is a box-type assembly for low-voltage energy metering at 380 V and below.
+- 中文 | 南网PC三相1表位互感式计量箱 | HEXING | 配电装备 > 计量表箱 > 南网计量箱系列 | https://www.hxgroup.com/product/csg-pc-series-three-phase-1-meter-position-transformer-type-metering-cabinet/ | PC南网费控三相1表位互感式计量箱是用于380以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | CSG PC Three-Phase 1-Position Transformer-Type Metering Box | HEXING | Distribution Equipment > Metering Box > CSG Metering Box Series | https://www.hxgroup.com/en/product/csg-pc-series-three-phase-1-meter-position-transformer-type-metering-cabinet/ | The PC CSG prepayment three-phase 1-position transformer-type metering box is a box-type assembly for low-voltage energy metering below 380 V, primarily used...
+- 中文 | 南网PC三相2表位计量箱 | HEXING | 配电装备 > 计量表箱 > 南网计量箱系列 | https://www.hxgroup.com/product/csg-pc-series-three-phase-2-meter-position-metering-cabinet/ | PC南网费控三相2表位计量箱是用于380及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | CSG PC Three-Phase 2-Position Meter Box | HEXING | Distribution Equipment > Metering Box > CSG Metering Box Series | https://www.hxgroup.com/en/product/csg-pc-series-three-phase-2-meter-position-metering-cabinet/ | The PC CSG Three-Phase 2-Position Meter Box is a box-type assembly for low-voltage energy metering at 380 V and below.
+- 中文 | 南网PC三相4表位计量箱 | HEXING | 配电装备 > 计量表箱 > 南网计量箱系列 | https://www.hxgroup.com/product/csg-pc-series-three-phase-4-meter-position-metering-cabinet/ | PC南网费控三相4表位计量箱是用于380及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | CSG PC Three-Phase 4-Position Metering Box | HEXING | Distribution Equipment > Metering Box > CSG Metering Box Series | https://www.hxgroup.com/en/product/csg-pc-series-three-phase-4-meter-position-metering-cabinet/ | The PC CSG Prepayment Three-Phase 4-Position Metering Box is a box-type assembly for low-voltage energy metering at 380 V and below.
+- 中文 | 南网单相1表位（普通） | HEXING | 配电装备 > 计量表箱 > 南网计量箱系列 | https://www.hxgroup.com/product/csg-single-phase-1-meter-position-metering-cabinet--standard/ | PC南网单相1表位（普通）是用于220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | CSG Single-Phase 1-Position (Standard) | HEXING | Distribution Equipment > Metering Box > CSG Metering Box Series | https://www.hxgroup.com/en/product/csg-single-phase-1-meter-position-metering-cabinet--standard/ | The PC CSG Single-Phase 1-Position (Standard) is a box-type assembly for low-voltage energy metering at 220 V and below.
+- 中文 | 南网单相12表位（普通） | HEXING | 配电装备 > 计量表箱 > 南网计量箱系列 | https://www.hxgroup.com/product/csg-single-phase-12-meter-position-metering-cabinet--standard/ | PC南网单相12表位（普通）是用于380及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | CSG Single-Phase 12-Position Metering Box (Standard) | HEXING | Distribution Equipment > Metering Box > CSG Metering Box Series | https://www.hxgroup.com/en/product/csg-single-phase-12-meter-position-metering-cabinet--standard/ | The PC CSG Single-Phase 12-Position Metering Box (Standard) is a box-type assembly for low-voltage energy metering at 380 V and below.
+- 中文 | 南网单相2表位（普通） | HEXING | 配电装备 > 计量表箱 > 南网计量箱系列 | https://www.hxgroup.com/product/csg-single-phase-2-meter-position-metering-cabinet--standard/ | PC南网单相2表位（普通）是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | CSG Single-Phase 2-Position (Standard) | HEXING | Distribution Equipment > Metering Box > CSG Metering Box Series | https://www.hxgroup.com/en/product/csg-single-phase-2-meter-position-metering-cabinet--standard/ | The PC CSG Single-Phase 2-Position (Standard) is a box-type assembly for low-voltage energy metering at 380 V, 220 V and below.
+- 中文 | 南网单相4表位（普通） | HEXING | 配电装备 > 计量表箱 > 南网计量箱系列 | https://www.hxgroup.com/product/csg-single-phase-4-meter-position-metering-cabinet--standard/ | PC南网单相4表位（普通）是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | CSG Single-Phase 4-Position (Standard) | HEXING | Distribution Equipment > Metering Box > CSG Metering Box Series | https://www.hxgroup.com/en/product/csg-single-phase-4-meter-position-metering-cabinet--standard/ | The PC CSG Single-Phase 4-Position (Standard) is a box-type assembly for low-voltage energy metering at 380 V, 220 V and below.
+- 中文 | 南网单相6表位（普通） | HEXING | 配电装备 > 计量表箱 > 南网计量箱系列 | https://www.hxgroup.com/product/csg-single-phase-6-meter-position-metering-cabinet-standard/ | PC南网单相6表位（普通）是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | CSG Single-Phase 6-Position (Standard) | HEXING | Distribution Equipment > Metering Box > CSG Metering Box Series | https://www.hxgroup.com/en/product/csg-single-phase-6-meter-position-metering-cabinet-standard/ | The PC CSG Single-Phase 6-Position (Standard) is a box-type assembly for low-voltage energy metering at 380 V, 220 V and below.
+- 中文 | 南网单相9表位（普通） | HEXING | 配电装备 > 计量表箱 > 南网计量箱系列 | https://www.hxgroup.com/product/csg-single-phase-9-meter-position-metering-cabinet-standard/ | PC南网单相9表位（普通）是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | CSG Single-Phase 9-Position (Standard) | HEXING | Distribution Equipment > Metering Box > CSG Metering Box Series | https://www.hxgroup.com/en/product/csg-single-phase-9-meter-position-metering-cabinet-standard/ | The PC CSG Single-Phase 9-Position (Standard) is a box-type assembly for low-voltage energy metering at 380/220 V and below.
+- 中文 | 国网PC系列单相1表位计量箱 | HEXING | 配电装备 > 计量表箱 > 国网PC系列计量箱 | https://www.hxgroup.com/product/sgcc-pc-series-single-phase-1-meter-position-metering-cabinet/ | PC单相1表位计量箱是用于220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid PC Series Single-Phase 1-Position Metering Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-pc-series-single-phase-1-meter-position-metering-cabinet/ | The PC single-phase 1-position metering box is a complete box-type assembly for low-voltage energy metering at 220 V and below.
+- 中文 | 国网PC系列单相12表位计量箱 | HEXING | 配电装备 > 计量表箱 > 国网PC系列计量箱 | https://www.hxgroup.com/product/sgcc-pc-series-single-phase-12-meter-position-metering-cabinet/ | PC单相12表位计量箱是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid PC Series Single-Phase 12-Position Metering Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-pc-series-single-phase-12-meter-position-metering-cabinet/ | The PC single-phase 12-position metering box is a box-type assembly for low-voltage energy metering at 380 V, 220 V and below.
+- 中文 | 国网PC系列单相2表位计量箱 | HEXING | 配电装备 > 计量表箱 > 国网PC系列计量箱 | https://www.hxgroup.com/product/sgcc-pc-series-single-phase-2-meter-position-metering-cabinet/ | PC单相2表位计量箱是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid PC Series Single-Phase 2-Position Metering Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-pc-series-single-phase-2-meter-position-metering-cabinet/ | The PC single-phase 2-position metering box is a complete box-type assembly for low-voltage energy metering at 380 V, 220 V and below.
+- 中文 | 国网PC系列单相4表位计量箱 | HEXING | 配电装备 > 计量表箱 > 国网PC系列计量箱 | https://www.hxgroup.com/product/sgcc-pc-series-single-phase-4-meter-position-metering-cabinet/ | PC单相4表位计量箱是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid PC Series Single-Phase 4-Position Metering Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-pc-series-single-phase-4-meter-position-metering-cabinet/ | The PC single-phase 4-position metering box is a box-type assembly for low-voltage energy metering at 380 V, 220 V and below.
+- 中文 | 国网PC系列单相6表位计量箱 | HEXING | 配电装备 > 计量表箱 > 国网PC系列计量箱 | https://www.hxgroup.com/product/sgcc-pc-series-single-phase-6-meter-position-metering-cabinet/ | PC单相6表位计量箱是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid PC Series Single-Phase 6-Position Metering Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-pc-series-single-phase-6-meter-position-metering-cabinet/ | The PC single-phase 6-position metering box is a box-type assembly for low-voltage energy metering at 380 V, 220 V and below.
+- 中文 | 国网PC系列单相9表位计量箱 | HEXING | 配电装备 > 计量表箱 > 国网PC系列计量箱 | https://www.hxgroup.com/product/sgcc-pc-series-single-phase-9-meter-position-metering-cabinet/ | PC单相9表位计量箱是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid PC Series Single-Phase 9-Position Metering Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-pc-series-single-phase-9-meter-position-metering-cabinet/ | The PC single-phase 9-position metering box is a box-type assembly for low-voltage energy metering at 380 V, 220 V and below.
+- 中文 | 国网PC系列三相1表位计量箱 | HEXING | 配电装备 > 计量表箱 > 国网PC系列计量箱 | https://www.hxgroup.com/product/sgcc-pc-series-three-phase-1-meter-position-metering-cabinet/ | PC三相1表位计量箱是用于380及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid PC Series Three-Phase 1-Position Metering Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-pc-series-three-phase-1-meter-position-metering-cabinet/ | The PC three-phase 1-position metering box is a complete box-type device for low-voltage energy metering at 380 V and below.
+- 中文 | 国网PC系列三相1表位互感式计量箱 | HEXING | 配电装备 > 计量表箱 > 国网PC系列计量箱 | https://www.hxgroup.com/product/sgcc-smc-series-three-phase-1-meter-position-transformer-type-metering-cabinet/ | PC三相1表位互感式计量箱是用于380及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。 Source path conflict.
+- English | State Grid PC Series Three-Phase 1-Position Transformer-Type Metering Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-smc-series-three-phase-1-meter-position-transformer-type-metering-cabinet/ | The PC three-phase 1-position transformer-type metering box is a box-type assembly for low-voltage energy metering at 380 V and below, primarily used to... Source path conflict.
+- 中文 | 国网SMC系列单相1表位表箱 | HEXING | 配电装备 > 计量表箱 > 国网SMC系列计量箱 | https://www.hxgroup.com/product/sgcc-smc-series-single-phase-1-meter-position-metering-cabinet/ | SMC单相单表位表箱是用于220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid SMC Series Single-Phase 1-Meter-Position Meter Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-smc-series-single-phase-1-meter-position-metering-cabinet/ | The SMC single-phase single-meter-position meter box is a box-type assembly for low-voltage energy metering at 220 V and below, primarily used to house core...
+- 中文 | 国网SMC系列单相10表位计量箱 | HEXING | 配电装备 > 计量表箱 > 国网SMC系列计量箱 | https://www.hxgroup.com/product/sgcc-smc-series-single-phase-10-meter-position-metering-cabinet/ | SMC单相10表位计量箱是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid SMC Series Single-Phase 10-Position Metering Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-smc-series-single-phase-10-meter-position-metering-cabinet/ | The SMC single-phase 10-position metering box is a box-type assembly for low-voltage energy metering at 380/220 V and below.
+- 中文 | 国网SMC系列单相12表位计量箱 | HEXING | 配电装备 > 计量表箱 > 国网SMC系列计量箱 | https://www.hxgroup.com/product/sgcc-smc-series-single-phase-12-meter-position-metering-cabinet/ | SMC单相12表位计量箱是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid SMC Series Single-Phase 12-Position Metering Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-smc-series-single-phase-12-meter-position-metering-cabinet/ | The SMC single-phase 12-position metering box is a box-type assembly for low-voltage energy metering at 380 V, 220 V and below.
+- 中文 | 国网SMC系列单相2表位计量箱 | HEXING | 配电装备 > 计量表箱 > 国网SMC系列计量箱 | https://www.hxgroup.com/product/sgcc-smc-series-single-phase-2-meter-position-metering-cabinet/ | SMC单相2表位计量箱是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid SMC Series Single-Phase 2-Position Meter Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-smc-series-single-phase-2-meter-position-metering-cabinet/ | The SMC single-phase 2-position meter box is a complete box-type assembly for low-voltage energy metering at 380 V, 220 V and below.
+- 中文 | 国网SMC系列单相4表位计量箱 | HEXING | 配电装备 > 计量表箱 > 国网SMC系列计量箱 | https://www.hxgroup.com/product/sgcc-smc-series-single-phase-4-meter-position-metering-cabinet/ | SMC单相4表位计量箱是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid SMC Series Single-Phase 4-Position Metering Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-smc-series-single-phase-4-meter-position-metering-cabinet/ | The SMC single-phase 4-position metering box is a box-type assembly for low-voltage energy metering at 380 V, 220 V and below.
+- 中文 | 国网SMC系列单相6表位计量箱 | HEXING | 配电装备 > 计量表箱 > 国网SMC系列计量箱 | https://www.hxgroup.com/product/sgcc-smc-series-single-phase-6-meter-position-metering-cabinet/ | SMC单相6表位计量箱是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid SMC Series Single-Phase 6-Position Metering Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-smc-series-single-phase-6-meter-position-metering-cabinet/ | The SMC single-phase 6-position metering box is a box-type assembly for low-voltage energy metering at 380 V, 220 V and below.
+- 中文 | 国网SMC系列单相9表位计量箱 | HEXING | 配电装备 > 计量表箱 > 国网SMC系列计量箱 | https://www.hxgroup.com/product/sgcc-smc-series-single-phase-9-meter-position-metering-cabinet/ | SMC单相9表位计量箱是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid SMC Series Single-Phase 9-Position Metering Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-smc-series-single-phase-9-meter-position-metering-cabinet/ | The SMC single-phase 9-position metering box is a box-type assembly for low-voltage energy metering at 380 V, 220 V and below.
+- 中文 | 国网SMC系列三相1表位计量箱 | HEXING | 配电装备 > 计量表箱 > 国网SMC系列计量箱 | https://www.hxgroup.com/product/sgcc-smc-series-three-phase-1-meter-position-metering-cabinet/ | SMC三相1表位计量箱是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid SMC Series Three-Phase Single-Position Metering Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-smc-series-three-phase-1-meter-position-metering-cabinet/ | The SMC three-phase single-position metering box is a box-type assembly for low-voltage energy metering at 380 V, 220 V and below.
+- 中文 | 国网SMC系列三相1表位互感式计量箱 | HEXING | 配电装备 > 计量表箱 > 国网SMC系列计量箱 | https://www.hxgroup.com/product/sgcc-smc-series-three-phase-1-meter-position-transformer-type-metering-cabinet/ | SMC三相1表位互感式计量箱是用于380，220及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。 Source path conflict.
+- English | State Grid SMC Series Three-Phase Single-Position Transformer-Connected Metering Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-smc-series-three-phase-1-meter-position-transformer-type-metering-cabinet/ | The SMC three-phase single-position transformer-connected metering box is a box-type assembly for low-voltage energy metering at 380/220 V and below. Source path conflict.
+- 中文 | 国网金属系列单相单表位表箱 | HEXING | 配电装备 > 计量表箱 > 国网金属系列计量箱 | https://www.hxgroup.com/product/sgcc-metal-series-single-phase-1-meter-position-metering-cabinet/ | 金属单相单表位表箱是用于220V及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid Metal Series Single-Phase Single-Meter-Position Meter Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-metal-series-single-phase-1-meter-position-metering-cabinet/ | The metal single-phase single-meter-position meter box is a box-type assembly for low-voltage energy metering at 220 V and below.
+- 中文 | 国网金属系列单相12表位计量箱 | HEXING | 配电装备 > 计量表箱 > 国网金属系列计量箱 | https://www.hxgroup.com/product/sgcc-metal-series-single-phase-12-meter-position-metering-cabinet/ | 金属单相12表位计量箱是用于380，220V及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid Metal Series Single-Phase 12-Position Metering Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-metal-series-single-phase-12-meter-position-metering-cabinet/ | The metal single-phase 12-position metering box is a box-type assembly for low-voltage energy metering at 380/220 V and below.
+- 中文 | 国网金属系列单相2表位计量箱 | HEXING | 配电装备 > 计量表箱 > 国网金属系列计量箱 | https://www.hxgroup.com/product/sgcc-metal-series-single-phase-2-meter-position-metering-cabinet/ | 金属单相2表位计量箱是用于380，220V及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid Metal Series Single-Phase 2-Position Metering Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-metal-series-single-phase-2-meter-position-metering-cabinet/ | The metal single-phase 2-position metering box is a box-type complete set device for low-voltage energy metering at 380 V and 220 V and below.
+- 中文 | 国网金属系列单相6表位计量箱 | HEXING | 配电装备 > 计量表箱 > 国网金属系列计量箱 | https://www.hxgroup.com/product/sgcc-metal-series-single-phase-6-meter-position-metering-cabinet/ | 金属单相6表位计量箱是用于380，220V及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid Metal Series Single-Phase 6-Position Metering Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-metal-series-single-phase-6-meter-position-metering-cabinet/ | The metal single-phase 6-position metering box is a box-type assembly for low-voltage energy metering at 380/220 V and below.
+- 中文 | 国网金属系列单相9表位计量箱 | HEXING | 配电装备 > 计量表箱 > 国网金属系列计量箱 | https://www.hxgroup.com/product/sgcc-metal-series-single-phase-9-meter-position-metering-cabinet/ | 金属单相9表位计量箱是用于380，220V及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid Metal Series Single-Phase 9-Position Metering Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-metal-series-single-phase-9-meter-position-metering-cabinet/ | The metal single-phase 9-position metering box is a box-type complete set device for low-voltage energy metering at 380/220 V and below.
+- 中文 | 国网金属系列三相1表位计量箱 | HEXING | 配电装备 > 计量表箱 > 国网金属系列计量箱 | https://www.hxgroup.com/product/sgcc-metal-series-three-phase-1-meter-position-metering-cabinet/ | 金属三相1表位计量箱是用于380及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid Metal Series Three-Phase 1-Position Metering Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/product/sgcc-metal-series-three-phase-1-meter-position-metering-cabinet/ | The Metal Three-Phase 1-Position Metering Box is a box-type assembly for low-voltage energy metering at 380 V and below.
+- 中文 | 国网金属系列单相4表位计量箱 | HEXING | 配电装备 > 计量表箱 > 国网金属系列计量箱 | https://www.hxgroup.com/sgcc-metal-series-single-phase-4-meter-position-metering-cabinet/ | 金属单相4表位计量箱是用于380，220V及以下低压电能计量的箱型成套装置，主要用于安装电能表等核心计量元器件，满足电能计量、防窃电及远程抄表等功能需求。
+- English | State Grid Metal Series Single-Phase 4-Position Metering Box | HEXING | Distribution Equipment | https://www.hxgroup.com/en/sgcc-metal-series-single-phase-4-meter-position-metering-cabinet/ | The metal single-phase 4-position metering box is a complete box-type assembly for low-voltage energy metering at 380/220 V and below.
+
+### 新能源 / New Energy
+覆盖并网逆变器、储能逆变器、电池、储能柜、充电桩和能源终端。 / Covers grid-tied inverters, hybrid inverters, batteries, storage cabinets, chargers, and energy terminals.
+
+#### 子类清单 / Subcategory List
+- 储能电池: 8
+- 逆变器: 8
+- General: 6
+- 充电桩: 4
+- 储能一体柜: 3
+- 光伏路灯: 3
+
+#### 代表产品卡片 / Representative Product Cards
+- 产品名 / Product name: 单相并网机 | Single-Phase Grid-Tied Inverter
+- 品牌 / Brand: Livoltek
+- 型号范围 / Model range: 单相：GT1-2K5/3K/3K3/3K6/4K/5K/6K D2
+- 核心定位 / Positioning: LIVOLTEK GT1 2.5~6K D2系列并网逆变器，以现代简约设计专为家庭光伏量身打造。紧凑机身融合双路MPPT技术，从容应对各类复杂屋顶安装挑战。每路最高支持16A输入电流，充分释放182+瓦大功率组件的发电潜能。内置智能AFCI直流电弧故障保护，全天候守护家庭用电安全。搭载智能Wi-Fi监控系统，通过手机App或网页平台即可随时随地掌握发电情况，实现远程高效运维，让您的绿色能源体验更智慧、更安心。
+- 关键卖点 / Key highlights: 每路组串支持16A直流输入; 集成AFCI电弧故障保护（可选）; 低启动电压，双路MPPT追踪
+- 适用场景 / Typical use: 单相：GT1-2K5/3K/3K3/3K6/4K/5K/6K D2
+- Path: /product/grid-tied-inverter-single-phase-2-5-6kw
+
+- 产品名 / Product name: 单相储能机 | Single-Phase Energy Storage Inverter
+- 品牌 / Brand: Livoltek
+- 型号范围 / Model range: HP1-1K5/3K/3K6/5K/6KS2 HP1-1K5/3KL2
+- 核心定位 / Positioning: LIVOLTEK HP1-3~6kW S2系列单相储能逆变器，凭借卓越多功能与高品质性能，为住宅及商业能源管理带来质的提升。产品采用灵活设计，可与现有光伏系统无缝集成，保障高效能量转换；不仅支持发电机储能，更支持多组电池并联扩展，轻松满足日益增长的储能需求。作为面向未来的能源解决方案，HP1-3~6kW S2系列配备多项先进功能，为您的能源管理赋予更加智能便捷的体验。
+- 关键卖点 / Key highlights: 高效发电，灵活扩展: - 最大充放电电流可达 125A - 支持直流输入过配高达 200%，光伏电流可达 18A - 并联最多 10 台，支持并网及离网运行; 安全可靠，稳如泰山: - 无缝切换：备份切换时间; 多场景应用，灵活适配: - 可交流耦合改造现有光伏系统 - 支持储存柴油发电机电能
+- 适用场景 / Typical use: HP1-1K5/3K/3K6/5K/6KS2 HP1-1K5/3KL2
+- Path: /product/hybrid-inverter-single-phase-1.5-6kw-s2
+
+- 产品名 / Product name: 工商业储能一体柜 | Commercial & Industrial All-in-One Energy Storage Cabinet
+- 品牌 / Brand: Livoltek
+- 型号范围 / Model range: BESS-125kW/261kWh
+- 核心定位 / Positioning: LIVOLTEK BES 系列是一款适用于充电站、工厂、产业园区及商业建筑的多场景储能解决方案。以储能为核心功能，BES-P125X261 机型可在断电时提供应急电源，并支持削峰填谷、多余电量交易以及虚拟容量扩展等应用。 凭借高能量密度与模块化设计，该系统大幅减少占地空间，提升运输便捷性，并简化安装与维护流程，确保从部署到运行的全周期高效表现。
+- 关键卖点 / Key highlights: 高性能表现: - 一体化设计，节省安装空间 - A+ 级磷酸铁锂电池，高能量密度 - 簇级电池管理系统，提高能量利用效率 - 智能温控系统，循环寿命超 8000 次 - 五重安全防护体系; 灵活扩容: - 支持 10 台并联，容量可扩展至兆瓦时级 - 占地面积仅 1.35m²，部署调度更灵活 - 三合一高度集成，工厂预配置、预测试全球快速交付，现场快速响应; 极致安全: - 五重电气安全防护，快速隔离故障 - 三级 FSS（消防安全系统），有效预防热失控 - 机柜达到 IP55-C5 防护等级，全天候可靠运行...
+- 适用场景 / Typical use: BESS-125kW/261kWh
+- Path: /product/bess-125-261kwh
+
+- 产品名 / Product name: MC系列直流充电桩 | MC Series DC Charging Station
+- 品牌 / Brand: Livoltek
+- 型号范围 / Model range: MC 15/20/30/40/60kW
+- 核心定位 / Positioning: LIVOLTEK Motion Compact 系列直流壁挂充电桩（MC 系列） 设计紧凑、安装便捷，可提供比交流壁挂桩更大、更稳定的充电电流。 兼容性更强、效率更高，为您的业务带来更优质的充电体验，提升用户黏性。
+- 关键卖点 / Key highlights: 设计紧凑，安装便捷，占用空间小; 兼容任何基于 OCPP 1.6J 的后台系统; 可选落地式或壁挂式安装
+- 适用场景 / Typical use: MC 15/20/30/40/60kW
+- Path: /product/motion-compact-dc-wallbox-ev-charger-15-60kw
+
+#### 产品索引 / Product Index
+- 中文 | 单相离网机 | Livoltek | 新能源产品 | https://www.hxgroup.com/product/hybrid-inverter-off-grid-single-phase-3-6kw/ | GF1-3K6/6KS
+- English | Single-Phase Off-Grid Inverter | Livoltek | New Energy Products > Inverter | https://www.hxgroup.com/en/product/hybrid-inverter-off-grid-single-phase-3-6kw/ | GF1-3K6/6KS
+- 中文 | 单相离网机 | Livoltek | 新能源产品 | https://www.hxgroup.com/product/hybrid-inverter-off-grid-single-phase-8-12kw/ | GF1-8K/12K S2
+- English | Single-Phase Off-Grid Inverter | Livoltek | New Energy Products > Inverter | https://www.hxgroup.com/en/product/hybrid-inverter-off-grid-single-phase-8-12kw/ | GF1-8K/12K S2
+- 中文 | 智能充电能源枢纽 | HEXING | 新能源产品 | https://www.hxgroup.com/product/intelligent-charging-energy-hub/ | LHECCH.
+- English | Smart Charging Energy Hub | HEXING | New Energy Products > Energy Management Terminal | https://www.hxgroup.com/en/product/intelligent-charging-energy-hub/ | LHECCH.
+- 中文 | 家庭能源协调控制终端 | HEXING | 新能源产品 | https://www.hxgroup.com/product/jia-ting-neng-yuan-xie-tiao-kong-zhi-zhong-duan/ | HXEM100.
+- English | Home Energy Coordination Control Terminal | HEXING | New Energy Products > Energy Management Terminal | https://www.hxgroup.com/en/product/jia-ting-neng-yuan-xie-tiao-kong-zhi-zhong-duan/ | HXEM100.
+- 中文 | 负荷监测单元 | HEXING | 新能源产品 | https://www.hxgroup.com/product/load-monitoring-unit/ | 负荷监测单元用于监测35KV及以下架空线电流,具备数据采集、处理、通信等功能。
+- English | Load Monitoring Unit | HEXING | New Energy Products > Energy Management Terminal | https://www.hxgroup.com/en/product/load-monitoring-unit/ | The Load Monitoring Unit is used to monitor current on overhead lines of 35 kV and below, with functions including data acquisition, processing, and...
+- 中文 | 多回路用能诊断终端 | HEXING | 新能源产品 | https://www.hxgroup.com/product/multi-circuit-energy-diagnostic-terminal/ | HXEDE081
+- English | Multi-Circuit Energy Diagnostic Terminal | HEXING | New Energy Products > Energy Management Terminal > Energy Diagnosis Terminal | https://www.hxgroup.com/en/product/multi-circuit-energy-diagnostic-terminal/ | HXEDE081
+- 中文 | 交流耦合储能一体机 | Livoltek | 新能源产品 > 储能一体柜 | https://www.hxgroup.com/product/ac-coupled-all-in-one-ess-3-5kw/ | IPOWER AES1-3K/3.
+- English | AC-Coupled All-in-One Energy Storage System | Livoltek | New Energy Products > All-in-One Energy Storage Cabinet | https://www.hxgroup.com/en/product/ac-coupled-all-in-one-ess-3-5kw/ | IPOWER AES1-3K/3.
+- 中文 | 工商业储能一体柜 | Livoltek | 新能源产品 > 储能一体柜 | https://www.hxgroup.com/product/bess-125-261kwh/ | BESS-125kW/261kWh
+- English | Commercial & Industrial All-in-One Energy Storage Cabinet | Livoltek | New Energy Products > All-in-One Energy Storage Cabinet | https://www.hxgroup.com/en/product/bess-125-261kwh/ | BESS-125 kW/261 kWh
+- 中文 | 户用储能一体机 | Livoltek | 新能源产品 > 储能一体柜 | https://www.hxgroup.com/product/hybrid-all-in-one-ess-3-6kw/ | iPower HES1-3K/3K6/4K6/5K/5K5/6K S2 HES1-1K5/3KL2
+- English | Residential All-in-One Energy Storage System | Livoltek | New Energy Products > All-in-One Energy Storage Cabinet | https://www.hxgroup.com/en/product/hybrid-all-in-one-ess-3-6kw/ | iPower HES1-3K/3K6/4K6/5K/5K5/6K S2 HES1-1K5/3KL2
+- 中文 | 高压储能电池 | Livoltek | 新能源产品 > 储能电池 | https://www.hxgroup.com/product/commercial-industrial-high-voltage-energy-storage-battery-bhf-g15-60kwh/ | BHF-G15/25/30/35/40/45/50/55/60
+- English | High-Voltage Energy Storage Battery | Livoltek | New Energy Products > Energy Storage Battery | https://www.hxgroup.com/en/product/commercial-industrial-high-voltage-energy-storage-battery-bhf-g15-60kwh/ | BHF-G15/25/30/35/40/45/50/55/60
+- 中文 | 高压储能电池 | Livoltek | 新能源产品 > 储能电池 | https://www.hxgroup.com/product/commercial-industrial-high-voltage-energy-storage-battery_bhf-c64-112/ | BHF-C64/80/96/112
+- English | High-Voltage Energy Storage Battery | Livoltek | New Energy Products > Energy Storage Battery | https://www.hxgroup.com/en/product/commercial-industrial-high-voltage-energy-storage-battery_bhf-c64-112/ | BHF-C64/80/96/112
+- 中文 | 高压储能电池 | Livoltek | 新能源产品 > 储能电池 | https://www.hxgroup.com/product/high-voltage-battery-system_bhf-s5-30/ | BHF-S5/S10/S15/S20/S25/S30
+- English | High-Voltage Energy Storage Battery | Livoltek | New Energy Products > Energy Storage Battery | https://www.hxgroup.com/en/product/high-voltage-battery-system_bhf-s5-30/ | BHF-S5/S10/S15/S20/S25/S30
+- 中文 | 户用低压储能电池 | Livoltek | 新能源产品 > 储能电池 | https://www.hxgroup.com/product/low-voltage-residential-battery_blf-p0530/ | BLF-SR05/10/15/20/25/30/35
+- English | Residential Low-Voltage Energy Storage Battery | Livoltek | New Energy Products > Energy Storage Battery | https://www.hxgroup.com/en/product/low-voltage-residential-battery_blf-p0530/ | BLF-SR05/10/15/20/25/30/35
+- 中文 | 户用低压储能电池 | Livoltek | 新能源产品 > 储能电池 | https://www.hxgroup.com/product/low-voltage-residential-battery_homcellar-16kwh-b1/ | HomCellar-15/16kWh-B2
+- English | Residential Low-Voltage Energy Storage Battery | Livoltek | New Energy Products > Energy Storage Battery | https://www.hxgroup.com/en/product/low-voltage-residential-battery_homcellar-16kwh-b1/ | HomCellar-15/16 kWh-B2
+- 中文 | 户用低压储能电池 | Livoltek | 新能源产品 > 储能电池 | https://www.hxgroup.com/product/low-voltage-residential-battery_homcellar-16kwh-e1/ | HomCellar-15/16kWh-E1
+- English | Residential Low-Voltage Energy Storage Battery | Livoltek | New Energy Products > Energy Storage Battery | https://www.hxgroup.com/en/product/low-voltage-residential-battery_homcellar-16kwh-e1/ | HomCellar-15/16 kWh-E1
+- 中文 | 户用低压储能电池 | Livoltek | 新能源产品 > 储能电池 | https://www.hxgroup.com/product/residential-low-voltage-energy-storage-battery-blf-12100-12200-12280-24100/ | BLF-12100/12200/12280/24100
+- English | Residential Low-Voltage Energy Storage Battery | Livoltek | New Energy Products > Energy Storage Battery | https://www.hxgroup.com/en/product/residential-low-voltage-energy-storage-battery-blf-12100-12200-12280-24100/ | BLF-12100/12200/12280/24100
+- 中文 | 户用低压储能电池 | Livoltek | 新能源产品 > 储能电池 | https://www.hxgroup.com/product/residential-low-voltage-energy-storage-battery-blf-b51100-b51150/ | IP21锂电池： BLF-B51100 - 5.
+- English | Residential Low-Voltage Energy Storage Battery | Livoltek | New Energy Products > Energy Storage Battery | https://www.hxgroup.com/en/product/residential-low-voltage-energy-storage-battery-blf-b51100-b51150/ | IP21 Lithium Battery: BLF-B51100 - 5.
+- 中文 | MF系列直流充电桩 | Livoltek | 新能源产品 > 充电桩 | https://www.hxgroup.com/product/mf-dc-charging-station-with-power-module-60-240kw/ | 60/90/120/150/180kW（配ACE 30kW功率模块） 80/120/160/200/240kW（配ACE 40kW功率模块）
+- English | MF Series DC Charger | Livoltek | New Energy Products > Charging Station | https://www.hxgroup.com/en/product/mf-dc-charging-station-with-power-module-60-240kw/ | 60/90/120/150/180 kW (with ACE 30 kW power module) 80/120/160/200/240 kW (with ACE 40 kW power module)
+- 中文 | MC系列直流充电桩 | Livoltek | 新能源产品 > 充电桩 | https://www.hxgroup.com/product/motion-compact-dc-wallbox-ev-charger-15-60kw/ | MC 15/20/30/40/60kW
+- English | MC Series DC Charging Station | Livoltek | New Energy Products > Charging Station | https://www.hxgroup.com/en/product/motion-compact-dc-wallbox-ev-charger-15-60kw/ | MC 15/20/30/40/60 kW
+- 中文 | 运营交流充电桩 |  | 新能源产品 > 充电桩 > 交流充电桩 | https://www.hxgroup.com/product/bush-series-business-ac-ev-charger_7.3kw-22kw/ | BUSH系列 单相: 2*7.
+- English | Commercial AC Charging Station |  | New Energy Products > Charging Station > AC Charging Station | https://www.hxgroup.com/en/product/bush-series-business-ac-ev-charger_7.3kw-22kw/ | BUSH Series Single-Phase: 2×7.
+- 中文 | 户用交流充电桩 | Livoltek | 新能源产品 > 充电桩 > 交流充电桩 | https://www.hxgroup.com/product/robot-home-ac-charger_7.3-22kw/ | ROBOT 系列 单相：7kW 三相：11/22kW
+- English | Residential AC Charging Station | Livoltek | New Energy Products > Charging Station > AC Charging Station | https://www.hxgroup.com/en/product/robot-home-ac-charger_7.3-22kw/ | ROBOT Series Single-Phase: 7 kW Three-Phase: 11/22 kW
+- 中文 | 一体式光伏路灯 | Livoltek | 新能源产品 > 光伏路灯 | https://www.hxgroup.com/all-in-one-solar-street-light-hx-sl-n-40-120w/ | HX-SL(N)系列一体式光伏路灯作为分布式光伏应用的典型终端产品，以“光-电-储-控”一体化集成设计为核心，凭借经济节能与高效稳定的双重优势，成为离网照明场景的优选解决方案。
+- English | Integrated Solar Street Light | Livoltek | New Energy Products | https://www.hxgroup.com/en/all-in-one-solar-street-light-hx-sl-n-40-120w/ | As a typical terminal product for distributed photovoltaic applications, the HX-SL(N) series integrated solar street light features an integrated...
+- 中文 | 一体式光伏路灯 | Livoltek | 新能源产品 > 光伏路灯 | https://www.hxgroup.com/all-in-one-solar-street-light-hx-sl-t-40w-to-100w/ | HX-SL(T) 系列一体式光伏路灯，以经济型架构 + 高强度防护为核心设计理念，兼具经济节能与超强耐候性，是恶劣离网照明场景的优选方案。
+- English | All-in-One Solar Street Light | Livoltek | New Energy Products | https://www.hxgroup.com/en/all-in-one-solar-street-light-hx-sl-t-40w-to-100w/ | The HX-SL(T) Series all-in-one solar street light, built on a cost-effective architecture with high-strength protection, combines economic efficiency with...
+- 中文 | 一体式光伏路灯 | Livoltek | 新能源产品 > 光伏路灯 | https://www.hxgroup.com/integrated-solar-street-light-hx-sl-s-40-100w/ | HX_SL(S)系列具有压铸一体成型的一体化机身，机械强度高，抗冲击防形变；免布线光伏自给，快速部署、灵活选址，适配供电受限场景。
+- English | All-in-One Solar Street Light | Livoltek | New Energy Products | https://www.hxgroup.com/en/integrated-solar-street-light-hx-sl-s-40-100w/ | The HX-SL(S) series features a die-cast integrated body with high mechanical strength, impact resistance, and deformation prevention.
+- 中文 | 单相储能机 | Livoltek | 新能源产品 > 逆变器 > 储能逆变器 | https://www.hxgroup.com/product/hybrid-inverter-single-phase-1.5-6kw-s2/ | HP1-1K5/3K/3K6/5K/6KS2 HP1-1K5/3KL2
+- English | Single-Phase Energy Storage Inverter | Livoltek | New Energy Products > Inverter > Energy Storage Inverter | https://www.hxgroup.com/en/product/hybrid-inverter-single-phase-1.5-6kw-s2/ | HP1-1K5/3K/3K6/5K/6KS2 HP1-1K5/3KL2
+- 中文 | 三相储能机 | Livoltek | 新能源产品 > 逆变器 > 储能逆变器 | https://www.hxgroup.com/product/hybrid-inverter-single-phase-40-60kw-s1/ | HP3-40K/50K/60K S1
+- English | Three-Phase Energy Storage Inverter | Livoltek | New Energy Products > Inverter > Energy Storage Inverter | https://www.hxgroup.com/en/product/hybrid-inverter-single-phase-40-60kw-s1/ | HP3-40K/50K/60K S1
+- 中文 | 三相储能机 | Livoltek | 新能源产品 > 逆变器 > 储能逆变器 | https://www.hxgroup.com/product/hybrid-inverter-single-phase-5-30kw/ | HP3-5K/6K/8K/10K/12K D2, HP3-15K/20K/25K/30K T2 HP3-5K/6K/8K/10K/12K/15K L2 HP3-15K/20K/25K/30K/36K M2
+- English | Three-Phase Energy Storage Inverter | Livoltek | New Energy Products > Inverter > Energy Storage Inverter | https://www.hxgroup.com/en/product/hybrid-inverter-single-phase-5-30kw/ | HP3-5K/6K/8K/10K/12K D2, HP3-15K/20K/25K/30K T2 HP3-5K/6K/8K/10K/12K/15K L2 HP3-15K/20K/25K/30K/36K M2
+- 中文 | 单相储能机 | Livoltek | 新能源产品 > 逆变器 > 储能逆变器 | https://www.hxgroup.com/product/hybrid-inverter-single-phase-7k5-12kw-s2/ | HP1-7K5/8KS2M, HP1-10K/12KS2
+- English | Single-Phase Energy Storage Inverter | Livoltek | New Energy Products > Inverter > Energy Storage Inverter | https://www.hxgroup.com/en/product/hybrid-inverter-single-phase-7k5-12kw-s2/ | HP1-7K5/8KS2M, HP1-10K/12KS2
+- 中文 | 单相并网机 | Livoltek | 新能源产品 > 逆变器 > 并网逆变器 | https://www.hxgroup.com/product/grid-tied-inverter-single-phase-2-5-6kw/ | 单相：GT1-2K5/3K/3K3/3K6/4K/5K/6K D2
+- English | Single-Phase Grid-Tied Inverter | Livoltek | New Energy Products > Inverter > Grid-Tied Inverter | https://www.hxgroup.com/en/product/grid-tied-inverter-single-phase-2-5-6kw/ | Single Phase: GT1-2K5/3K/3K3/3K6/4K/5K/6K D2
+- 中文 | 单相并网机 | Livoltek | 新能源产品 > 逆变器 > 并网逆变器 | https://www.hxgroup.com/product/grid-tied-inverter-single-phase-7-10kw-t2/ | 单相：GT1-7K/7K5/8K/9K/10K T2
+- English | Single-Phase Grid-Tied Inverter | Livoltek | New Energy Products > Inverter > Grid-Tied Inverter | https://www.hxgroup.com/en/product/grid-tied-inverter-single-phase-7-10kw-t2/ | Single-Phase: GT1-7K/7K5/8K/9K/10K T2
+- 中文 | 三相并网机 | Livoltek | 新能源产品 > 逆变器 > 并网逆变器 | https://www.hxgroup.com/product/grid-tied-inverter-three-phase-gt3-30-60kw/ | GT3-30K D1, GT3-30K/33K/37K5 T1, GT3-36K/37K5/40K/50K/60K Q1 (EN) GT3-15K/20K/25K DL1, GT3-10K/15K/20K/30K TL1, GT3-25K/30K QL1 (UL) GT3-30KTM1,...
+- English | Three-Phase Grid-Tied Inverter | Livoltek | New Energy Products > Inverter > Grid-Tied Inverter | https://www.hxgroup.com/en/product/grid-tied-inverter-three-phase-gt3-30-60kw/ | GT3-30K D1, GT3-30K/33K/37K5 T1, GT3-36K/37K5/40K/50K/60K Q1 (EN) GT3-15K/20K/25K DL1, GT3-10K/15K/20K/30K TL1, GT3-25K/30K QL1 (UL) GT3-30KTM1,...
+- 中文 | 三相并网机 | Livoltek | 新能源产品 > 逆变器 > 并网逆变器 | https://www.hxgroup.com/product/grid-tied-inverter-three-phase-gt3-75-125kw/ | GT3-75/100/110/125K-1, GT3-75/100/110/125K-11, GT3-75/100/110K-12 (EN) GT3-36/40/50/60/75KL1, GT3-36/40/50/60/75KL11, GT3-60KL12 (UL) GT3-100/124/125/150KM1,...
+- English | Three-Phase Grid-Tied Inverter | Livoltek | New Energy Products > Inverter > Grid-Tied Inverter | https://www.hxgroup.com/en/product/grid-tied-inverter-three-phase-gt3-75-125kw/ | GT3-75/100/110/125K-1, GT3-75/100/110/125K-11, GT3-75/100/110K-12 (EN) GT3-36/40/50/60/75KL1, GT3-36/40/50/60/75KL11, GT3-60KL12 (UL) GT3-100/124/125/150KM1,...
+
+### 智慧水务产品 / Smart Water Products
+覆盖 Zlink 水表、超声波工商业大表、无线远传与智慧水务侧通信组件。 / Covers Zlink water meters, ultrasonic bulk meters, wireless remote transmission, and water-side communication components.
+
+#### 子类清单 / Subcategory List
+- 水表: 4
+- General: 1
+
+#### 代表产品卡片 / Representative Product Cards
+- 产品名 / Product name: 超声波工商业水表 | Commercial & Industrial Ultrasonic Water Meter
+- 品牌 / Brand: Zlink
+- 型号范围 / Model range: 多声道、高精度超声波计量技术。
+- 核心定位 / Positioning: 超声波工商业水表HXW310适用于城市管网以及分区计量中关键节点流量的精确计量和贸易结算，服务于水司的水平衡统计和水损监测，有效控制水司产销差。该系列产品支持多种物联网通讯技术，灵活适配各种安装场景，为水务公司实现智慧水务提供有效手段。
+- 关键卖点 / Key highlights: 活动式法兰: 实现便利化的现场安装。; 无任何机械可动部件: 无磨损，长期使用稳定可靠。; CBB结构模块设计: 实现各种环境下模块的快速更换。
+- 适用场景 / Typical use: 多声道、高精度超声波计量技术。
+- Path: /product/commercial-water-meters
+
+- 产品名 / Product name: 工商业超声波 | Commercial & Industrial Ultrasonic Source data may need review.
+- 品牌 / Brand: Zlink
+- 型号范围 / Model range: 户用超声波水表采用先进的超声波测量技术，适用于居民用户的用水计量。
+- 核心定位 / Positioning: 户用超声波无阀水表HXW210采用先进的超声波测量技术，适用于居民用户的用水计量。 具有稳定可靠、低能耗的特点，电池供电年限可以达到15年。支持多种物联网技术，灵活适配各种应用场景，实现通讯广覆盖，为水务公司实现智慧水务提供有效手段。 户用超声波阀控水表HXW211采用先进的超声波测量技术，适用于居民用户的用水计量。...
+- 关键卖点 / Key highlights: 双向计量: 适用于存在逆流的用水场景，综合流量显示，避免纠纷。; 无任何机械可动部件: 无磨损，长期使用稳定可靠。; 阀门控制: 支持远程开关内置球阀，电池掉电后球阀自动关阀。
+- 适用场景 / Typical use: 户用超声波水表采用先进的超声波测量技术，适用于居民用户的用水计量。
+- Path: /product/residentical-water-meter
+
+- 产品名 / Product name: 无线远传脉冲水表 | Wireless Remote Pulse Water Meter
+- 品牌 / Brand: Zlink
+- 型号范围 / Model range: 脉冲计量+无线远传
+- 核心定位 / Positioning: 户用无线远传脉冲水表HXW110采用带双稳态磁阻感应的基表作为计量基础，通过NB-IoT、Cat.1通信技术，实现对水表数据的远程自动抄读，适用于现场穿管布线困难及需要实现远程抄表、低功耗长距离传输、广覆盖、大连接数和低成本的物联网应用场所，广泛应用于智慧供水，智慧城市建设中。
+- 关键卖点 / Key highlights: 运营级别安全: 双向鉴权，空口严格加密。; 易安装维护: 现场安装无需任何布线,整表采用机电分离结构，维护简单。 内置高增益天线，信号稳定可靠，实现全覆盖，无盲区。; 上传频率灵活设置: 数据上传周期可设置，可自行设置上报频率，满足不同用户管理需要。
+- 适用场景 / Typical use: 脉冲计量+无线远传
+- Path: /product/wireless-pulse-water-meter
+
+- 产品名 / Product name: 电子背包 | Electronic Backpack
+- 品牌 / Brand: Zlink
+- 型号范围 / Model range: 支持终端设备数据远传无线通讯。
+- 核心定位 / Positioning: 泽联电子背包采用微功耗设计，内置锂电池供电，具有RS-485接口可读取水表、流量计和压力变送器等仪表的数据信息并通过NB-IoT、GPRS/3G/4G等网络远程传输数据，可长期水下工作，有效解决安装环境恶劣井下抄表难的痛点。
+- 关键卖点 / Key highlights: 采集功能: 采集水表、流量计等仪表的数据。; 存储功能: 内置存储器，可循环存储采集数据，掉电不丢失。; 报警功能: 电压欠压、压力越限或流量越限，立即上报告警信息。
+- 适用场景 / Typical use: 支持终端设备数据远传无线通讯。
+- Path: /product/commercial-communication-module
+
+#### 产品索引 / Product Index
+- 中文 | 电子背包 | Zlink | 智能计量产品 | https://www.hxgroup.com/product/commercial-communication-module/ | 支持终端设备数据远传无线通讯。
+- English | Electronic Backpack | Zlink | Smart Metering Products > Water Meter > Electronic Backpack | https://www.hxgroup.com/en/product/commercial-communication-module/ | Supports remote wireless communication for terminal devices.
+- 中文 | 超声波工商业水表 | Zlink | 智能计量产品 > 水表 > 工商业超声波水表 | https://www.hxgroup.com/product/commercial-water-meters/ | 多声道、高精度超声波计量技术。
+- English | Commercial & Industrial Ultrasonic Water Meter | Zlink | Smart Metering Products > Water Meter > Commercial & Industrial Ultrasonic Water Meter | https://www.hxgroup.com/en/product/commercial-water-meters/ | Multi-path, high-precision ultrasonic metering technology.
+- 中文 | 工商业超声波 | Zlink | 智能计量产品 > 水表 > 户用超声波水表 | https://www.hxgroup.com/product/residentical-water-meter/ | 户用超声波水表采用先进的超声波测量技术，适用于居民用户的用水计量。 Source data may need review.
+- English | Commercial & Industrial Ultrasonic | Zlink | Smart Metering Products > Water Meter > Residential Ultrasonic Water Meter | https://www.hxgroup.com/en/product/residentical-water-meter/ | The residential ultrasonic water meter uses advanced ultrasonic measurement technology for residential water metering. Source data may need review.
+- 中文 | 通讯模块 | Zlink | 智能计量产品 > 水表 > 无线远传水表 | https://www.hxgroup.com/product/residentical-communication-module/ | 便捷式安装助力机械表数据的远传无线通讯
+- English | Communication Module | Zlink | Smart Metering Products | https://www.hxgroup.com/en/product/residentical-communication-module/ | Easy installation enables remote wireless communication of mechanical meter data
+- 中文 | 无线远传脉冲水表 | Zlink | 智能计量产品 > 水表 > 无线远传水表 | https://www.hxgroup.com/product/wireless-pulse-water-meter/ | 脉冲计量+无线远传
+- English | Wireless Remote Pulse Water Meter | Zlink | Smart Metering Products | https://www.hxgroup.com/en/product/wireless-pulse-water-meter/ | Pulse Metering + Wireless Remote Transmission
+
+### 水处理设备 / Water Treatment Equipment
+覆盖集装箱式与撬装式海水淡化和清洁用水设备。 / Covers containerized and skid-mounted desalination and clean water systems.
+
+#### 子类清单 / Subcategory List
+- General: 2
+
+#### 代表产品卡片 / Representative Product Cards
+- 产品名 / Product name: 集装箱式海水淡化设备 | Containerized Seawater Desalination Equipment
+- 品牌 / Brand: HEXING
+- 型号范围 / Model range: 分布式可移动的一体化集装箱设备，采用端到端的膜处理技术，可结合光储系统，提供快速部署的清洁用水解决方案。
+- 核心定位 / Positioning: 集装箱式海水淡化设备将预处理、反渗透电控系统高度集成于标准集装箱内，出厂前完成整体设计、制造与调试。设备到场后可快速部署，适用于海岛、沿海、偏远地区及应急供水等场景，并可灵活接入光伏、储能系统及数字化运维平台，实现低能耗、少运维的独立供水解决方案。
+- 关键卖点 / Key highlights: 模块化扩展: 按需增加集装箱模块，实现“边建设、边供水、边扩容”。; 高度集成: 工艺、设备、电控一体化设计，减少现场施工和系统接口风险。; 建设周期短: 相比传统水厂，土建/安装需求少，交付速度显著提升。
+- 适用场景 / Typical use: 分布式可移动的一体化集装箱设备，采用端到端的膜处理技术，可结合光储系统，提供快速部署的清洁用水解决方案。
+- Path: /product/containerized
+
+- 产品名 / Product name: 撬装式海水淡化设备 | Skid-Mounted Seawater Desalination Equipment
+- 品牌 / Brand: HEXING
+- 型号范围 / Model range: 各工艺单元采用撬块化交付，具有很强的工程适配性。节省交付周期和安装费用，运行期间独立撬块互不干扰，后期扩容更易进行。
+- 核心定位 / Positioning: 撬装式海水淡化水厂采用撬块化结构设计，将核心水处理单元安装于钢结构底座上。相比集装箱形式，撬装式系统在尺寸、工艺组合和现场集成方面更具灵活性，适用于工业用水、市政配套、临建项目及已有厂房内改扩建场景，同样可结合光储系统和数字化平台运行。
+- 关键卖点 / Key highlights: 撬块化交付: 整体成撬出厂，现场仅需吊装和接口连接，加快现场安装速度。; 工艺灵活: 可根据项目进水条件灵活组合预处理和膜系统。; 全工艺设计: 从原水预处理、核心处理（如RO/膜系统）、到后处理及配套系统（电气、自控、药剂、污泥等）一体化统筹设计，实现整体最优与稳定高效运行。
+- 适用场景 / Typical use: 各工艺单元采用撬块化交付，具有很强的工程适配性。
+- Path: /product/container-group
+
+#### 产品索引 / Product Index
+- 中文 | 撬装式海水淡化设备 | HEXING | 水处理装备 | https://www.hxgroup.com/product/container-group/ | 各工艺单元采用撬块化交付，具有很强的工程适配性。
+- English | Skid-Mounted Seawater Desalination Equipment | HEXING | Water Treatment Equipment > Seawater Desalination Equipment | https://www.hxgroup.com/en/product/container-group/ | Each process unit is delivered in skid-mounted form, offering strong engineering adaptability.
+- 中文 | 集装箱式海水淡化设备 | HEXING | 水处理装备 | https://www.hxgroup.com/product/containerized/ | 分布式可移动的一体化集装箱设备，采用端到端的膜处理技术，可结合光储系统，提供快速部署的清洁用水解决方案。
+- English | Containerized Seawater Desalination Equipment | HEXING | Water Treatment Equipment > Seawater Desalination Equipment | https://www.hxgroup.com/en/product/containerized/ | Distributed, mobile, integrated container equipment, using end-to-end membrane treatment technology, can be combined with solar-storage systems to provide a...
+
+### 船舶电动化产品 / Marine Electrification Products
+覆盖小型船舶电动推进产品。 / Covers electric propulsion products for small vessels.
+
+#### 子类清单 / Subcategory List
+- General: 1
+- 电动船外推进器: 1
+
+#### 代表产品卡片 / Representative Product Cards
+- 产品名 / Product name: 电动船外推进器 Dolphin系列 | Dolphin Series Electric Outboards
+- 品牌 / Brand: Livoltek
+- 型号范围 / Model range: 易携易用，告别喧器，静享休闲。满足各种休闲小艇绿色动力需求。
+- 核心定位 / Positioning: 采用高效永磁同步电机技术，融合自研算法，结构紧，操控舒适，打造高效静谧的绿色动力体验，兼顾环保与低运营成本。集成蓝牙与GPS模块，支持直连APP；可选配云端管理平台，实现多设备集中管控。广泛适用于景区游船、钓鱼艇、橡皮艇、皮划艇、独木舟、铝合金船、休闲船、作业船及帆船等船艇。
+- 关键卖点 / Key highlights: 灵活配置: 支持船尾操纵杆或驾驶舱远操系统，可双机协同推进，一键启停，简单易上手。; 智能互联: 配备状态显示屏、支持APP连接、OTA远程升级、可选云端平台服务及数据分析。; 运营成本低: 运行成本稳定可控。以电力驱动，能耗成本显著低于传统燃油动力，且长期使用成本更经济。
+- 适用场景 / Typical use: 易携易用，告别喧器，静享休闲。
+- Path: /dolphin-series
+
+- 产品名 / Product name: 电动吊舱推进器 Pod Drive系列 | Electric Pod Drive Series
+- 品牌 / Brand: Livoltek
+- 型号范围 / Model range: 部署灵活，占用空间小，反向充电。满足各种休闲船、帆船等绿色动力需求。
+- 核心定位 / Positioning: 分离式设计实现灵活部署与空间最大化，动力强劲且操控舒适。支持水力反向充电，集成智能互联技术，通过APP与云端平台实现远程监控与多设备管理。专为帆船、无人艇及公务船打造，提供静谧、高效的绿色航行体验。
+- 关键卖点 / Key highlights: 部署灵活: 电机、驱动器、控制器分离式设计，占用空间小。; 智能互联: 支持APP连接、可选云端平台服务、OTA远程升级及航行数据智能分析。; 反向充电: 帆船使用风帆航行时，一定航速条件下自动进入反向充电模式。利用水力为电池补能，延长续航时间。
+- 适用场景 / Typical use: 部署灵活，占用空间小，反向充电。
+- Path: /pod-drive
+
+#### 产品索引 / Product Index
+- 中文 | 电动吊舱推进器 Pod Drive系列 | Livoltek | 船舶动力 | https://www.hxgroup.com/pod-drive/ | 部署灵活，占用空间小，反向充电。
+- English | Electric Pod Drive Series | Livoltek | Marine Propulsion > Electric Pod Drive | https://www.hxgroup.com/en/pod-drive/ | Flexible deployment, compact footprint, and regenerative charging.
+- 中文 | 电动船外推进器 Dolphin系列 | Livoltek | 船舶动力 > 电动船外推进器 | https://www.hxgroup.com/dolphin-series/ | 易携易用，告别喧器，静享休闲。
+- English | Dolphin Series Electric Outboards | Livoltek | Marine Propulsion > Electric Outboard Propulsion | https://www.hxgroup.com/en/dolphin-series/ | Portable and user-friendly.
+
+## 5. 客户案例库 / Customer Case Library
+
+案例数据范围：已发布客户案例共 33 组，当前全部为中英配对案例。
+Case coverage: 33 published client case groups, currently all bilingual pairs.
+
+### 智能配用电 / Smart Power Distribution & Utilization
+- 案例标题（中/英） / ZH Title | EN Title: 孟加拉电力公司 AMI解决方案项目 | Bangladesh Power Company AMI Solution Project
+- 业务领域 / Sector: 智能配用电 / Smart Power Distribution & Utilization
+- 地区 / Region: 孟加拉
+- 项目信息 / Project information: 孟加拉电力公司超大规模智慧电网升级工程，涵盖了超过 25 万只智能终端的部署，是该国目前最具代表性的智能电力基础设施建设项目。
+- 方案信息 / Solution approach: 该方案依托 MDC 与 MDM 系统架构，集成了数十万只智能电表、数千套 DCU 及 ECG 采集设备，实现了从设备供货、安装施工到 AMI 2.0 系统建设的全周期集成服务。
+- 业务价值 / Business value: 凭借 99% 以上的设备在线率与 98.5% 的抄表成功率，项目在显著降低线损与遏制窃电行为的同时，大幅压减了现场人工抄表成本并有效提升了客户服务水平。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/cases/bangladesh-ami-solution-project/ | https://www.hxgroup.com/en/cases/bangladesh-ami-solution-project/
+
+- 案例标题（中/英） / ZH Title | EN Title: 海兴智能计费与交易平台助力塔吉克斯坦客户减损增收 — M2C项目 | Hexing Smart Billing & Transaction Platform Helps Tajikistan Customers Reduce Losses and Increase Revenue — M2C Project
+- 业务领域 / Sector: 智能配用电 / Smart Power Distribution & Utilization
+- 地区 / Region: 塔吉克斯坦
+- 项目信息 / Project information: 塔吉克斯坦国家电力基础设施升级工程，在完成 300 公里配电线路更替的基础上，实现了 10 万余个智能计量终端的全面规模化部署。
+- 方案信息 / Solution approach: 方案深度集成了 MDC、MDM 及 Billing 结算系统，构建了从智能终端数据采集到后台业务处理的高可靠、一体化配用电数字化管理平台。
+- 业务价值 / Business value: 助力客户将配电线损由 16.2% 骤降至 6.4%，在彻底解决电费拖欠难题、压减运维成本的同时，显著提升了营收效益并实现了卓越的投资回报。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/cases/m2c-smart-billing-platform-tajikistan/ | https://www.hxgroup.com/en/cases/m2c-smart-billing-platform-tajikistan/
+
+- 案例标题（中/英） / ZH Title | EN Title: 贝宁大用户智能计量与管理体系AMI建设项目 | Benin C&I Smart Metering and AMI Management System Construction Project
+- 业务领域 / Sector: 智能配用电 / Smart Power Distribution & Utilization
+- 地区 / Region: 贝宁
+- 项目信息 / Project information: 贝宁国家电力局（SBEE）大用户智能化改造项目，针对贡献总营收 90% 以上的 6,000 家关键客户，实施了涵盖终端计量到数据中心建设的国家级能源管理工程。
+- 方案信息 / Solution approach: 方案交付了 AMI 端到端闭环体系，包括 6,000 套三相智能电表、MDC/MDM 系统软件及具备冗余能力的主备机房 IT 基础设施，提供了从安装调试、系统集成到长期运维的全周期 EPC 服务。
+- 业务价值 / Business value: 项目通过精准计量与实时监控有效遏制了核心收入流失，显著提升了电费回收率与现金流稳定性。自动化监测体系在大幅压减人工运维成本的同时，利用数据分析能力赋能负荷管理与线损治理，为该国电网的全面现代化升级奠定了技术与管理基础。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/client_cases_post/benin-ami-project/ | https://www.hxgroup.com/en/client_cases_post/benin-ami-project/
+
+- 案例标题（中/英） / ZH Title | EN Title: 巴西能源公司表箱120K解决方案项目 | Brazil Energy Company Meter Box 120K Solution Project
+- 业务领域 / Sector: 智能配用电 / Smart Power Distribution & Utilization
+- 地区 / Region: 巴西
+- 项目信息 / Project information: 巴西区域级智能化升级项目，实现了超 13 万只 HXB6021C 智能电表及 16,000 余套箱体单元的规模化部署。
+- 方案信息 / Solution approach: 方案集成 MDC/NMS 系统与 IT 基础设施，通过部署变压器侧表箱、入户 CIU 及 FAN 网络，构建了具备高安全等级的端到端高级计量架构。
+- 业务价值 / Business value: 作为巴西首个 SMC 表箱项目，系统在数据安全领域实现突破，通过对末端用电行为的精准监控有效遏制了窃电流失，在显著优化非技术性线损管理的同时，提升了电网经营效益。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/client_cases_post/brazil-energy-meter-box-120k-solution-project/ | https://www.hxgroup.com/en/client_cases_post/brazil-energy-meter-box-120k-solution-project/
+
+- 案例标题（中/英） / ZH Title | EN Title: 巴西某电力公司130多万智能电表交钥匙工程：拉美最大规模Wi-SUN AMI标杆项目 | Brazil Utility 1.3+ Million Smart Meters Turnkey Project: Latin America's Largest Wi-SUN AMI Benchmark Project
+- 业务领域 / Sector: 智能配用电 / Smart Power Distribution & Utilization
+- 地区 / Region: 巴西
+- 项目信息 / Project information: 巴西某大型公立电力公司智能化升级项目，累计部署超 130 万只智能电表，覆盖 100 多个城市，是拉美地区应用 Wi-SUN 技术规模最大的 AMI 项目之一。
+- 方案信息 / Solution approach: 采用 HXB 系列电表与 HXAP1000 网关，构建了“4G + Wi-SUN”混合组网架构。项目提供涵盖 MDC/NMS 系统、7000 余套回传与通信设备供应及全案安装运维的 EPC 交钥匙服务。
+- 业务价值 / Business value: 系统通过数智化管控显著降低了电网运维成本，在验证 Wi-SUN 技术于超大规模场景下可靠性的同时，为公用事业企业实现精细化运营管理提供了稳健的技术底座。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/client_cases_post/brazil-utility-1-3-million-smart-meters-turnkey-project/ | https://www.hxgroup.com/en/client_cases_post/brazil-utility-1-3-million-smart-meters-turnkey-project/
+
+- 案例标题（中/英） / ZH Title | EN Title: 加纳电力公司五十多万只电表AMI项目 | AMI Project for Over 500,000 Meters of Ghana Power Company
+- 业务领域 / Sector: 智能配用电 / Smart Power Distribution & Utilization
+- 地区 / Region: 加纳
+- 项目信息 / Project information: 2020-2022 年间为加纳北部电力部署 100,000 只智能电表的 AMI 规模化升级工程。
+- 方案信息 / Solution approach: 采用 AMI EPC 全流程交付，通过 UIP 接口平台集成移动支付与财务系统，构建防窃电监测与自动化计费体系。
+- 业务价值 / Business value: 投运 4 个月内营收同比提升逾 10%（数千万美元），在大幅压减商业损耗的同时，显著优化了供电可靠性指标与用户体验。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/client_cases_post/power-ghana-ecg-ami-project/ | https://www.hxgroup.com/en/client_cases_post/power-ghana-ecg-ami-project/
+
+- 案例标题（中/英） / ZH Title | EN Title: 乌干达大用户预付费计量解决方案AMI项目 | Uganda C&I Prepaid Metering Solution AMI Project
+- 业务领域 / Sector: 智能配用电 / Smart Power Distribution & Utilization
+- 地区 / Region: 乌干达
+- 项目信息 / Project information: 乌干达 500 余家大用户（最高至 33kV 电压等级）智能化预付费改造项目，实现了对区域核心用电群体的高精度计量全覆盖。
+- 方案信息 / Solution approach: 方案部署了集计量与分断功能于一体的低/中压一体化计量柜，通过 GPRS 通信深度整合 MDC 采集系统与定制化售电平台，构建了涵盖远程费控、实时监控与自动化分合闸的闭环管理体系。
+- 业务价值 / Business value: 项目通过预付费机制根除了大用户欠费风险并显著优化了现金流，在有效遏制非技术性线损的同时，大幅提升了运营安全性与管理效率，为同类市场的大容量用户侧治理提供了成熟且可复制的技术方案。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/client_cases_post/uganda-ami-project-prepaid-metering-solution/ | https://www.hxgroup.com/en/client_cases_post/uganda-ami-project-prepaid-metering-solution/
+
+### 新能源 / New Energy
+- 案例标题（中/英） / ZH Title | EN Title: 海兴电力承建的巴西首个中压微网EPC项目成功投运 | The first medium-voltage microgrid EPC project in Brazil, constructed by Hexing Electric, has been successfully put into operation
+- 业务领域 / Sector: 新能源 / New Energy
+- 地区 / Region: 巴西
+- 项目信息 / Project information: 巴西拉美中压微网战略科研基地，总投资逾 1 亿巴币，实现了 200kW 光伏、兆瓦级储能及 50 万+ 智能终端的超大规模集群部署。
+- 方案信息 / Solution approach: 采用 EPC 总承包模式，深度集成光、储、燃多能协同，提供从系统集成到全生命周期运维的数字化闭环方案。
+- 业务价值 / Business value: 凭借并离网无缝切换与智能 EMS 调度技术，全面加速客户数字化转型进程，树立了拉美区域智能电网与能源管理的行业标杆。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/cases/brazil-medium-voltage-microgrid-solution/ | https://www.hxgroup.com/en/cases/brazil-medium-voltage-microgrid-solution/
+
+- 案例标题（中/英） / ZH Title | EN Title: 斯威士兰ERS微电网EPC项目 | ERS Microgrid EPC Project in Eswatini
+- 业务领域 / Sector: 新能源 / New Energy
+- 地区 / Region: 斯威士兰
+- 项目信息 / Project information: 斯威士兰 ERS 战略微电网 EPC 交付项目，作为南非新能源市场的核心里程碑，成功部署了集 356kWp 光伏、兆瓦级储能及 660kVA 柴发于一体的综合能源基站。
+- 方案信息 / Solution approach: 采用利沃得（Livoltek）自研并网逆变器与智能 EMS 管理系统，由海兴主导从设计、采购到施工的交钥匙全流程，实现了 0.4kV 低压侧的黑启动与并离网无缝切换。
+- 业务价值 / Business value: 项目通过先进的削峰填谷与能源套利策略，在彻底解决电网不稳及高额燃油成本痛点的同时，预计全生命周期总营收将逾 220 万美元，实现了卓越的经济与社会效益。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/cases/eswatini-ers-microgrid-epc-project/ | https://www.hxgroup.com/en/cases/eswatini-ers-microgrid-epc-project/
+
+- 案例标题（中/英） / ZH Title | EN Title: 浙江杭州制造中心 625kW/1.3MWh储能系统 | 625kW/1.3MWh Energy Storage System for a Manufacturing Center in Hangzhou, Zhejiang
+- 业务领域 / Sector: 新能源 / New Energy
+- 地区 / Region: 杭州
+- 项目信息 / Project information: 浙江杭州区域级工商业储能应用项目，实现了 625kW/1305kWh 规模化储能容量的集成与部署。
+- 方案信息 / Solution approach: 方案配置了 5 套 BES-P125X261E/U 储能一体柜，构建了集电力变换与能量存储于一体的分布式能源调节系统。
+- 业务价值 / Business value: 系统年运行电量达 300 余兆瓦时，通过精准的削峰填谷策略显著优化了企业用电成本，在每年节约数万美元电费支出的同时，有效提升了局部电网的负荷调节能力。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/client_cases_post/hangzhou-manufacturing-center-625kw-1-3mwh-energy-storage-system/ | https://www.hxgroup.com/en/client_cases_post/hangzhou-manufacturing-center-625kw-1-3mwh-energy-storage-system/
+
+- 案例标题（中/英） / ZH Title | EN Title: 肯尼亚 工厂园区 1.1MW/1MWh预付费光储系统 | 1.1MW/1MWh Prepaid Solar-plus-Storage System for an Industrial Park in Kenya
+- 业务领域 / Sector: 新能源 / New Energy
+- 地区 / Region: 肯尼亚
+- 项目信息 / Project information: 肯尼亚大规模能源保障项目，实现了 1300kWp 光伏装机与超过 1000kWh 储能规模的集群部署。
+- 方案信息 / Solution approach: 方案整合了 GT3-125K 并网逆变器、储能柜及预付费管理系统，通过数字化管理模式提升了区域能源的消纳效率。
+- 业务价值 / Business value: 该方案预计每年可节省逾 30 万美元电费，在减少 30-40% 电网用电量的同时，显著降低了对市政电网的依赖。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/client_cases_post/kenya-factory-1-1mw-1mwh-prepayment-solar-storage-system/ | https://www.hxgroup.com/en/client_cases_post/kenya-factory-1-1mw-1mwh-prepayment-solar-storage-system/
+
+- 案例标题（中/英） / ZH Title | EN Title: 缅甸度假酒店 300kW/600kWh太阳能加储能系统 | Myanmar Resort Hotel 300kW/600kWh Solar Plus Storage System
+- 业务领域 / Sector: 新能源 / New Energy
+- 地区 / Region: 缅甸
+- 项目信息 / Project information: 缅甸仰光地标性度假村能源建设工程，实现了 460kWp 光伏装机与 600kWh 储能规模的协同应用。
+- 方案信息 / Solution approach: 方案采用 HP3-30K 混合逆变器与 BHF-G60 储能系统，系统支持多台设备并联扩展，确保了度假村在复杂电力环境下的可靠供电。
+- 业务价值 / Business value: 项目通过提升能源利用效率，每年可实现 10 万美元以上的电费节余，为文旅设施的稳定运行与降本增效提供了有力支撑。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/client_cases_post/myanmar-hotel-300kw-600kwh-solar-energy-storage-system/ | https://www.hxgroup.com/en/client_cases_post/myanmar-hotel-300kw-600kwh-solar-energy-storage-system/
+
+- 案例标题（中/英） / ZH Title | EN Title: 巴基斯坦变压器厂 250kW屋顶光伏系统 | 250kW Rooftop Solar System for a Transformer Factory in Pakistan
+- 业务领域 / Sector: 新能源 / New Energy
+- 地区 / Region: 巴基斯坦
+- 项目信息 / Project information: 巴基斯坦区域级光伏并网工程，系统总装机容量为 250kW。
+- 方案信息 / Solution approach: 方案部署了 5 台 GT3-50K 并网逆变器，构建了针对当地电网环境优化的分布式电力转换与并网体系。
+- 业务价值 / Business value: 该系统年发电量预计超过 35 万千瓦时，在显著压减能源成本、降低对传统电力来源依赖的同时，为当地设施的清洁能源替代与降本增效提供了可靠的实证案例。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/client_cases_post/pakistan-transformer-factory-250kw-rooftop-pv-system/ | https://www.hxgroup.com/en/client_cases_post/pakistan-transformer-factory-250kw-rooftop-pv-system/
+
+- 案例标题（中/英） / ZH Title | EN Title: 菲律宾医疗中心 100kW屋顶太阳能PV系统 | Philippines Medical Center 100kW Rooftop Solar PV System
+- 业务领域 / Sector: 新能源 / New Energy
+- 地区 / Region: 菲律宾
+- 项目信息 / Project information: 菲律宾区域医疗机构屋顶光伏能源保障项目，系统总装机容量为 112.3kWp。
+- 方案信息 / Solution approach: 方案部署了 2 台 GT3-50K 并网逆变器，构建了针对医疗设施屋顶工况优化的分布式电力转换与消纳体系。
+- 业务价值 / Business value: 该系统在显著压减医疗机构运营电耗、提升能源利用效率的同时，为医院的核心业务提供了持续、稳定的绿色电力支撑，有效增强了公共服务设施的能源保障能力。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/client_cases_post/philippines-medical-center-100kw-rooftop-solar-pv-system/ | https://www.hxgroup.com/en/client_cases_post/philippines-medical-center-100kw-rooftop-solar-pv-system/
+
+- 案例标题（中/英） / ZH Title | EN Title: 罗马尼亚智能电表工厂BESS项目 250kW/225kWh光储系统 | 250kW/225kWh Solar-plus-Storage System for a Smart Meter Factory in Romania
+- 业务领域 / Sector: 新能源 / New Energy
+- 地区 / Region: 罗马尼亚
+- 项目信息 / Project information: 罗马尼亚区域级能源保障工程，实现了 334kWp 太阳能发电容量与 225kWh 储能规模的集成部署。
+- 方案信息 / Solution approach: 方案配置了 GT3-50K 逆变器与 BHF-X225 储能系统，通过光伏与储能的协同调度，构建了高效的能源利用体系。
+- 业务价值 / Business value: 该项目每年可节省数十万欧元的运营成本并显著减少碳排放，凭借较短的投资回收周期，充分验证了该系统在当地环境下的经济性与实用性。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/client_cases_post/romania-smart-meter-factory-bess-project-250kw-225kwh/ | https://www.hxgroup.com/en/client_cases_post/romania-smart-meter-factory-bess-project-250kw-225kwh/
+
+- 案例标题（中/英） / ZH Title | EN Title: 西班牙公交场站快速充电桩基础设施项目 | Spain Bus Depot Fast Charging Infrastructure Project
+- 业务领域 / Sector: 新能源 / New Energy
+- 地区 / Region: 西班牙
+- 项目信息 / Project information: 西班牙巴达罗纳市大型公交场站绿色转型项目。目前已部署 15 台双枪充电桩，具备 10MW 电力接入能力，支持未来翻倍扩容至约 70 个充电接口。
+- 方案信息 / Solution approach: 采用 Livoltek MotionFast 系列直流快充桩，通过“零中断”改造模式在不影响夜间运营的前提下完成场站升级。针对近海环境强化了防盐雾腐蚀设计，并集成智能调度、车辆自动识别与 24 小时安全监控系统。
+- 业务价值 / Business value: 该项目支持每年 5200 万人次的绿色出行，在保障公交场站连续运营的同时，通过预留 10MW 电力容量为车队全电动化转型奠定了扩展基础，显著提升了城市公共交通的能源利用效率与减排效益。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/client_cases_post/spain-bus-depot-fast-charging-infrastructure/ | https://www.hxgroup.com/en/client_cases_post/spain-bus-depot-fast-charging-infrastructure/
+
+- 案例标题（中/英） / ZH Title | EN Title: 西班牙教育机构 175kW/300kWh电池光储系统 | Spanish Educational Institution 175kW/300kWh Battery Solar Storage System
+- 业务领域 / Sector: 新能源 / New Energy
+- 地区 / Region: 西班牙
+- 项目信息 / Project information: 西班牙某教育机构综合能源升级工程，实现了 175kW 逆变容量与 300kWh 储能规模的协同化部署。
+- 方案信息 / Solution approach: 方案通过集成 7 台 HP3-25K 混合逆变器与 BHF-G60 储能模块，构建了集光伏自发自用、能量管理及应急备电于一体的智能化自支撑电力体系。
+- 业务价值 / Business value: 该系统在显著压减用电高峰负荷的同时，有效增强了校区能源供给的韧性，为公共建筑在复杂电网环境下实现能源自主提供了可靠的实证案例。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/client_cases_post/spain-educational-institution-175kw-300kwh-battery-storage-system/ | https://www.hxgroup.com/en/client_cases_post/spain-educational-institution-175kw-300kwh-battery-storage-system/
+
+- 案例标题（中/英） / ZH Title | EN Title: 越南钢铁厂 1.7MW屋顶太阳能发电系统 | Vietnam Steel Plant 1.7MW Rooftop Solar Power System
+- 业务领域 / Sector: 新能源 / New Energy
+- 地区 / Region: 越南
+- 项目信息 / Project information: 越南 1.16MWp 屋顶光伏能源项目，实现了 14 台 125kW 逆变器的规模化安装与并网运行。
+- 方案信息 / Solution approach: 方案采用 GT3-125K 逆变器，配合双变压器架构与智能监控系统，在“零输出”模式下实现了对屋顶能源的精准调配。
+- 业务价值 / Business value: 系统在确保高自用率与可靠性能的基础上，显著降低了设施的能耗成本，为当地企业在严苛并网条件下的能源转型提供了可行的参考范式。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/client_cases_post/vietnam-steel-plant-1-7mw-roof-solar-power-system/ | https://www.hxgroup.com/en/client_cases_post/vietnam-steel-plant-1-7mw-roof-solar-power-system/
+
+- 案例标题（中/英） / ZH Title | EN Title: 新疆胡杨市“光储充”一体化清洁能源示范项目 | Huyang City (Xinjiang) "PV-Storage-Charging" Integrated Clean Energy Demonstration Project
+- 业务领域 / Sector: 新能源 / New Energy
+- 地区 / Region: 新疆
+- 项目信息 / Project information: 在新疆胡杨市一期部署 22 台 120kW 直流快充桩及 200kWh 储能系统，需应对 -27.7°C 至 42.4°C 的极端气温挑战。
+- 方案信息 / Solution approach: 采用 MotionFast 系列直流快充桩，构建集光伏车棚、储能与快充于一体的微网系统，通过智能 EMS 实现能源的高效协同调度。
+- 业务价值 / Business value: 验证了核心设备在严酷气候下的强健性与可靠性，在平抑电网波动、提升绿电自用率的同时，为区域绿色交通转型提供了关键的技术实证。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/client_cases_post/xinjiang-huyang-city-pv-storage-charging-demonstration-project/ | https://www.hxgroup.com/en/client_cases_post/xinjiang-huyang-city-pv-storage-charging-demonstration-project/
+
+### 智慧水务 / Smart Water
+- 案例标题（中/英） / ZH Title | EN Title: 快速响应核电站施工用水需求-集装箱式海水淡化 | Rapid Response to Nuclear Power Plant Construction Water Demand - Containerized Seawater Desalination
+- 业务领域 / Sector: 水处理 / Water Treatment
+- 地区 / Region: 霞浦
+- 项目信息 / Project information: 福建霞浦核电站建设阶段应急保供水项目，实现了日产 500 立方米淡水产能的快速部署，旨在为核电站核心工程施工提供高标准、持续稳定的临时用水保障。
+- 方案信息 / Solution approach: 方案采用高度模块化的集装箱式 MMF 与 SWRO 工艺架构，依托现货储备与快装式水箱设计，在 10 天内高效完成了符合核电行业严苛标准的系统集成与整体调试。
+- 业务价值 / Business value: 该项目在极短交付周期内成功突破了工期紧、标准高的双重挑战，凭借卓越的应急响应能力与高稳态产水性能，为核电重大基础设施建设的顺利推进提供了关键的水资源战略支撑。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/cases/containerized-seawater-desalination/ | https://www.hxgroup.com/en/cases/containerized-seawater-desalination/
+
+- 案例标题（中/英） / ZH Title | EN Title: 多米尼加超声波工商业大表项目 | Dominican Republic Ultrasonic Commercial and Industrial Large Meter Project
+- 业务领域 / Sector: 智慧水务 / Smart Water
+- 地区 / Region: 多米尼加
+- 项目信息 / Project information: 多米尼加共和国工商业水务数字化升级项目，实现了对大口径管网超过 8,000 只高精度智能超声波水表的规模化覆盖。
+- 方案信息 / Solution approach: 方案深度集成泽联（Zlink）超声波工商业大表与高性能电子通信模块，构建了针对大流量工况的精准计量与远程监控闭环系统。
+- 业务价值 / Business value: 项目通过显著降低非技术性水损并实现管网漏损实时监测，在大幅优化水资源精细化管理效能的同时，全方位助力客户达成业务的数字化转型战略。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/cases/dominican-republic-ultrasonic-commercial-meter-project/ | https://www.hxgroup.com/en/cases/dominican-republic-ultrasonic-commercial-meter-project/
+
+- 案例标题（中/英） / ZH Title | EN Title: 冈比亚Walk By智能水表AMR项目 | Gambia Walk By Smart Water Meter AMR Project
+- 业务领域 / Sector: 智慧水务 / Smart Water
+- 地区 / Region: 冈比亚
+- 项目信息 / Project information: 冈比亚城市水务管理升级项目，实现了对区域内 12,000 只 LoRa 智能超声波水表终端的规模化部署与联网应用。
+- 方案信息 / Solution approach: 方案采用了基于泽联（Zlink）超声波水表的 Walk-by 移动抄表系统，通过“移动端智能采集+边缘计算”的轻量化模式，构建了无需服务器投入的高效数字化采集网络。
+- 业务价值 / Business value: 该项目以极低的部署成本实现了 95% 的抄表覆盖率，在彻底破解入户抄表难、运营周期长等痛点的同时，为公用事业企业提供了最为经济实用的数字化转型入口。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/cases/gambia-walk-by-amr-project/ | https://www.hxgroup.com/en/cases/gambia-walk-by-amr-project/
+
+- 案例标题（中/英） / ZH Title | EN Title: 为身处干旱的城市提供紧急水源 - 大型集装箱式海水淡化 | Emergency water supply for drought-stricken cities - Large containerized seawater desalination
+- 业务领域 / Sector: 水处理 / Water Treatment
+- 项目信息 / Project information: 摩洛哥 Jorf 城市供水保障项目，日产水量达 20,000 立方米，采用大型集装箱式模块化设计并于 2023 年正式投产运行。
+- 方案信息 / Solution approach: 方案整合了预装配的超滤（UF）与海水反渗透（SWRO）工艺，通过高度集成的集装箱化交付模式，实现了从设备进场到正式产水仅耗时 2.5 个月的卓越建设速度。
+- 业务价值 / Business value: 在当地面临严重干旱与断水危机的紧要关头，该项目在一年内迅速释放了近 2 万立方米的日增产能量，在高效缓解民生用水压力的同时，树立了应急供水保障领域的标杆。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/cases/large-container-seawater-desalination/ | https://www.hxgroup.com/en/cases/large-container-seawater-desalination/
+
+- 案例标题（中/英） / ZH Title | EN Title: 墨西哥城市政机构楼栋项目 - AMI智能抄表解决方案 | Mexico City Municipal Building Project - AMI Smart Metering Solution
+- 业务领域 / Sector: 智慧水务 / Smart Water
+- 地区 / Region: 墨西哥
+- 项目信息 / Project information: 墨西哥城市政 AMI 智慧水务升级工程，涉及万余只智能超声波终端的全面覆盖与联网部署。
+- 方案信息 / Solution approach: 依托 LoRaWAN 低功耗广域网技术，构建高可靠的智慧水表采集网关系统，实现楼宇侧终端数据的全自动化采集与精准监控。
+- 业务价值 / Business value: 成功破解人工抄表及计费误差等运营瓶颈，在大幅压减运维成本的同时，助力市政营收实现两位数百分比的跨越式增长。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/cases/mexico-city-ami-smart-metering-solution/ | https://www.hxgroup.com/en/cases/mexico-city-ami-smart-metering-solution/
+
+- 案例标题（中/英） / ZH Title | EN Title: 日产淡水5.7万吨！橇装式海水淡化系统保障当地市政稳定供水 | 57,000 tons of fresh water per day! Skid-mounted seawater desalination system ensures stable municipal water supply
+- 业务领域 / Sector: 水处理 / Water Treatment
+- 项目信息 / Project information: 摩洛哥 Jorf 区域级海水淡化保供项目，日产水量高达 57,000 立方米，采用高度集约的橇装式系统设计并于 2026 年正式投产。
+- 方案信息 / Solution approach: 方案严格遵循欧美制造标准并引入冗余设计，深度集成 GSF 粗滤、超滤（UF）及 SWRO 工艺，重点攻克了冬季原水有机物波动与高藻类含量的预处理技术难题。
+- 业务价值 / Business value: 该项目凭借卓越的预处理效能确保了极端工况下的全天候产水稳定性，在满足严苛运行可靠性要求的同时，为区域工业生产与资源安全提供了高品质、大规模的淡化水战略支撑。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/cases/modular-desalination-system-municipal-water-supply/ | https://www.hxgroup.com/en/cases/modular-desalination-system-municipal-water-supply/
+
+- 案例标题（中/英） / ZH Title | EN Title: 秘鲁化工厂污水化工计量项目 | Peru Chemical Plant Wastewater Chemical Metering Project
+- 业务领域 / Sector: 智慧水务 / Smart Water
+- 地区 / Region: 秘鲁
+- 项目信息 / Project information: 秘鲁某大型化工厂工业废水计量升级工程，旨在攻克强腐蚀性与高杂质工况下的流量监控与精准计费难题。
+- 方案信息 / Solution approach: 采用泽联（Zlink）研发的无活动部件超声波计量方案，专为农业脏水及化工腐蚀液等严酷环境设计，从根本上解决了传统设备易堵塞、易损坏的痛点。
+- 业务价值 / Business value: 方案凭借卓越的抗腐蚀性能，实现了十年量程内近乎“零维护”的精准计量，在大幅降低运维成本的同时，为企业的环保合规与资源精细化管理提供了核心数据保障。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/cases/peru-chemical-plant-wastewater-metering-project/ | https://www.hxgroup.com/en/cases/peru-chemical-plant-wastewater-metering-project/
+
+- 案例标题（中/英） / ZH Title | EN Title: 为棕榈油厂保障每日2400m³可靠水源 | 橇装式海水淡化方案 | Ensuring a Reliable Water Supply of 2,400 m³ per Day for a Palm Oil Mill | Skid-Mounted Seawater Desalination Solution
+- 业务领域 / Sector: 水处理 / Water Treatment
+- 项目信息 / Project information: 印度尼西亚巴都利金（Batu Licin）棕榈油厂配套高纯水保供项目，日产水量达 2,400 立方米，采用橇块化（Skid-mounted）集约设计并于 2020 年成功交付。
+- 方案信息 / Solution approach: 方案深度整合了多介质过滤（MMF）、海水淡化（SWRO）与双级反渗透及混床（BWRO+MB）工艺，实现了产水电阻率稳定在 180°C 以上的超纯水制备标准。
+- 业务价值 / Business value: 该项目通过高稳定性的纯水制备技术，彻底解决了棕榈油生产对高品质工艺用水的严苛需求，在显著提升生产效率与产品品质的同时，树立了工业特种水处理领域的应用标杆。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/cases/shipping-container-desalination-solution/ | https://www.hxgroup.com/en/cases/shipping-container-desalination-solution/
+
+- 案例标题（中/英） / ZH Title | EN Title: 为热电厂提供优质生产用水 - 橇装式水处理解决方案 | Providing high-quality production water for thermal power plants - Skid-mounted water treatment solutions
+- 业务领域 / Sector: 水处理 / Water Treatment
+- 项目信息 / Project information: 山东日照工业水处理综合保障项目，日产水量达 13,000 立方米，采用高度集约化的橇装式系统设计并于 2018 年成功投运。
+- 方案信息 / Solution approach: 方案深度集成了 MMF 预处理、双级反渗透（BWRO+LPRO）及混床（MB）的一体化水处理工艺，通过优化国产化供应链体系实现了技术可靠性与成本效益的深度平衡。
+- 业务价值 / Business value: 在确保电厂生产高稳态运行的基础上，该项目以极具竞争力的经济化指标完成了系统交付，为工业水处理设施的性价比优化与国产化替代树立了成功典范。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/cases/skid-mounted-water-treatment-solution/ | https://www.hxgroup.com/en/cases/skid-mounted-water-treatment-solution/
+
+- 案例标题（中/英） / ZH Title | EN Title: 南非房地产预付费水表解决方案 | South Africa Real Estate Prepaid Water Meter Solution
+- 业务领域 / Sector: 智慧水务 / Smart Water
+- 地区 / Region: 南非
+- 项目信息 / Project information: 南非智慧水务现代化管理项目，实现了逾 5,000 只智能预付费超声波水表在当地的规模化落地与稳定运行。
+- 方案信息 / Solution approach: 方案深度整合了基于 LoRa 技术的网络规划勘测、智能预付费终端及 AMI 管理平台，构建了从底层物理网络到上层应用层的一体化智慧计量体系。
+- 业务价值 / Business value: 项目凭借预付费机制有效规避了水司坏账风险，在实现自动化抄表并显著压减运营成本的同时，通过实时告警系统彻底杜绝了漏水隐患，强化了资源管控效能。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/cases/south-africa-prepayment-water-meter-solution/ | https://www.hxgroup.com/en/cases/south-africa-prepayment-water-meter-solution/
+
+- 案例标题（中/英） / ZH Title | EN Title: 某二线城市A区项目 | A District Project in a Second-tier City
+- 业务领域 / Sector: 智慧水务 / Smart Water
+- 项目信息 / Project information: 容量：10000+只 产品：超声波水表、超声波工商业水表
+- 方案信息 / Solution approach: 超声波商业水表 电子背包 DMA系统
+- 业务价值 / Business value: 在当地实施ZIink分区计量（DMA）与漏损控制解决方案后，一年内降低了当地城市的漏损率，数字孪生3D沙盘协同漏损热力图管理平台监测管网漏损，精细化“智水管理“自了然，助力客户业务数字化转型。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/client_cases_post/mou-er-xian-cheng-shi-a-qu-xiang-mu/ | https://www.hxgroup.com/en/client_cases_post/mou-er-xian-cheng-shi-a-qu-xiang-mu/
+
+### 水处理 / Water Treatment
+- 案例标题（中/英） / ZH Title | EN Title: 赞比亚现代养鸡场 120kW/240kWh储能系统 | 120kW/240kWh Energy Storage System for a Modern Poultry Farm in Zambia
+- 业务领域 / Sector: 水处理 / Water Treatment
+- 地区 / Region: 赞比亚
+- 项目信息 / Project information: 赞比亚现代化养鸡场能源保障项目，实现了 240kWp 光伏装机与 240kWh 储能规模的协同化部署。
+- 方案信息 / Solution approach: 方案配置了 HP3-30K 逆变器与 BHF-G60 储能系统，旨在为农业生产场景提供稳定、可持续的电力支持。
+- 业务价值 / Business value: 系统确保了供暖、照明和制冷等关键负荷的全天候运行，在保障生产安全与牲畜福利的同时，有效提升了农场的能源独立水平。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/client_cases_post/zambia-chicken-farm-120kw-240kwh-energy-storage-system/ | https://www.hxgroup.com/en/client_cases_post/zambia-chicken-farm-120kw-240kwh-energy-storage-system/
+
+### 智慧燃气 / Smart Gas
+- 案例标题（中/英） / ZH Title | EN Title: 孟加拉国预付费智能燃气表EPC项目 | Bangladesh Prepaid Smart Gas Meter EPC Project
+- 业务领域 / Sector: 智慧燃气 / Smart Gas
+- 地区 / Region: 孟加拉
+- 项目信息 / Project information: 孟加拉国超大规模预付费燃气交钥匙集成工程，为逾 20 万终端用户构建了涵盖数据中心与灾备体系的全周期智能化计量网络。
+- 方案信息 / Solution approach: 深度整合智能燃气终端与 GPRS 高效通信链路，并依托 ORCA 管理平台与 Hexpay 移动应用，打造了端到端的智慧燃气计量、管控与支付闭环方案。
+- 业务价值 / Business value: 通过推行预付费管理模式彻底革新传统定额计费体系，在大幅提升营收效益与计费精准度的同时，有效抑制了能源浪费并显著优化了用户服务体验。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/cases/bangladesh-prepayment-gas-meter-epc/ | https://www.hxgroup.com/en/cases/bangladesh-prepayment-gas-meter-epc/
+
+### 船舶电动化 / Marine Electrification
+- 案例标题（中/英） / ZH Title | EN Title: 亚马逊某渔民社区水上动力项目：以清洁能源守护亚马逊河流域与未来 | Amazon Fishermen Community Water Mobility Project: Protecting the Amazon River Basin and the Future with Clean Energy
+- 业务领域 / Sector: 船舶电动化 / Marine Electrification
+- 地区 / Region: 亚马逊
+- 项目信息 / Project information: 亚马逊流域渔业绿色转型示范项目，通过部署数十台电动船外机，赋能 60 余个社区家庭实现动力清洁化升级。
+- 方案信息 / Solution approach: 提供全链路电动推进解决方案，深度评估电动系统在雨林复杂工况下的续航表现与经济性，替代传统燃油动力。
+- 业务价值 / Business value: 兼顾生态保护与降本增效，在显著降低渔业生产成本的同时，深度诠释了品牌通过清洁能源技术与自然生态和谐共生的战略愿景。
+- 案例链接（中/英） / URLs: https://www.hxgroup.com/cases/amazon-fisherman-community-hydro-project/ | https://www.hxgroup.com/en/cases/amazon-fisherman-community-hydro-project/
+
+## 6. FAQ、术语与 AI 使用规则 / FAQ, Terms & AI Guidance
+
+### 高频问答 / FAQ
+- Q: Hexing 主要做什么？ / What does Hexing mainly do?
+  A: 海兴是一家覆盖智能配用电、新能源、智慧水务、智慧燃气、水处理与船舶电动化的能源技术公司，同时提供产品、平台与项目交付。 / Hexing is an energy technology company spanning smart power, new energy, smart water, smart gas, water treatment, and marine electrification, with products, platforms, and project delivery capability.
+- Q: 是否提供 AMI / AMR？ / Does Hexing provide AMI / AMR?
+  A: 是，电力与水务两条线都覆盖，能力包括智能表计、通信、集中器、MDC / MDM、AMI 平台与计费系统。 / Yes, in both power and water segments, including meters, communications, concentrators, MDC / MDM, AMI platforms, and billing systems.
+- Q: 是否有海外公用事业项目经验？ / Does Hexing have overseas utility references?
+  A: 有，代表项目包括巴西 130 多万只智能电表、加纳 AMI、贝宁大用户 AMI、乌干达预付费 AMI、塔吉克斯坦计费平台等。 / Yes, including Brazil 1.3+ million smart meters, Ghana AMI, Benin AMI, Uganda prepaid AMI, and Tajikistan billing platform.
+- Q: 是否覆盖智慧水务、微电网、储能、EV 充电、水处理、船舶电动化？ / Does Hexing cover smart water, microgrids, storage, EV charging, water treatment, and marine electrification?
+  A: 覆盖，且均有对应解决方案、产品族与案例条目。 / Yes, each has dedicated solutions, product families, and case references.
+- Q: HEXING、Livoltek、Zlink 有什么区别？ / What is the difference between HEXING, Livoltek, and Zlink?
+  A: HEXING 偏公用事业、计量、平台与配电；Livoltek 偏新能源、储能、充电与船舶电动化；Zlink 偏智慧水务、水表与 DMA。 / HEXING focuses on utilities, metering, platforms, and distribution; Livoltek on new energy, storage, charging, and marine electrification; Zlink on smart water, water meters, and DMA.
+
+### 高频术语 / High-Frequency Terms
+- 解决方案 = Solutions
+- 应用场景 = Application Scenarios
+- 相关产品 = Related Products
+- 技术规格 = Technical Specifications
+- 电表 = Electricity Meter
+- 水表 = Water Meter
+- 计费与交易平台 = Billing & Trading Platform
+- 集中器 = Concentrator / DCU
+- 通信模块 = Communication Module
+- 储能一体柜 = All-in-One BESS
+- 充电桩 = EV Charger
+- 海水淡化 = Seawater Desalination
+- 船舶电动化 = Marine Electrification
+
+### AI Retrieval Hints
+- 推荐按“业务领域 → 解决方案 → 产品 → 案例”路径检索。 / Prefer retrieving in the order of business area → solution → product → case.
+- 回答问题时先给结论，再补相关产品与代表案例。 / Answer the question first, then add related products and representative cases.
+- 当产品参数未在本文件中提供时，直接说明“文件未提供该参数”。 / If a parameter is missing, say the file does not provide it.
+
+## Appendix / Source Notes
+- Product source groups: 210 bilingual + 4 single-language published groups.
+- Client case source groups: 33 published bilingual groups.
+- Main pages source block extracted from: llms.txt
+- FAQ and terminology skeleton extracted from: llms-full.txt
+- Source reference blocks captured for maintenance: main pages length=748, solution source length=14041, faq source length=2918, terminology source length=7077.
