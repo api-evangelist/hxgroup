@@ -22,7 +22,7 @@ accessModel:
   generated: '2026-07-22'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hxgroup.png
-name: Hexing Electrical Co., Ltd.
+name: Hexing Electrical
 description: >-
   Hexing Electrical Co., Ltd. (海兴电力 / Hexing) is a Chinese energy-technology
   company focused on smart power distribution and utilization, new energy,
@@ -77,3 +77,4 @@ x-enrichment:
   status: backfilled
   pass: local-v1
   note: backfilled from .gitignore signal + verified work evidence
+x-legal-name: Hexing Electrical Co., Ltd.
